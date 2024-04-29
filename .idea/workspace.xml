@@ -4,24 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c927f566-e1ab-4c11-a852-3620c04eb55d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/torchDeepLearning.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/numpy_cc/np_array.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/numpy_cc/np_operations.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pandas_cc/bank.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pandas_cc/pddataframe.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pandas_cc/pdgroupby.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pandas_cc/pdoperations.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pandas_cc/pdseries.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/torch/lin_reg.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/torch/tensor_basics.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/torch/tensor_ops.ipynb" afterDir="false" />
-    </list>
+    <list default="true" id="c927f566-e1ab-4c11-a852-3620c04eb55d" name="Changes" comment="Moving project to a separate repository" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -30,6 +13,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/omar11205/torchDeepLearning.git",
+    "accountId": "8f42d4c5-8e48-4d1c-a9b2-c4df522c6811"
+  }
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
 }</component>
@@ -72,8 +61,17 @@
       <option name="presentableId" value="Default" />
       <updated>1714402202132</updated>
       <workItem from="1714402202812" duration="214000" />
-      <workItem from="1714402426586" duration="733000" />
+      <workItem from="1714402426586" duration="1177000" />
     </task>
+    <task id="LOCAL-00001" summary="Moving project to a separate repository">
+      <option name="closed" value="true" />
+      <created>1714403531997</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1714403531997</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -81,5 +79,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Moving project to a separate repository" />
+    <option name="LAST_COMMIT_MESSAGE" value="Moving project to a separate repository" />
   </component>
 </project>
