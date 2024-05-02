@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c927f566-e1ab-4c11-a852-3620c04eb55d" name="Changes" comment="control">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AAN/torch_gradient.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/AAN/torch_gradient.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -80,7 +81,9 @@
       <workItem from="1714483206353" duration="1225000" />
       <workItem from="1714499213914" duration="4812000" />
       <workItem from="1714515360551" duration="5100000" />
-      <workItem from="1714533680366" duration="1630000" />
+      <workItem from="1714533680366" duration="2551000" />
+      <workItem from="1714567903255" duration="2117000" />
+      <workItem from="1714598373637" duration="5178000" />
     </task>
     <task id="LOCAL-00001" summary="Moving project to a separate repository">
       <option name="closed" value="true" />
@@ -114,7 +117,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714536614172</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="control">
+      <option name="closed" value="true" />
+      <created>1714537769820</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1714537769820</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
