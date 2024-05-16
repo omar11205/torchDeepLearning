@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c927f566-e1ab-4c11-a852-3620c04eb55d" name="Changes" comment="control">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AAN/computational_graph_from_scratch.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/AAN/computational_graph_from_scratch.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -109,7 +110,9 @@
       <workItem from="1715636751272" duration="2394000" />
       <workItem from="1715706345110" duration="6691000" />
       <workItem from="1715724242839" duration="145000" />
-      <workItem from="1715787155281" duration="13031000" />
+      <workItem from="1715787155281" duration="13669000" />
+      <workItem from="1715810315870" duration="1865000" />
+      <workItem from="1715819096237" duration="3072000" />
     </task>
     <task id="LOCAL-00001" summary="Moving project to a separate repository">
       <option name="closed" value="true" />
@@ -263,7 +266,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715802521077</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="control">
+      <option name="closed" value="true" />
+      <created>1715805194136</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1715805194136</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
