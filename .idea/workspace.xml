@@ -118,7 +118,8 @@
       <workItem from="1715892957483" duration="6361000" />
       <workItem from="1715958197861" duration="2224000" />
       <workItem from="1715969099793" duration="10737000" />
-      <workItem from="1716042589198" duration="13599000" />
+      <workItem from="1716042589198" duration="14495000" />
+      <workItem from="1716211712789" duration="4729000" />
     </task>
     <task id="LOCAL-00001" summary="Moving project to a separate repository">
       <option name="closed" value="true" />
@@ -312,7 +313,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716067642578</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="control">
+      <option name="closed" value="true" />
+      <created>1716077729604</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1716077729604</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
