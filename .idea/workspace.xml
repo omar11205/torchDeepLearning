@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c927f566-e1ab-4c11-a852-3620c04eb55d" name="Changes" comment="control">
+      <change afterPath="$PROJECT_DIR$/AAN/images/zooming_w_two_neurons.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AAN/backpropagation_demonstration.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/AAN/backpropagation_demonstration.ipynb" afterDir="false" />
     </list>
@@ -135,7 +136,8 @@
       <workItem from="1716682167081" duration="2635000" />
       <workItem from="1717117389244" duration="6284000" />
       <workItem from="1717162183394" duration="20494000" />
-      <workItem from="1717246052022" duration="23220000" />
+      <workItem from="1717246052022" duration="23266000" />
+      <workItem from="1717344872484" duration="14370000" />
     </task>
     <task id="LOCAL-00001" summary="Moving project to a separate repository">
       <option name="closed" value="true" />
@@ -433,7 +435,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717254841136</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="control">
+      <option name="closed" value="true" />
+      <created>1717292514432</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1717292514432</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
