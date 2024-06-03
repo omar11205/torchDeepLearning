@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c927f566-e1ab-4c11-a852-3620c04eb55d" name="Changes" comment="control">
-      <change afterPath="$PROJECT_DIR$/AAN/backpropagation_with_learning.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AAN/images/gradient_descent.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AAN/images/plane_gradient.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AAN/images/steepest_ascent.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AAN/backpropagation_with_learning.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/AAN/backpropagation_with_learning.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,7 +140,8 @@
       <workItem from="1717162183394" duration="20494000" />
       <workItem from="1717246052022" duration="23266000" />
       <workItem from="1717344872484" duration="14489000" />
-      <workItem from="1717376169245" duration="7403000" />
+      <workItem from="1717376169245" duration="8587000" />
+      <workItem from="1717420027542" duration="12258000" />
     </task>
     <task id="LOCAL-00001" summary="Moving project to a separate repository">
       <option name="closed" value="true" />
@@ -451,7 +455,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717366689157</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="control">
+      <option name="closed" value="true" />
+      <created>1717383736842</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1717383736842</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -478,13 +490,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="jupyter-line">
           <url>notebook://D:/GIT/AI/torchDeepLearning/AAN/backpropagation_with_learning.ipynb</url>
-          <line>20</line>
-          <option name="timeStamp" value="8" />
+          <line>69</line>
+          <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="jupyter-line">
           <url>notebook://D:/GIT/AI/torchDeepLearning/AAN/backpropagation_with_learning.ipynb</url>
-          <line>32</line>
-          <option name="timeStamp" value="9" />
+          <line>57</line>
+          <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
