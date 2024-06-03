@@ -5,9 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c927f566-e1ab-4c11-a852-3620c04eb55d" name="Changes" comment="control">
-      <change afterPath="$PROJECT_DIR$/AAN/images/gradient_descent.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AAN/images/plane_gradient.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AAN/images/steepest_ascent.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AAN/backpropagation_with_learning.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/AAN/backpropagation_with_learning.ipynb" afterDir="false" />
     </list>
@@ -141,7 +138,8 @@
       <workItem from="1717246052022" duration="23266000" />
       <workItem from="1717344872484" duration="14489000" />
       <workItem from="1717376169245" duration="8587000" />
-      <workItem from="1717420027542" duration="12258000" />
+      <workItem from="1717420027542" duration="13744000" />
+      <workItem from="1717443884390" duration="6863000" />
     </task>
     <task id="LOCAL-00001" summary="Moving project to a separate repository">
       <option name="closed" value="true" />
@@ -463,7 +461,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717383736842</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="control">
+      <option name="closed" value="true" />
+      <created>1717441353531</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1717441353531</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -490,12 +496,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="jupyter-line">
           <url>notebook://D:/GIT/AI/torchDeepLearning/AAN/backpropagation_with_learning.ipynb</url>
-          <line>69</line>
+          <line>84</line>
           <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="jupyter-line">
           <url>notebook://D:/GIT/AI/torchDeepLearning/AAN/backpropagation_with_learning.ipynb</url>
-          <line>57</line>
+          <line>72</line>
           <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
