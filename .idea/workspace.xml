@@ -139,7 +139,7 @@
       <workItem from="1717344872484" duration="14489000" />
       <workItem from="1717376169245" duration="8587000" />
       <workItem from="1717420027542" duration="13744000" />
-      <workItem from="1717443884390" duration="6863000" />
+      <workItem from="1717443884390" duration="14184000" />
     </task>
     <task id="LOCAL-00001" summary="Moving project to a separate repository">
       <option name="closed" value="true" />
@@ -469,7 +469,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717441353531</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="control">
+      <option name="closed" value="true" />
+      <created>1717453107235</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1717453107235</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -496,12 +504,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="jupyter-line">
           <url>notebook://D:/GIT/AI/torchDeepLearning/AAN/backpropagation_with_learning.ipynb</url>
-          <line>84</line>
+          <line>133</line>
           <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="jupyter-line">
           <url>notebook://D:/GIT/AI/torchDeepLearning/AAN/backpropagation_with_learning.ipynb</url>
-          <line>72</line>
+          <line>121</line>
           <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
