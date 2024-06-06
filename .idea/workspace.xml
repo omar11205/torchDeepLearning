@@ -145,7 +145,7 @@
       <workItem from="1717557081482" duration="1295000" />
       <workItem from="1717558477307" duration="343000" />
       <workItem from="1717558835375" duration="2829000" />
-      <workItem from="1717592181900" duration="13785000" />
+      <workItem from="1717592181900" duration="28508000" />
     </task>
     <task id="LOCAL-00001" summary="Moving project to a separate repository">
       <option name="closed" value="true" />
@@ -499,7 +499,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717559177428</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="Working minst neural network architecture">
+      <option name="closed" value="true" />
+      <created>1717616415245</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1717616415245</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -534,16 +542,6 @@
           <url>notebook://D:/GIT/AI/torchDeepLearning/AAN/backpropagation_with_learning.ipynb</url>
           <line>138</line>
           <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="jupyter-line">
-          <url>notebook://C:/GITAI/artificial_intelligence/torchDeepLearning/AAN/backpropagation_with_learning.ipynb</url>
-          <line>207</line>
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="jupyter-line">
-          <url>notebook://C:/GITAI/artificial_intelligence/torchDeepLearning/AAN/backpropagation_with_learning.ipynb</url>
-          <line>301</line>
-          <option name="timeStamp" value="15" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
