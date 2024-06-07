@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c927f566-e1ab-4c11-a852-3620c04eb55d" name="Changes" comment="Working minst neural network architecture">
-      <change afterPath="$PROJECT_DIR$/AAN/data/mnist.pkl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AAN/data/mnist.pkl.gz" afterDir="false" />
+    <list default="true" id="c927f566-e1ab-4c11-a852-3620c04eb55d" name="Changes" comment="control">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AAN/backpropagation_with_learning.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/AAN/backpropagation_with_learning.ipynb" afterDir="false" />
     </list>
@@ -31,12 +30,12 @@
     &quot;assignee&quot;: &quot;omar11205&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/omar11205/torchDeepLearning.git&quot;,
-    &quot;accountId&quot;: &quot;a25185d9-62ee-4d81-8de8-7f288b1a88e8&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/omar11205/torchDeepLearning.git",
+    "accountId": "8f42d4c5-8e48-4d1c-a9b2-c4df522c6811"
   }
-}</component>
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
 }</component>
@@ -67,8 +66,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-PY-241.17011.127" />
-        <option value="bundled-python-sdk-48aec45f0201-7e9c3bbb6e34-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-241.17011.127" />
+        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-PY-241.14494.241" />
+        <option value="bundled-python-sdk-0509580d9d50-28c9f5db9ffe-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-241.14494.241" />
       </set>
     </attachedChunks>
   </component>
@@ -146,6 +145,7 @@
       <workItem from="1717558477307" duration="343000" />
       <workItem from="1717558835375" duration="2829000" />
       <workItem from="1717592181900" duration="28508000" />
+      <workItem from="1717709849170" duration="9230000" />
     </task>
     <task id="LOCAL-00001" summary="Moving project to a separate repository">
       <option name="closed" value="true" />
@@ -535,13 +535,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="jupyter-line">
           <url>notebook://D:/GIT/AI/torchDeepLearning/AAN/backpropagation_with_learning.ipynb</url>
-          <line>169</line>
+          <line>347</line>
           <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="jupyter-line">
-          <url>notebook://D:/GIT/AI/torchDeepLearning/AAN/backpropagation_with_learning.ipynb</url>
-          <line>138</line>
-          <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
