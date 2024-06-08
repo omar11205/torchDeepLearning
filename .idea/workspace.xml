@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c927f566-e1ab-4c11-a852-3620c04eb55d" name="Changes" comment="debug">
-      <change afterPath="$PROJECT_DIR$/AAN/basic_torch_gradient.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AAN/backpropagation_with_learning.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/AAN/backpropagation_with_learning.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AAN/torch_gradient.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/AAN/advanced_torch_gradient.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AAN/basic_torch_gradient.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/AAN/basic_torch_gradient.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,7 +145,8 @@
       <workItem from="1717558835375" duration="2829000" />
       <workItem from="1717592181900" duration="28508000" />
       <workItem from="1717709849170" duration="9262000" />
-      <workItem from="1717765919443" duration="19933000" />
+      <workItem from="1717765919443" duration="24886000" />
+      <workItem from="1717850929756" duration="10663000" />
     </task>
     <task id="LOCAL-00001" summary="Moving project to a separate repository">
       <option name="closed" value="true" />
@@ -517,7 +516,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717720857629</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="debug">
+      <option name="closed" value="true" />
+      <created>1717793669899</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1717793669899</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
