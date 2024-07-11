@@ -4,12 +4,106 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c927f566-e1ab-4c11-a852-3620c04eb55d" name="Changes" comment="debug">
-      <change afterPath="$PROJECT_DIR$/AAN/torch_linear_regression.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_6_06_2024_10_25_a__m___Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_6_06_2024_10_25_a_ m__[Changes]/shelved.patch" beforeDir="false" />
+    <list default="true" id="c927f566-e1ab-4c11-a852-3620c04eb55d" name="Changes" comment="control">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/.readthedocs.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/MANIFEST.in" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/docker/api.dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/docker/build-api.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/docs/Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/docs/conf.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/docs/index.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/docs/installation.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/docs/make.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/docs/pix2tex.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/docs/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/notebooks/LaTeX_OCR_test.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/notebooks/LaTeX_OCR_training.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/pix2tex/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/pix2tex/__main__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/pix2tex/api/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/pix2tex/api/app.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/pix2tex/api/run.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/pix2tex/api/streamlit.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/pix2tex/cli.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/pix2tex/dataset/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/pix2tex/dataset/arxiv.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/pix2tex/dataset/data/.gitkeep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/pix2tex/dataset/dataset.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/pix2tex/dataset/demacro-test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/pix2tex/dataset/demacro.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/pix2tex/dataset/extract_latex.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/pix2tex/dataset/latex2png.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/pix2tex/dataset/postprocess.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/pix2tex/dataset/preprocessing/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/pix2tex/dataset/preprocessing/generate_latex_vocab.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/pix2tex/dataset/preprocessing/preprocess_formulas.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/pix2tex/dataset/preprocessing/preprocess_latex.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/pix2tex/dataset/preprocessing/third_party/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/pix2tex/dataset/preprocessing/third_party/katex/.#katex.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/pix2tex/dataset/preprocessing/third_party/katex/LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/pix2tex/dataset/preprocessing/third_party/katex/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/pix2tex/dataset/preprocessing/third_party/katex/cli.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/pix2tex/dataset/preprocessing/third_party/katex/katex.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/pix2tex/dataset/preprocessing/third_party/katex/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/pix2tex/dataset/preprocessing/third_party/katex/src/Lexer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/pix2tex/dataset/preprocessing/third_party/katex/src/Options.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/pix2tex/dataset/preprocessing/third_party/katex/src/ParseError.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/pix2tex/dataset/preprocessing/third_party/katex/src/Parser.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/pix2tex/dataset/preprocessing/third_party/katex/src/Settings.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/pix2tex/dataset/preprocessing/third_party/katex/src/Style.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/pix2tex/dataset/preprocessing/third_party/katex/src/buildCommon.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/pix2tex/dataset/preprocessing/third_party/katex/src/buildHTML.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/pix2tex/dataset/preprocessing/third_party/katex/src/buildMathML.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/pix2tex/dataset/preprocessing/third_party/katex/src/buildTree.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/pix2tex/dataset/preprocessing/third_party/katex/src/delimiter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/pix2tex/dataset/preprocessing/third_party/katex/src/domTree.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/pix2tex/dataset/preprocessing/third_party/katex/src/environments.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/pix2tex/dataset/preprocessing/third_party/katex/src/fontMetrics.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/pix2tex/dataset/preprocessing/third_party/katex/src/fontMetricsData.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/pix2tex/dataset/preprocessing/third_party/katex/src/functions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/pix2tex/dataset/preprocessing/third_party/katex/src/mathMLTree.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/pix2tex/dataset/preprocessing/third_party/katex/src/parseData.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/pix2tex/dataset/preprocessing/third_party/katex/src/parseTree.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/pix2tex/dataset/preprocessing/third_party/katex/src/symbols.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/pix2tex/dataset/preprocessing/third_party/katex/src/utils.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/pix2tex/dataset/preprocessing/third_party/match-at/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/pix2tex/dataset/preprocessing/third_party/match-at/lib/matchAt.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/pix2tex/dataset/preprocessing/third_party/match-at/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/pix2tex/dataset/render.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/pix2tex/dataset/scraping.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/pix2tex/dataset/transforms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/pix2tex/eval.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/pix2tex/gui.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/pix2tex/model/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/pix2tex/model/checkpoints/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/pix2tex/model/checkpoints/get_latest_checkpoint.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/pix2tex/model/dataset/tokenizer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/pix2tex/model/settings/config-vit.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/pix2tex/model/settings/config.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/pix2tex/model/settings/debug.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/pix2tex/models/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/pix2tex/models/hybrid.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/pix2tex/models/transformer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/pix2tex/models/utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/pix2tex/models/vit.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/pix2tex/resources/MathJax.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/pix2tex/resources/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/pix2tex/resources/icon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/pix2tex/resources/processing-icon-anim.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/pix2tex/resources/resources.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/pix2tex/resources/resources.qrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/pix2tex/setup_desktop.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/pix2tex/train.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/pix2tex/train_resizer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/pix2tex/utils/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/pix2tex/utils/utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/setup.cfg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/setup.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AAN/backpropagation_with_learning.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/AAN/backpropagation_with_learning.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +146,7 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
@@ -155,22 +250,13 @@
       <workItem from="1717951361157" duration="12000" />
       <workItem from="1718564616861" duration="955000" />
       <workItem from="1718572454860" duration="13000" />
-    </task>
-    <task id="LOCAL-00001" summary="Moving project to a separate repository">
-      <option name="closed" value="true" />
-      <created>1714403531997</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1714403531997</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Moving project to a separate repository">
-      <option name="closed" value="true" />
-      <created>1714403701972</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1714403701972</updated>
+      <workItem from="1719175600658" duration="7576000" />
+      <workItem from="1719676721640" duration="1909000" />
+      <workItem from="1719691926690" duration="2382000" />
+      <workItem from="1719763754907" duration="1184000" />
+      <workItem from="1719944978387" duration="2045000" />
+      <workItem from="1719948275449" duration="20000" />
+      <workItem from="1720116736804" duration="1047000" />
     </task>
     <task id="LOCAL-00003" summary="Moving project to a separate repository">
       <option name="closed" value="true" />
@@ -548,7 +634,23 @@
       <option name="project" value="LOCAL" />
       <updated>1717863686698</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="Torch linear regression done">
+      <option name="closed" value="true" />
+      <created>1719187656662</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1719187656662</updated>
+    </task>
+    <task id="LOCAL-00051" summary="control">
+      <option name="closed" value="true" />
+      <created>1719188256359</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1719188256359</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -557,10 +659,11 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Moving project to a separate repository" />
-    <MESSAGE value="control" />
     <MESSAGE value="Working minst neural network architecture" />
     <MESSAGE value="debug" />
-    <option name="LAST_COMMIT_MESSAGE" value="debug" />
+    <MESSAGE value="Torch linear regression done" />
+    <MESSAGE value="control" />
+    <option name="LAST_COMMIT_MESSAGE" value="control" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
