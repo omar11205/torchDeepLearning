@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c927f566-e1ab-4c11-a852-3620c04eb55d" name="Changes" comment="control">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/.gitignore" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/.readthedocs.yaml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/LICENSE" afterDir="false" />
@@ -103,13 +102,14 @@
       <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/pix2tex/utils/utils.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/setup.cfg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/LaTeX-OCR-0.0.31/LaTeX-OCR-0.0.31/setup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AAN/images/comp-graph-xSquared.png" beforeDir="false" afterPath="$PROJECT_DIR$/ANN/images/comp-graph-xSquared.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ChangesViewManager" show_ignored="true" />
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -257,22 +257,7 @@
       <workItem from="1719944978387" duration="2045000" />
       <workItem from="1719948275449" duration="20000" />
       <workItem from="1720116736804" duration="1047000" />
-    </task>
-    <task id="LOCAL-00003" summary="Moving project to a separate repository">
-      <option name="closed" value="true" />
-      <created>1714406045740</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1714406045740</updated>
-    </task>
-    <task id="LOCAL-00004" summary="control">
-      <option name="closed" value="true" />
-      <created>1714536614172</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1714536614172</updated>
+      <workItem from="1720716728573" duration="340000" />
     </task>
     <task id="LOCAL-00005" summary="control">
       <option name="closed" value="true" />
@@ -650,7 +635,23 @@
       <option name="project" value="LOCAL" />
       <updated>1719188256359</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="control">
+      <option name="closed" value="true" />
+      <created>1720716908613</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1720716908613</updated>
+    </task>
+    <task id="LOCAL-00053" summary="control">
+      <option name="closed" value="true" />
+      <created>1720716931694</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1720716931694</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
