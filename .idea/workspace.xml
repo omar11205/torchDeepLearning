@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c927f566-e1ab-4c11-a852-3620c04eb55d" name="Changes" comment="control" />
+    <list default="true" id="c927f566-e1ab-4c11-a852-3620c04eb55d" name="Changes" comment="control">
+      <change afterPath="$PROJECT_DIR$/ANN/datasetsIntro.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ANN/data/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/ANN/data/.gitignore" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,8 +18,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Jupyter Notebook" />
         <option value="Python Script" />
+        <option value="Jupyter Notebook" />
       </list>
     </option>
   </component>
@@ -63,6 +67,11 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\GIT\AI\torchDeepLearning\ANN\data" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -163,15 +172,8 @@
       <workItem from="1720716728573" duration="3643000" />
       <workItem from="1720738432499" duration="13266000" />
       <workItem from="1720798584538" duration="11207000" />
-      <workItem from="1720832496327" duration="7676000" />
-    </task>
-    <task id="LOCAL-00012" summary="control">
-      <option name="closed" value="true" />
-      <created>1715034169235</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1715034169235</updated>
+      <workItem from="1720832496327" duration="8516000" />
+      <workItem from="1720889588092" duration="8363000" />
     </task>
     <task id="LOCAL-00013" summary="control">
       <option name="closed" value="true" />
@@ -557,7 +559,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720841952035</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="control">
+      <option name="closed" value="true" />
+      <created>1720842416279</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1720842416279</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
