@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c927f566-e1ab-4c11-a852-3620c04eb55d" name="Changes" comment="control">
-      <change afterPath="$PROJECT_DIR$/pandas_cc/data/auto-mpg.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pandas_cc/pd_preprocessing.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pandas_cc/data/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pandas_cc/data/jh-simple-dataset.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pandas_cc/pd_preprocessing.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/pandas_cc/pd_preprocessing.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,6 +74,7 @@
       <recent name="D:\GIT\AI\torchDeepLearning\pandas_cc\data" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\GIT\AI\torchDeepLearning\pandas_cc\data" />
       <recent name="D:\GIT\AI\torchDeepLearning\ANN\data" />
     </key>
   </component>
@@ -188,15 +190,9 @@
       <workItem from="1721229661994" duration="7382000" />
       <workItem from="1721322981588" duration="2542000" />
       <workItem from="1721390964529" duration="4934000" />
-      <workItem from="1721401333594" duration="10154000" />
-    </task>
-    <task id="LOCAL-00020" summary="control">
-      <option name="closed" value="true" />
-      <created>1715805194136</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1715805194136</updated>
+      <workItem from="1721401333594" duration="10228000" />
+      <workItem from="1721432116512" duration="6510000" />
+      <workItem from="1721483373141" duration="5377000" />
     </task>
     <task id="LOCAL-00021" summary="control">
       <option name="closed" value="true" />
@@ -582,7 +578,15 @@
       <option name="project" value="LOCAL" />
       <updated>1721250171849</updated>
     </task>
-    <option name="localTasksCounter" value="69" />
+    <task id="LOCAL-00069" summary="control">
+      <option name="closed" value="true" />
+      <created>1721417389843</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1721417389844</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
