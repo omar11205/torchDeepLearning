@@ -5,9 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c927f566-e1ab-4c11-a852-3620c04eb55d" name="Changes" comment="control">
+      <change afterPath="$PROJECT_DIR$/ANN/images/nn-net-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ANN/images/nn-net-2.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/pandas_cc/data/jh-simple-dataset.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pandas_cc/pd_preprocessing.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/pandas_cc/pd_preprocessing.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ANN/backpropagation_demonstration.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/ANN/backpropagation_demonstration.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ANN/feature_engineering.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/ANN/feature_engineering.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -198,15 +201,7 @@
       <workItem from="1721660209221" duration="5960000" />
       <workItem from="1721668883109" duration="1706000" />
       <workItem from="1721679752759" duration="3954000" />
-      <workItem from="1721735464741" duration="1500000" />
-    </task>
-    <task id="LOCAL-00024" summary="control">
-      <option name="closed" value="true" />
-      <created>1716067642578</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1716067642578</updated>
+      <workItem from="1721735464741" duration="3729000" />
     </task>
     <task id="LOCAL-00025" summary="control">
       <option name="closed" value="true" />
@@ -592,7 +587,15 @@
       <option name="project" value="LOCAL" />
       <updated>1721684603630</updated>
     </task>
-    <option name="localTasksCounter" value="73" />
+    <task id="LOCAL-00073" summary="control">
+      <option name="closed" value="true" />
+      <created>1721737107220</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1721737107221</updated>
+    </task>
+    <option name="localTasksCounter" value="74" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
