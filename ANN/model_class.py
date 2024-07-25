@@ -19,7 +19,7 @@ class NNetwork(object):
 
     def __init__(self, sizes):
         """
-        parameters sizes: a LIST containing the number of neurons in the respective layers np.random.randn generates
+        sizes: a LIST containing the number of neurons in the respective layers np.random.randn generates
         gaussian distributions with mean 0 and STD of 1 list[1:] slices elements from index 1 to the end of the list,
         (exclude the first layer of neurons to have bias, the input layer don't have bias) zip() combines multiple
         iterables in a tuple list[:-1] slices all the elements in the list least the last one (the output layer don't
@@ -41,7 +41,7 @@ class NNetwork(object):
         """Return the number of test inputs for which the neural network outputs the correct result. Note that the
         neural network's output is assumed to be the index of whichever neuron in the final layer has the highest
         activation."""
-        test_results = [(np.argmax(self.feedforward(x)), y) for (x, y) in test_data]
+        test_results = [(np.argmax(self.feedforward(x)), np.argmax(y)) for (x, y) in test_data]
         return sum(int(x == y) for (x, y) in test_results)
 
     def cost_derivative(self, output_activations, y):
@@ -124,24 +124,24 @@ class NNetwork(object):
                 print(f'Epoch {j} complete')
 
 
-def import_data():
+def mnist_import_data():
     f = gzip.open('data/mnist.pkl.gz', 'rb')
     training_data, validation_data, test_data = pickle.load(f, encoding="latin1")
     f.close()
     return (training_data, validation_data, test_data)
 
 
-def one_hot_encoding(j):
+def mnist_one_hot_encoding(j):
     """Transform an integer result to the desired training result, that is a 10-dimensional column vector"""
     e = np.zeros((10,1))
     e[j] = 1.0
     return e
 
 
-def data_wrapper(show_lengths=False):
-    tr_d, va_d, te_d = import_data()
+def mnist_data_wrapper(show_lengths=False):
+    tr_d, va_d, te_d = mnist_import_data()
     training_inputs = [np.reshape(x, (784, 1)) for x in tr_d[0]]
-    training_results = [one_hot_encoding(y) for y in tr_d[1]]
+    training_results = [mnist_one_hot_encoding(y) for y in tr_d[1]]
     training_data = zip(training_inputs, training_results)
     validation_inputs = [np.reshape(x,(784,1)) for x in va_d[0]]
     validation_data = zip(validation_inputs, va_d[1])
@@ -154,10 +154,10 @@ def data_wrapper(show_lengths=False):
     return (training_data, validation_data, test_data)
 
 
-training_data, validation_data, test_data = data_wrapper(show_lengths=True)
+# training_data, validation_data, test_data = mnist_data_wrapper(show_lengths=True)
 
-net = NNetwork([784, 30, 10])
-net.sgd(training_data, 30, 10, 0.5, test_data=test_data)
+# net = NNetwork([784, 30, 10])
+# net.sgd(training_data, 30, 10, 0.5, test_data=test_data)
 
 
 
