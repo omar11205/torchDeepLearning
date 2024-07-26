@@ -41,7 +41,7 @@ class NNetwork(object):
         """Return the number of test inputs for which the neural network outputs the correct result. Note that the
         neural network's output is assumed to be the index of whichever neuron in the final layer has the highest
         activation."""
-        test_results = [(np.argmax(self.feedforward(x)), np.argmax(y)) for (x, y) in test_data]
+        test_results = [(np.argmax(self.feedforward(x)), y) for (x, y) in test_data]
         return sum(int(x == y) for (x, y) in test_results)
 
     def cost_derivative(self, output_activations, y):
@@ -154,10 +154,10 @@ def mnist_data_wrapper(show_lengths=False):
     return (training_data, validation_data, test_data)
 
 
-# training_data, validation_data, test_data = mnist_data_wrapper(show_lengths=True)
+#  training_data, validation_data, test_data = mnist_data_wrapper(show_lengths=True)
 
 # net = NNetwork([784, 30, 10])
-# net.sgd(training_data, 30, 10, 0.5, test_data=test_data)
+# net.sgd(training_data, 30, 10, 3, test_data=test_data)
 
 
 
