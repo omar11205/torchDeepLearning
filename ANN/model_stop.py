@@ -115,8 +115,8 @@ train_data = iris_data_wrapper(x_train, y_train)
 test_data = iris_data_wrapper(x_test, y_test)
 
 # Initialize and train the network
-net = NNetwork([4, 30, 3])
-net.sgd(train_data, 30, 10, 3.0, test_data=test_data)
+# net = NNetwork([4, 30, 3])
+# net.sgd(train_data, 30, 10, 3.0, test_data=test_data)
 
 
 

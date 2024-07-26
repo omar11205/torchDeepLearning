@@ -93,8 +93,8 @@ def prepare_data(x, y):
     return train_data, test_data
 
 
-x, y = load_data()
-train_data, test_data = prepare_data(x, y)
+# x, y = load_data()
+# train_data, test_data = prepare_data(x, y)
 
-net = NNetwork([7, 100, 1])
-net.sgd(train_data, 500, 60, 0.05, test_data=test_data)
+# net = NNetwork([7, 100, 1])
+# net.sgd(train_data, 500, 60, 0.05, test_data=test_data)
