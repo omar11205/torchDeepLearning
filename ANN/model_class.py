@@ -1,3 +1,9 @@
+"""
+Code for training a classification task with deep neural networks
+Incoming updates to include Adam optimization and ReLU activation function
+"""
+
+
 import numpy as np
 import random
 import pickle
