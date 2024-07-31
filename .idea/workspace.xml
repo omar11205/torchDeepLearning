@@ -7,7 +7,6 @@
     <list default="true" id="c927f566-e1ab-4c11-a852-3620c04eb55d" name="Changes" comment="debug and updating manual model for regression">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ANN/torch_kfolds.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/ANN/torch_kfolds.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ANN/torch_stop.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/ANN/torch_stop.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -192,23 +191,8 @@
       <workItem from="1722113652115" duration="4824000" />
       <workItem from="1722130482394" duration="4084000" />
       <workItem from="1722186617446" duration="22217000" />
-      <workItem from="1722260653889" duration="27435000" />
-    </task>
-    <task id="LOCAL-00008" summary="control">
-      <option name="closed" value="true" />
-      <created>1714705819789</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1714705819789</updated>
-    </task>
-    <task id="LOCAL-00009" summary="control">
-      <option name="closed" value="true" />
-      <created>1714755325733</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1714755325733</updated>
+      <workItem from="1722260653889" duration="31758000" />
+      <workItem from="1722357103429" duration="19748000" />
     </task>
     <task id="LOCAL-00010" summary="control">
       <option name="closed" value="true" />
@@ -586,7 +570,23 @@
       <option name="project" value="LOCAL" />
       <updated>1722219121989</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="debug and updating manual model for regression">
+      <option name="closed" value="true" />
+      <created>1722308667905</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1722308667905</updated>
+    </task>
+    <task id="LOCAL-00058" summary="debug and updating manual model for regression">
+      <option name="closed" value="true" />
+      <created>1722308689041</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1722308689041</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
