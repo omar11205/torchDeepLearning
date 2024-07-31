@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c927f566-e1ab-4c11-a852-3620c04eb55d" name="Changes" comment="debug and updating manual model for regression">
+      <change afterPath="$PROJECT_DIR$/ANN/torch_embedding_layers.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ANN/torch_kfolds.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/ANN/torch_kfolds.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ANN/iris.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/ANN/iris.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,8 +84,8 @@
       <recent name="C:\GITAI\artificial_intelligence\torchDeepLearning\ANN\data" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\GITAI\artificial_intelligence\torchDeepLearning\pandas_cc\data" />
       <recent name="C:\GITAI\artificial_intelligence\torchDeepLearning\ANN\data" />
+      <recent name="C:\GITAI\artificial_intelligence\torchDeepLearning\pandas_cc\data" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -192,15 +193,9 @@
       <workItem from="1722130482394" duration="4084000" />
       <workItem from="1722186617446" duration="22217000" />
       <workItem from="1722260653889" duration="31758000" />
-      <workItem from="1722357103429" duration="19748000" />
-    </task>
-    <task id="LOCAL-00010" summary="control">
-      <option name="closed" value="true" />
-      <created>1714759641764</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1714759641764</updated>
+      <workItem from="1722357103429" duration="21337000" />
+      <workItem from="1722436584551" duration="2110000" />
+      <workItem from="1722443859720" duration="11669000" />
     </task>
     <task id="LOCAL-00011" summary="control">
       <option name="closed" value="true" />
@@ -586,7 +581,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722308689041</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="debug and updating manual model for regression">
+      <option name="closed" value="true" />
+      <created>1722397779969</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1722397779969</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
