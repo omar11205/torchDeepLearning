@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c927f566-e1ab-4c11-a852-3620c04eb55d" name="Changes" comment="debug and updating manual model for regression">
-      <change afterPath="$PROJECT_DIR$/ANN/torch_embedding_layers.ipynb" afterDir="false" />
+    <list default="true" id="c927f566-e1ab-4c11-a852-3620c04eb55d" name="Changes" comment="creating torch embedding layers notebook">
+      <change afterPath="$PROJECT_DIR$/ANN/torch_schedules.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ANN/iris.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/ANN/iris.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ANN/torch_kfolds.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/ANN/torch_kfolds.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -195,15 +195,8 @@
       <workItem from="1722260653889" duration="31758000" />
       <workItem from="1722357103429" duration="21337000" />
       <workItem from="1722436584551" duration="2110000" />
-      <workItem from="1722443859720" duration="11669000" />
-    </task>
-    <task id="LOCAL-00011" summary="control">
-      <option name="closed" value="true" />
-      <created>1714971075008</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1714971075008</updated>
+      <workItem from="1722443859720" duration="17817000" />
+      <workItem from="1722466146824" duration="3970000" />
     </task>
     <task id="LOCAL-00012" summary="control">
       <option name="closed" value="true" />
@@ -589,7 +582,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722397779969</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="creating torch embedding layers notebook">
+      <option name="closed" value="true" />
+      <created>1722460050993</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1722460050993</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -613,7 +614,8 @@
     <MESSAGE value="Working minst neural network architecture" />
     <MESSAGE value="debug" />
     <MESSAGE value="debug and updating manual model for regression" />
-    <option name="LAST_COMMIT_MESSAGE" value="debug and updating manual model for regression" />
+    <MESSAGE value="creating torch embedding layers notebook" />
+    <option name="LAST_COMMIT_MESSAGE" value="creating torch embedding layers notebook" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
