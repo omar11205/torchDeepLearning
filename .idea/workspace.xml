@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c927f566-e1ab-4c11-a852-3620c04eb55d" name="Changes" comment="control">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ANN/torch_schedules.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/ANN/torch_schedules.ipynb" afterDir="false" />
     </list>
@@ -91,8 +90,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-PY-241.17011.127" />
-        <option value="bundled-python-sdk-48aec45f0201-7e9c3bbb6e34-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-241.17011.127" />
+        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-PY-241.14494.241" />
+        <option value="bundled-python-sdk-0509580d9d50-28c9f5db9ffe-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-241.14494.241" />
       </set>
     </attachedChunks>
   </component>
@@ -197,14 +196,8 @@
       <workItem from="1722436584551" duration="2110000" />
       <workItem from="1722443859720" duration="17817000" />
       <workItem from="1722466146824" duration="3970000" />
-    </task>
-    <task id="LOCAL-00012" summary="control">
-      <option name="closed" value="true" />
-      <created>1715034169235</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1715034169235</updated>
+      <workItem from="1722570450062" duration="93000" />
+      <workItem from="1722604279680" duration="1854000" />
     </task>
     <task id="LOCAL-00013" summary="control">
       <option name="closed" value="true" />
@@ -590,7 +583,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722460050993</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="control">
+      <option name="closed" value="true" />
+      <created>1722570483395</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1722570483395</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -610,12 +611,12 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Moving project to a separate repository" />
-    <MESSAGE value="control" />
     <MESSAGE value="Working minst neural network architecture" />
     <MESSAGE value="debug" />
     <MESSAGE value="debug and updating manual model for regression" />
     <MESSAGE value="creating torch embedding layers notebook" />
-    <option name="LAST_COMMIT_MESSAGE" value="creating torch embedding layers notebook" />
+    <MESSAGE value="control" />
+    <option name="LAST_COMMIT_MESSAGE" value="control" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
