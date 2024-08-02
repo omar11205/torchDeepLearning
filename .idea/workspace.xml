@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c927f566-e1ab-4c11-a852-3620c04eb55d" name="Changes" comment="creating torch embedding layers notebook">
-      <change afterPath="$PROJECT_DIR$/ANN/torch_schedules.ipynb" afterDir="false" />
+    <list default="true" id="c927f566-e1ab-4c11-a852-3620c04eb55d" name="Changes" comment="control">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ANN/torch_kfolds.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/ANN/torch_kfolds.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ANN/torch_schedules.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/ANN/torch_schedules.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
