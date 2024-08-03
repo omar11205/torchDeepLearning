@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c927f566-e1ab-4c11-a852-3620c04eb55d" name="Changes" comment="control">
+      <change afterPath="$PROJECT_DIR$/ANN/torch_dropout_regurarization.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ANN/torch_schedules.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/ANN/torch_schedules.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -198,14 +198,7 @@
       <workItem from="1722466146824" duration="3970000" />
       <workItem from="1722570450062" duration="93000" />
       <workItem from="1722604279680" duration="1854000" />
-    </task>
-    <task id="LOCAL-00013" summary="control">
-      <option name="closed" value="true" />
-      <created>1715034245199</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1715034245199</updated>
+      <workItem from="1722615287376" duration="13137000" />
     </task>
     <task id="LOCAL-00014" summary="control">
       <option name="closed" value="true" />
@@ -591,7 +584,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722570483395</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="control">
+      <option name="closed" value="true" />
+      <created>1722616849336</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1722616849336</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
