@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c927f566-e1ab-4c11-a852-3620c04eb55d" name="Changes" comment="creating torch embedding layers notebook">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ANN/feature_engineering.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/ANN/torch_taxi_fares.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ANN/torch_taxi_fares.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/ANN/torch_taxi_fares.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -204,15 +204,8 @@
       <workItem from="1722736479952" duration="1039000" />
       <workItem from="1722737807618" duration="2303000" />
       <workItem from="1722787814285" duration="12801000" />
-      <workItem from="1722878308020" duration="5863000" />
-    </task>
-    <task id="LOCAL-00016" summary="control">
-      <option name="closed" value="true" />
-      <created>1715227524747</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1715227524747</updated>
+      <workItem from="1722878308020" duration="6424000" />
+      <workItem from="1722909178986" duration="3197000" />
     </task>
     <task id="LOCAL-00017" summary="control">
       <option name="closed" value="true" />
@@ -598,7 +591,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722740438000</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="creating torch embedding layers notebook">
+      <option name="closed" value="true" />
+      <created>1722884816676</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1722884816676</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
