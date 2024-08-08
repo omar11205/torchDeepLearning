@@ -7,7 +7,6 @@
     <list default="true" id="c927f566-e1ab-4c11-a852-3620c04eb55d" name="Changes" comment="updating project">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ANN/torch_taxi_fares.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/ANN/torch_taxi_fares.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APIs/maps_api.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/APIs/maps_api.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -210,15 +209,7 @@
       <workItem from="1722909178986" duration="3197000" />
       <workItem from="1722983425705" duration="1292000" />
       <workItem from="1722996985028" duration="11405000" />
-      <workItem from="1723066577977" duration="11114000" />
-    </task>
-    <task id="LOCAL-00019" summary="control">
-      <option name="closed" value="true" />
-      <created>1715802521077</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1715802521077</updated>
+      <workItem from="1723066577977" duration="16560000" />
     </task>
     <task id="LOCAL-00020" summary="control">
       <option name="closed" value="true" />
@@ -604,7 +595,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722984026995</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="updating project">
+      <option name="closed" value="true" />
+      <created>1723080237693</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1723080237693</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
