@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c927f566-e1ab-4c11-a852-3620c04eb55d" name="Changes" comment="creating torch embedding layers notebook">
+    <list default="true" id="c927f566-e1ab-4c11-a852-3620c04eb55d" name="Changes" comment="updating project">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ANN/torch_taxi_fares.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/ANN/torch_taxi_fares.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/APIs/maps_api.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/APIs/maps_api.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,6 +84,7 @@
       <recent name="C:\GITAI\artificial_intelligence\torchDeepLearning\ANN\data" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\GITAI\artificial_intelligence\torchDeepLearning\APIs" />
       <recent name="C:\GITAI\artificial_intelligence\torchDeepLearning\ANN\data" />
       <recent name="C:\GITAI\artificial_intelligence\torchDeepLearning\pandas_cc\data" />
     </key>
@@ -206,22 +208,9 @@
       <workItem from="1722787814285" duration="12801000" />
       <workItem from="1722878308020" duration="6424000" />
       <workItem from="1722909178986" duration="3197000" />
-    </task>
-    <task id="LOCAL-00017" summary="control">
-      <option name="closed" value="true" />
-      <created>1715724354546</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1715724354546</updated>
-    </task>
-    <task id="LOCAL-00018" summary="control">
-      <option name="closed" value="true" />
-      <created>1715792854099</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1715792854099</updated>
+      <workItem from="1722983425705" duration="1292000" />
+      <workItem from="1722996985028" duration="11405000" />
+      <workItem from="1723066577977" duration="11114000" />
     </task>
     <task id="LOCAL-00019" summary="control">
       <option name="closed" value="true" />
@@ -599,7 +588,23 @@
       <option name="project" value="LOCAL" />
       <updated>1722884816676</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="updating project">
+      <option name="closed" value="true" />
+      <created>1722983526518</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1722983526518</updated>
+    </task>
+    <task id="LOCAL-00067" summary="updating project">
+      <option name="closed" value="true" />
+      <created>1722984026995</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1722984026995</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -624,7 +629,8 @@
     <MESSAGE value="debug and updating manual model for regression" />
     <MESSAGE value="control" />
     <MESSAGE value="creating torch embedding layers notebook" />
-    <option name="LAST_COMMIT_MESSAGE" value="creating torch embedding layers notebook" />
+    <MESSAGE value="updating project" />
+    <option name="LAST_COMMIT_MESSAGE" value="updating project" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
