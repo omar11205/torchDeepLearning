@@ -83,7 +83,7 @@ class NNetwork(object):
 
 # Load and preprocess the IRIS dataset
 def load_iris_data():
-    df = pd.read_csv('data/iris.csv', na_values=["NA", "?"])
+    df = pd.read_csv('../data/iris.csv', na_values=["NA", "?"])
     X = df[['sepal_l', 'sepal_w', 'petal_l', 'petal_w']].values.astype(np.float32)
     y = df['species'].values
 

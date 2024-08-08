@@ -123,7 +123,7 @@ class NNetwork(object):
 
 
 def load_data():
-    df = pd.read_csv(filepath_or_buffer='data/auto-mpg.csv', na_values=["NA","?"])
+    df = pd.read_csv(filepath_or_buffer='../data/auto-mpg.csv', na_values=["NA", "?"])
     df = df.dropna()
     x = df[["cylinders", "displacement", "horsepower", "weight", "acceleration", "year", "origin"]].values.astype(np.float32)
     y = df["mpg"].values.astype(np.float32)

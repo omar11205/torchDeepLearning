@@ -6,7 +6,21 @@
   <component name="ChangeListManager">
     <list default="true" id="c927f566-e1ab-4c11-a852-3620c04eb55d" name="Changes" comment="updating project">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ANN/6_iris_introduction.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/ANN/6_iris_introduction.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ANN/advanced_torch_gradient.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/ANN/5_advanced_torch_gradient.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ANN/backpropagation_demonstration.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/ANN/1_backpropagation_demonstration.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ANN/backpropagation_with_learning.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/ANN/2_backpropagation_with_learning.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ANN/basic_torch_gradient.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/ANN/4_basic_torch_gradient.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ANN/computational_graph_from_scratch.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/ANN/3_computational_graph_from_scratch.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ANN/datasetsIntro.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ANN/iris.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/ANN/8_torch_iris_classification.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ANN/model_class.py" beforeDir="false" afterPath="$PROJECT_DIR$/ANN/manual_models/model_class.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ANN/model_reg.py" beforeDir="false" afterPath="$PROJECT_DIR$/ANN/manual_models/model_reg.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ANN/model_stop.py" beforeDir="false" afterPath="$PROJECT_DIR$/ANN/manual_models/model_stop.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ANN/torch_linear_regression.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/ANN/6_torch_linear_regression.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ANN/torch_mpg_regression.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/ANN/7_torch_mpg_regression.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ANN/torch_taxi_fares.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/ANN/torch_taxi_fares.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/APIs/maps_api.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/APIs/maps_api.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -209,15 +223,9 @@
       <workItem from="1722909178986" duration="3197000" />
       <workItem from="1722983425705" duration="1292000" />
       <workItem from="1722996985028" duration="11405000" />
-      <workItem from="1723066577977" duration="16560000" />
-    </task>
-    <task id="LOCAL-00020" summary="control">
-      <option name="closed" value="true" />
-      <created>1715805194136</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1715805194136</updated>
+      <workItem from="1723066577977" duration="17863000" />
+      <workItem from="1723132803868" duration="2675000" />
+      <workItem from="1723141422889" duration="4426000" />
     </task>
     <task id="LOCAL-00021" summary="control">
       <option name="closed" value="true" />
@@ -603,7 +611,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723080237693</updated>
     </task>
-    <option name="localTasksCounter" value="69" />
+    <task id="LOCAL-00069" summary="updating project">
+      <option name="closed" value="true" />
+      <created>1723087688308</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1723087688308</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
