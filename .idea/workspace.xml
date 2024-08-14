@@ -5,13 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c927f566-e1ab-4c11-a852-3620c04eb55d" name="Changes" comment="control">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ANN/02_gradient_descent_manual_model.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/ANN/02_gradient_descent_manual_model.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ANN/03_computational_graph_from_scratch.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/ANN/03_computational_graph_from_scratch.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ANN/04_basic_torch_gradient.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/ANN/04_basic_torch_gradient.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ANN/06_torch_linear_regression.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/ANN/06_torch_linear_regression.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ANN/08_torch_iris_classification.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/ANN/08_torch_iris_classification.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ANN/18_torch_taxi_fares_p1.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/ANN/18_torch_taxi_fares_p1.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ANN/19_torch_taxi_fares_p2.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/ANN/19_torch_taxi_fares_p2.ipynb" afterDir="false" />
     </list>
@@ -227,15 +221,10 @@
       <workItem from="1723345598063" duration="770000" />
       <workItem from="1723438176832" duration="1984000" />
       <workItem from="1723467034832" duration="23993000" />
-      <workItem from="1723582922529" duration="12286000" />
-    </task>
-    <task id="LOCAL-00024" summary="control">
-      <option name="closed" value="true" />
-      <created>1716067642578</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1716067642578</updated>
+      <workItem from="1723582922529" duration="12335000" />
+      <workItem from="1723642310746" duration="1667000" />
+      <workItem from="1723644035336" duration="1618000" />
+      <workItem from="1723645737862" duration="10746000" />
     </task>
     <task id="LOCAL-00025" summary="control">
       <option name="closed" value="true" />
@@ -621,7 +610,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723438236768</updated>
     </task>
-    <option name="localTasksCounter" value="73" />
+    <task id="LOCAL-00073" summary="control">
+      <option name="closed" value="true" />
+      <created>1723601944643</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1723601944643</updated>
+    </task>
+    <option name="localTasksCounter" value="74" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -644,10 +641,10 @@
     <MESSAGE value="Working minst neural network architecture" />
     <MESSAGE value="debug" />
     <MESSAGE value="debug and updating manual model for regression" />
-    <MESSAGE value="control" />
     <MESSAGE value="creating torch embedding layers notebook" />
     <MESSAGE value="updating project" />
-    <option name="LAST_COMMIT_MESSAGE" value="updating project" />
+    <MESSAGE value="control" />
+    <option name="LAST_COMMIT_MESSAGE" value="control" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
