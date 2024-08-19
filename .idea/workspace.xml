@@ -5,11 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c927f566-e1ab-4c11-a852-3620c04eb55d" name="Changes" comment="updating project">
-      <change afterPath="$PROJECT_DIR$/ANN/19_torch_taxi_fares_p3.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ANN/18_torch_taxi_fares_p1.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/ANN/18_torch_taxi_fares_p1.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ANN/19_torch_taxi_fares_p2.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/ANN/19_torch_taxi_fares_p2.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ANN/19_torch_taxi_fares_p3.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/ANN/20_torch_taxi_fares_p3.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/numpy_cc/np_array.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/numpy_cc/np_array.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,26 +61,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Python.model_class.executor": "Run",
-    "Python.model_reg.executor": "Run",
-    "Python.model_stop.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/GITAI/artificial_intelligence/torchDeepLearning/ANN",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "python.debugger.dataview.coloredbydefault": "false",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Python.model_class.executor&quot;: &quot;Run&quot;,
+    &quot;Python.model_reg.executor&quot;: &quot;Run&quot;,
+    &quot;Python.model_stop.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/GITAI/artificial_intelligence/torchDeepLearning/ANN&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;python.debugger.dataview.coloredbydefault&quot;: &quot;false&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\GITAI\artificial_intelligence\torchDeepLearning\ANN" />
@@ -234,23 +234,10 @@
       <workItem from="1723896935357" duration="648000" />
       <workItem from="1723903825189" duration="18172000" />
       <workItem from="1723937814518" duration="7762000" />
-      <workItem from="1723948335372" duration="3922000" />
-    </task>
-    <task id="LOCAL-00026" summary="control">
-      <option name="closed" value="true" />
-      <created>1716219936617</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1716219936617</updated>
-    </task>
-    <task id="LOCAL-00027" summary="control">
-      <option name="closed" value="true" />
-      <created>1716240333304</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1716240333304</updated>
+      <workItem from="1723948335372" duration="4229000" />
+      <workItem from="1723993462146" duration="4692000" />
+      <workItem from="1724017028600" duration="3913000" />
+      <workItem from="1724021266352" duration="8113000" />
     </task>
     <task id="LOCAL-00028" summary="control">
       <option name="closed" value="true" />
@@ -628,7 +615,23 @@
       <option name="project" value="LOCAL" />
       <updated>1723662476821</updated>
     </task>
-    <option name="localTasksCounter" value="75" />
+    <task id="LOCAL-00075" summary="updating project">
+      <option name="closed" value="true" />
+      <created>1723956280759</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1723956280759</updated>
+    </task>
+    <task id="LOCAL-00076" summary="updating project">
+      <option name="closed" value="true" />
+      <created>1723956309310</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1723956309310</updated>
+    </task>
+    <option name="localTasksCounter" value="77" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -652,9 +655,9 @@
     <MESSAGE value="debug" />
     <MESSAGE value="debug and updating manual model for regression" />
     <MESSAGE value="creating torch embedding layers notebook" />
-    <MESSAGE value="updating project" />
     <MESSAGE value="control" />
-    <option name="LAST_COMMIT_MESSAGE" value="control" />
+    <MESSAGE value="updating project" />
+    <option name="LAST_COMMIT_MESSAGE" value="updating project" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
