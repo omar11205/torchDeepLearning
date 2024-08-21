@@ -8,8 +8,9 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ANN/18_torch_taxi_fares_p1.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/ANN/18_torch_taxi_fares_p1.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ANN/19_torch_taxi_fares_p2.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/ANN/19_torch_taxi_fares_p2.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ANN/19_torch_taxi_fares_p3.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/ANN/20_torch_taxi_fares_p3.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/numpy_cc/np_array.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/numpy_cc/np_array.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/numpy_cc/np_array.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/numpy_cc/01_np_array.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/numpy_cc/np_array_comprehension.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/numpy_cc/03_list_comprehension.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/numpy_cc/np_operations.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/numpy_cc/02_np_operations.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -237,15 +238,15 @@
       <workItem from="1723948335372" duration="4229000" />
       <workItem from="1723993462146" duration="4692000" />
       <workItem from="1724017028600" duration="3913000" />
-      <workItem from="1724021266352" duration="8113000" />
-    </task>
-    <task id="LOCAL-00028" summary="control">
-      <option name="closed" value="true" />
-      <created>1716252502398</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1716252502398</updated>
+      <workItem from="1724021266352" duration="8342000" />
+      <workItem from="1724079273263" duration="111000" />
+      <workItem from="1724083578974" duration="7027000" />
+      <workItem from="1724112486816" duration="597000" />
+      <workItem from="1724171699186" duration="1950000" />
+      <workItem from="1724182530762" duration="1033000" />
+      <workItem from="1724187239743" duration="3107000" />
+      <workItem from="1724194321864" duration="38042000" />
+      <workItem from="1724270509349" duration="3118000" />
     </task>
     <task id="LOCAL-00029" summary="control">
       <option name="closed" value="true" />
@@ -631,7 +632,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723956309310</updated>
     </task>
-    <option name="localTasksCounter" value="77" />
+    <task id="LOCAL-00077" summary="updating project">
+      <option name="closed" value="true" />
+      <created>1724034038384</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1724034038385</updated>
+    </task>
+    <option name="localTasksCounter" value="78" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
