@@ -5,12 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c927f566-e1ab-4c11-a852-3620c04eb55d" name="Changes" comment="updating project">
+      <change afterPath="$PROJECT_DIR$/numpy_cc/images/list_comprehension_network.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ANN/18_torch_taxi_fares_p1.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/ANN/18_torch_taxi_fares_p1.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ANN/19_torch_taxi_fares_p2.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/ANN/19_torch_taxi_fares_p2.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/numpy_cc/np_array.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/numpy_cc/01_np_array.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/numpy_cc/np_array_comprehension.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/numpy_cc/03_list_comprehension.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/numpy_cc/np_operations.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/numpy_cc/02_np_operations.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ANN/15_torch_lr_schedules.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/ANN/15_torch_lr_schedules.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ANN/20_torch_taxi_fares_p3.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/ANN/20_torch_taxi_fares_p3.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ANN/class_models/early_stop.py" beforeDir="false" afterPath="$PROJECT_DIR$/ANN/class_models/early_stop.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/numpy_cc/03_list_comprehension.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/numpy_cc/03_list_comprehension.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -247,6 +247,7 @@
       <workItem from="1724187239743" duration="3107000" />
       <workItem from="1724194321864" duration="38042000" />
       <workItem from="1724270509349" duration="3118000" />
+      <workItem from="1724278094573" duration="31797000" />
     </task>
     <task id="LOCAL-00029" summary="control">
       <option name="closed" value="true" />

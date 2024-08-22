@@ -1,5 +1,7 @@
 # Defining an early stopping class for PyTorch
 import copy
+
+
 class EarlyStopping:
   def __init__(self, patience=5, min_delta=0, restore_best_weights=True):
     self.patience = patience
@@ -9,6 +11,10 @@ class EarlyStopping:
     self.best_loss = None
     self.patience_counter = 0
     self.status = ""
+
+  def reset(self):
+    self.status = ""
+    self.patience_counter = 0
 
   def __call__(self, model, val_loss):
     if self.best_loss is None:
@@ -26,6 +32,7 @@ class EarlyStopping:
         self.status = f"Early stopping triggered after {self.patience_counter} epochs."
         if self.restore_best_weights:
           model.load_state_dict(self.best_model)
+        self.reset()
         return True
     return False
 
