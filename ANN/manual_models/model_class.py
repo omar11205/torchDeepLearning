@@ -3,11 +3,11 @@ Code for training a classification task with deep neural networks
 Incoming updates to include Adam optimization and ReLU activation function
 """
 
-
 import numpy as np
 import random
 import pickle
 import gzip
+
 
 def sigmoid(z):
     return 1.0 / (1.0 + np.exp(-z))
@@ -139,7 +139,7 @@ def mnist_import_data():
 
 def mnist_one_hot_encoding(j):
     """Transform an integer result to the desired training result, that is a 10-dimensional column vector"""
-    e = np.zeros((10,1))
+    e = np.zeros((10, 1))
     e[j] = 1.0
     return e
 
@@ -149,9 +149,9 @@ def mnist_data_wrapper(show_lengths=False):
     training_inputs = [np.reshape(x, (784, 1)) for x in tr_d[0]]
     training_results = [mnist_one_hot_encoding(y) for y in tr_d[1]]
     training_data = zip(training_inputs, training_results)
-    validation_inputs = [np.reshape(x,(784,1)) for x in va_d[0]]
+    validation_inputs = [np.reshape(x, (784, 1)) for x in va_d[0]]
     validation_data = zip(validation_inputs, va_d[1])
-    test_inputs = [np.reshape(x,(784,1)) for x in te_d[0]]
+    test_inputs = [np.reshape(x, (784, 1)) for x in te_d[0]]
     test_data = zip(test_inputs, te_d[1])
     if show_lengths:
         print(f'Training data length: {len(list(training_inputs))}')
@@ -160,10 +160,7 @@ def mnist_data_wrapper(show_lengths=False):
     return (training_data, validation_data, test_data)
 
 
-#  training_data, validation_data, test_data = mnist_data_wrapper(show_lengths=True)
-
-# net = NNetwork([784, 30, 10])
-# net.sgd(training_data, 30, 10, 3, test_data=test_data)
-
-
-
+if __name__ == '__main__':
+    training_data, validation_data, test_data = mnist_data_wrapper(show_lengths=True)
+    net = NNetwork([784, 30, 10])
+    net.sgd(training_data, 30, 10, 3, test_data=test_data)

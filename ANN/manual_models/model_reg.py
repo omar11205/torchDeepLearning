@@ -1,5 +1,5 @@
 """
-Code for training a regression task with deep neural networks
+Code for training a regression model with deep neural networks
 """
 
 import numpy as np
@@ -139,8 +139,9 @@ def prepare_data(x, y):
     return train_data, test_data
 
 
-# x, y = load_data()
-# train_data, test_data = prepare_data(x, y)
+if __name__ == '__main__':
+    x, y = load_data()
+    train_data, test_data = prepare_data(x, y)
 
-# net = NNetwork([7, 50, 25, 1], optimizer="ADAM", activation="relu")
-# net.sgd(train_data, 1000, 30, 0.0001, test_data=test_data)
+    net = NNetwork([7, 50, 25, 1], optimizer="ADAM", activation="relu")
+    net.sgd(train_data, 1000, 30, 0.0001, test_data=test_data)

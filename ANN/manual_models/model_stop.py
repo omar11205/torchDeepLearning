@@ -107,16 +107,18 @@ def iris_data_wrapper(X, y):
     data = list(zip(inputs, results))
     return data
 
-# Load normalized and encoded data
-x_train, x_test, y_train, y_test = load_iris_data()
 
-# Prepare data for NNetwork
-train_data = iris_data_wrapper(x_train, y_train)
-test_data = iris_data_wrapper(x_test, y_test)
+if __name__ == '__main__':
+    # Load normalized and encoded data
+    x_train, x_test, y_train, y_test = load_iris_data()
 
-# Initialize and train the network
-# net = NNetwork([4, 30, 3])
-# net.sgd(train_data, 30, 10, 3.0, test_data=test_data)
+    # Prepare data for NNetwork
+    train_data = iris_data_wrapper(x_train, y_train)
+    test_data = iris_data_wrapper(x_test, y_test)
+
+    # Initialize and train the network
+    net = NNetwork([4, 30, 3])
+    net.sgd(train_data, 30, 10, 3.0, test_data=test_data)
 
 
 
