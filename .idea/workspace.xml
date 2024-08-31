@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c927f566-e1ab-4c11-a852-3620c04eb55d" name="Changes" comment="updating project">
+      <change afterPath="$PROJECT_DIR$/ANN/22_torch_taxi_fares_p5.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ANN/06_torch_linear_regression.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/ANN/06_torch_linear_regression.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ANN/18_torch_taxi_fares_p1.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/ANN/18_torch_taxi_fares_p1.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ANN/19_torch_taxi_fares_p2.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/ANN/19_torch_taxi_fares_p2.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ANN/21_torch_taxi_fares_p4.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/ANN/21_torch_taxi_fares_p4.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -261,15 +261,7 @@
       <workItem from="1724875051628" duration="28000" />
       <workItem from="1724955180747" duration="6197000" />
       <workItem from="1724974486194" duration="16135000" />
-      <workItem from="1725025461376" duration="20947000" />
-    </task>
-    <task id="LOCAL-00038" summary="control">
-      <option name="closed" value="true" />
-      <created>1717292514432</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1717292514432</updated>
+      <workItem from="1725025461376" duration="30582000" />
     </task>
     <task id="LOCAL-00039" summary="control">
       <option name="closed" value="true" />
@@ -655,7 +647,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724993830870</updated>
     </task>
-    <option name="localTasksCounter" value="87" />
+    <task id="LOCAL-00087" summary="updating project">
+      <option name="closed" value="true" />
+      <created>1725058469903</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1725058469903</updated>
+    </task>
+    <option name="localTasksCounter" value="88" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
