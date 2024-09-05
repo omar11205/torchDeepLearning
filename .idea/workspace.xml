@@ -5,12 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c927f566-e1ab-4c11-a852-3620c04eb55d" name="Changes" comment="updating project">
-      <change afterPath="$PROJECT_DIR$/CNN/images/convolution_2D.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CNN/images/internal_conv.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CNN/mnist_ann.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ANN/02_gradient_descent_manual_model.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/ANN/02_gradient_descent_manual_model.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ANN/17_torch_embedding_layers.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/ANN/17_torch_embedding_layers.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ANN/18_torch_taxi_fares_p1.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/ANN/18_torch_taxi_fares_p1.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ANN/06_torch_linear_regression.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/ANN/06_torch_linear_regression.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CNN/1D_convolution_operation.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/CNN/1D_convolution_operation.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CNN/2D_convolution_operation.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/CNN/2D_convolution_operation.ipynb" afterDir="false" />
     </list>
@@ -260,23 +258,11 @@
       <workItem from="1725338639070" duration="3053000" />
       <workItem from="1725368250247" duration="14000000" />
       <workItem from="1725390548258" duration="23957000" />
-      <workItem from="1725454650425" duration="35270000" />
-    </task>
-    <task id="LOCAL-00039" summary="control">
-      <option name="closed" value="true" />
-      <created>1717366689157</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1717366689157</updated>
-    </task>
-    <task id="LOCAL-00040" summary="control">
-      <option name="closed" value="true" />
-      <created>1717383736842</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1717383736842</updated>
+      <workItem from="1725454650425" duration="35717000" />
+      <workItem from="1725504540207" duration="350000" />
+      <workItem from="1725509398168" duration="2323000" />
+      <workItem from="1725553388239" duration="19797000" />
+      <workItem from="1725577952218" duration="313000" />
     </task>
     <task id="LOCAL-00041" summary="control">
       <option name="closed" value="true" />
@@ -654,7 +640,23 @@
       <option name="project" value="LOCAL" />
       <updated>1725465895746</updated>
     </task>
-    <option name="localTasksCounter" value="88" />
+    <task id="LOCAL-00088" summary="updating project">
+      <option name="closed" value="true" />
+      <created>1725502956790</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1725502956790</updated>
+    </task>
+    <task id="LOCAL-00089" summary="updating project">
+      <option name="closed" value="true" />
+      <created>1725502979351</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1725502979351</updated>
+    </task>
+    <option name="localTasksCounter" value="90" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
