@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c927f566-e1ab-4c11-a852-3620c04eb55d" name="Changes" comment="updating project">
-      <change beforePath="$PROJECT_DIR$/CNN/simple_multi_channel_convolution.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/CNN/simple_multi_channel_convolution.ipynb" afterDir="false" />
-    </list>
+    <list default="true" id="c927f566-e1ab-4c11-a852-3620c04eb55d" name="Changes" comment="updating project" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -258,15 +256,7 @@
       <workItem from="1725509398168" duration="2323000" />
       <workItem from="1725553388239" duration="19797000" />
       <workItem from="1725577952218" duration="6431000" />
-      <workItem from="1725637979815" duration="6984000" />
-    </task>
-    <task id="LOCAL-00046" summary="debug">
-      <option name="closed" value="true" />
-      <created>1717720857629</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1717720857629</updated>
+      <workItem from="1725637979815" duration="7337000" />
     </task>
     <task id="LOCAL-00047" summary="debug">
       <option name="closed" value="true" />
@@ -652,7 +642,15 @@
       <option name="project" value="LOCAL" />
       <updated>1725644816354</updated>
     </task>
-    <option name="localTasksCounter" value="95" />
+    <task id="LOCAL-00095" summary="updating project">
+      <option name="closed" value="true" />
+      <created>1725645475850</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1725645475850</updated>
+    </task>
+    <option name="localTasksCounter" value="96" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
