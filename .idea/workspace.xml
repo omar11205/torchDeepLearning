@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c927f566-e1ab-4c11-a852-3620c04eb55d" name="Changes" comment="updating project">
+      <change afterPath="$PROJECT_DIR$/CNN/simple_multi_channel_convolution.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ANN/01_backpropagation_demonstration.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/ANN/01_backpropagation_demonstration.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CNN/2D_convolution_operation.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/CNN/2D_convolution_operation.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -258,23 +260,8 @@
       <workItem from="1725504540207" duration="350000" />
       <workItem from="1725509398168" duration="2323000" />
       <workItem from="1725553388239" duration="19797000" />
-      <workItem from="1725577952218" duration="4753000" />
-    </task>
-    <task id="LOCAL-00042" summary="control">
-      <option name="closed" value="true" />
-      <created>1717453107235</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1717453107235</updated>
-    </task>
-    <task id="LOCAL-00043" summary="control">
-      <option name="closed" value="true" />
-      <created>1717462172764</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1717462172764</updated>
+      <workItem from="1725577952218" duration="6431000" />
+      <workItem from="1725637979815" duration="6595000" />
     </task>
     <task id="LOCAL-00044" summary="Working minst neural network architecture">
       <option name="closed" value="true" />
@@ -652,7 +639,23 @@
       <option name="project" value="LOCAL" />
       <updated>1725578307818</updated>
     </task>
-    <option name="localTasksCounter" value="91" />
+    <task id="LOCAL-00091" summary="updating project">
+      <option name="closed" value="true" />
+      <created>1725585320735</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1725585320735</updated>
+    </task>
+    <task id="LOCAL-00092" summary="updating project">
+      <option name="closed" value="true" />
+      <created>1725585495325</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1725585495325</updated>
+    </task>
+    <option name="localTasksCounter" value="93" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
