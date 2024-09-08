@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="c927f566-e1ab-4c11-a852-3620c04eb55d" name="Changes" comment="updating project">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ANN/06_torch_linear_regression.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/ANN/06_torch_linear_regression.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CNN/mnist_ann.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/CNN/mnist_ann.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CNN/simple_multi_channel_convolution.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/CNN/simple_multi_channel_convolution.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -259,15 +261,8 @@
       <workItem from="1725509398168" duration="2323000" />
       <workItem from="1725553388239" duration="19797000" />
       <workItem from="1725577952218" duration="6431000" />
-      <workItem from="1725637979815" duration="15320000" />
-    </task>
-    <task id="LOCAL-00051" summary="debug">
-      <option name="closed" value="true" />
-      <created>1721939268917</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1721939268917</updated>
+      <workItem from="1725637979815" duration="23403000" />
+      <workItem from="1725726831452" duration="7968000" />
     </task>
     <task id="LOCAL-00052" summary="debug">
       <option name="closed" value="true" />
@@ -653,7 +648,15 @@
       <option name="project" value="LOCAL" />
       <updated>1725665936022</updated>
     </task>
-    <option name="localTasksCounter" value="100" />
+    <task id="LOCAL-00100" summary="updating project">
+      <option name="closed" value="true" />
+      <created>1725667035612</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1725667035613</updated>
+    </task>
+    <option name="localTasksCounter" value="101" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
