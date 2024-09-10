@@ -5,19 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c927f566-e1ab-4c11-a852-3620c04eb55d" name="Changes" comment="updating project">
-      <change afterPath="$PROJECT_DIR$/CNN/train_images/MNIST/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CNN/train_images/MNIST/MNIST/raw/t10k-images-idx3-ubyte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CNN/train_images/MNIST/MNIST/raw/t10k-images-idx3-ubyte.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CNN/train_images/MNIST/MNIST/raw/t10k-labels-idx1-ubyte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CNN/train_images/MNIST/MNIST/raw/t10k-labels-idx1-ubyte.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CNN/train_images/MNIST/MNIST/raw/train-images-idx3-ubyte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CNN/train_images/MNIST/MNIST/raw/train-images-idx3-ubyte.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CNN/train_images/MNIST/MNIST/raw/train-labels-idx1-ubyte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CNN/train_images/MNIST/MNIST/raw/train-labels-idx1-ubyte.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CNN/mnist_cnn.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CNN/train_images/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CNN/mnist_ann.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/CNN/mnist_ann.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CNN/simple_multi_channel_convolution.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/CNN/simple_multi_channel_convolution.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +68,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/m_py&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/GIT/AI/torchDeepLearning/CNN/train_images/MNIST/MNIST/raw&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -91,10 +81,12 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\GIT\AI\torchDeepLearning\CNN\train_images\MNIST\MNIST\raw" />
       <recent name="C:\GITAI\artificial_intelligence\torchDeepLearning\ANN" />
       <recent name="C:\GITAI\artificial_intelligence\torchDeepLearning\ANN\data" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\GIT\AI\torchDeepLearning\CNN" />
       <recent name="C:\GITAI\artificial_intelligence\torchDeepLearning\ANN" />
       <recent name="C:\GITAI\artificial_intelligence\torchDeepLearning\APIs" />
       <recent name="C:\GITAI\artificial_intelligence\torchDeepLearning\ANN\data" />
@@ -104,8 +96,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-PY-241.17011.127" />
-        <option value="bundled-python-sdk-48aec45f0201-7e9c3bbb6e34-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-241.17011.127" />
+        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-PY-241.14494.241" />
+        <option value="bundled-python-sdk-0509580d9d50-28c9f5db9ffe-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-241.14494.241" />
       </set>
     </attachedChunks>
   </component>
@@ -272,30 +264,12 @@
       <workItem from="1725577952218" duration="6431000" />
       <workItem from="1725637979815" duration="23403000" />
       <workItem from="1725726831452" duration="7968000" />
-    </task>
-    <task id="LOCAL-00052" summary="debug">
-      <option name="closed" value="true" />
-      <created>1721952542231</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1721952542231</updated>
-    </task>
-    <task id="LOCAL-00053" summary="debug">
-      <option name="closed" value="true" />
-      <created>1722010519220</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1722010519220</updated>
-    </task>
-    <task id="LOCAL-00054" summary="debug and updating manual model for regression">
-      <option name="closed" value="true" />
-      <created>1722108866105</created>
-      <option name="number" value="00054" />
-      <option name="presentableId" value="LOCAL-00054" />
-      <option name="project" value="LOCAL" />
-      <updated>1722108866106</updated>
+      <workItem from="1725849540014" duration="218000" />
+      <workItem from="1725849773394" duration="248000" />
+      <workItem from="1725850184371" duration="83000" />
+      <workItem from="1725887400501" duration="1975000" />
+      <workItem from="1725899369426" duration="2415000" />
+      <workItem from="1725974759778" duration="1348000" />
     </task>
     <task id="LOCAL-00055" summary="debug and updating manual model for regression">
       <option name="closed" value="true" />
@@ -665,7 +639,31 @@
       <option name="project" value="LOCAL" />
       <updated>1725667035613</updated>
     </task>
-    <option name="localTasksCounter" value="101" />
+    <task id="LOCAL-00101" summary="updating project">
+      <option name="closed" value="true" />
+      <created>1725849466068</created>
+      <option name="number" value="00101" />
+      <option name="presentableId" value="LOCAL-00101" />
+      <option name="project" value="LOCAL" />
+      <updated>1725849466068</updated>
+    </task>
+    <task id="LOCAL-00102" summary="updating project">
+      <option name="closed" value="true" />
+      <created>1725849506875</created>
+      <option name="number" value="00102" />
+      <option name="presentableId" value="LOCAL-00102" />
+      <option name="project" value="LOCAL" />
+      <updated>1725849506875</updated>
+    </task>
+    <task id="LOCAL-00103" summary="updating project">
+      <option name="closed" value="true" />
+      <created>1725849668680</created>
+      <option name="number" value="00103" />
+      <option name="presentableId" value="LOCAL-00103" />
+      <option name="project" value="LOCAL" />
+      <updated>1725849668681</updated>
+    </task>
+    <option name="localTasksCounter" value="104" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
