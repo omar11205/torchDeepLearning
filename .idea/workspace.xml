@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c927f566-e1ab-4c11-a852-3620c04eb55d" name="Changes" comment="updating project">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ANN/02_gradient_descent_manual_model.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/ANN/02_gradient_descent_manual_model.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CNN/mnist_cnn.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/CNN/mnist_cnn.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -58,28 +59,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;Python.model_class.executor&quot;: &quot;Run&quot;,
-    &quot;Python.model_reg.executor&quot;: &quot;Run&quot;,
-    &quot;Python.model_stop.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/GIT/AI/torchDeepLearning/CNN/train_images/MNIST/MNIST/raw&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;python.debugger.dataview.coloredbydefault&quot;: &quot;false&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Python.model_class.executor": "Run",
+    "Python.model_reg.executor": "Run",
+    "Python.model_stop.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "D:/GIT/AI/torchDeepLearning/CNN",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "python.debugger.dataview.coloredbydefault": "false",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\GIT\AI\torchDeepLearning\CNN" />
       <recent name="D:\GIT\AI\torchDeepLearning\CNN\train_images\MNIST\MNIST\raw" />
       <recent name="C:\GITAI\artificial_intelligence\torchDeepLearning\ANN" />
       <recent name="C:\GITAI\artificial_intelligence\torchDeepLearning\ANN\data" />
@@ -274,15 +276,8 @@
       <workItem from="1726090569761" duration="4649000" />
       <workItem from="1726101661206" duration="2462000" />
       <workItem from="1726156489897" duration="6738000" />
-      <workItem from="1726232686192" duration="10918000" />
-    </task>
-    <task id="LOCAL-00058" summary="debug and updating manual model for regression">
-      <option name="closed" value="true" />
-      <created>1722308689041</created>
-      <option name="number" value="00058" />
-      <option name="presentableId" value="LOCAL-00058" />
-      <option name="project" value="LOCAL" />
-      <updated>1722308689041</updated>
+      <workItem from="1726232686192" duration="15382000" />
+      <workItem from="1726271970893" duration="6099000" />
     </task>
     <task id="LOCAL-00059" summary="debug and updating manual model for regression">
       <option name="closed" value="true" />
@@ -668,7 +663,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726164469851</updated>
     </task>
-    <option name="localTasksCounter" value="107" />
+    <task id="LOCAL-00107" summary="updating project">
+      <option name="closed" value="true" />
+      <created>1726251405181</created>
+      <option name="number" value="00107" />
+      <option name="presentableId" value="LOCAL-00107" />
+      <option name="project" value="LOCAL" />
+      <updated>1726251405182</updated>
+    </task>
+    <option name="localTasksCounter" value="108" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
