@@ -285,15 +285,10 @@
       <workItem from="1726440176829" duration="6985000" />
       <workItem from="1726500337000" duration="5099000" />
       <workItem from="1726511188081" duration="4833000" />
-      <workItem from="1726540474557" duration="871000" />
-    </task>
-    <task id="LOCAL-00062" summary="control">
-      <option name="closed" value="true" />
-      <created>1722616849336</created>
-      <option name="number" value="00062" />
-      <option name="presentableId" value="LOCAL-00062" />
-      <option name="project" value="LOCAL" />
-      <updated>1722616849336</updated>
+      <workItem from="1726540474557" duration="1835000" />
+      <workItem from="1726583538001" duration="647000" />
+      <workItem from="1726585735905" duration="15000" />
+      <workItem from="1726671856220" duration="7078000" />
     </task>
     <task id="LOCAL-00063" summary="creating torch embedding layers notebook">
       <option name="closed" value="true" />
@@ -679,7 +674,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726507097807</updated>
     </task>
-    <option name="localTasksCounter" value="111" />
+    <task id="LOCAL-00111" summary="updating project">
+      <option name="closed" value="true" />
+      <created>1726542650640</created>
+      <option name="number" value="00111" />
+      <option name="presentableId" value="LOCAL-00111" />
+      <option name="project" value="LOCAL" />
+      <updated>1726542650640</updated>
+    </task>
+    <option name="localTasksCounter" value="112" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
