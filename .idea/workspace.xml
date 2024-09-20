@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c927f566-e1ab-4c11-a852-3620c04eb55d" name="Changes" comment="updating project">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ANN/02_gradient_descent_manual_model.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/ANN/02_gradient_descent_manual_model.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ANN/05_advanced_torch_gradient.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/ANN/05_advanced_torch_gradient.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CNN/mnist_cnn.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/CNN/mnist_cnn.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -292,15 +290,10 @@
       <workItem from="1726585735905" duration="15000" />
       <workItem from="1726671856220" duration="8406000" />
       <workItem from="1726703576349" duration="8291000" />
-      <workItem from="1726759622522" duration="11880000" />
-    </task>
-    <task id="LOCAL-00064" summary="creating torch embedding layers notebook">
-      <option name="closed" value="true" />
-      <created>1722740438000</created>
-      <option name="number" value="00064" />
-      <option name="presentableId" value="LOCAL-00064" />
-      <option name="project" value="LOCAL" />
-      <updated>1722740438000</updated>
+      <workItem from="1726759622522" duration="12478000" />
+      <workItem from="1726787164229" duration="3232000" />
+      <workItem from="1726806778024" duration="259000" />
+      <workItem from="1726848209171" duration="4771000" />
     </task>
     <task id="LOCAL-00065" summary="creating torch embedding layers notebook">
       <option name="closed" value="true" />
@@ -686,7 +679,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726682916735</updated>
     </task>
-    <option name="localTasksCounter" value="113" />
+    <task id="LOCAL-00113" summary="updating project">
+      <option name="closed" value="true" />
+      <created>1726782688031</created>
+      <option name="number" value="00113" />
+      <option name="presentableId" value="LOCAL-00113" />
+      <option name="project" value="LOCAL" />
+      <updated>1726782688031</updated>
+    </task>
+    <option name="localTasksCounter" value="114" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
