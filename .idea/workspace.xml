@@ -5,10 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c927f566-e1ab-4c11-a852-3620c04eb55d" name="Changes" comment="updating project">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ANN/01_backpropagation_demonstration.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/ANN/01_backpropagation_demonstration.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CNN/1D_convolution_operation.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/CNN/1D_convolution_operation.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CNN/mnist_cnn.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/CNN/mnist_cnn.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/numpy_cc/01_np_array.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/numpy_cc/01_np_array.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -297,14 +298,8 @@
       <workItem from="1726806778024" duration="259000" />
       <workItem from="1726848209171" duration="4771000" />
       <workItem from="1726919782307" duration="4086000" />
-    </task>
-    <task id="LOCAL-00065" summary="creating torch embedding layers notebook">
-      <option name="closed" value="true" />
-      <created>1722884816676</created>
-      <option name="number" value="00065" />
-      <option name="presentableId" value="LOCAL-00065" />
-      <option name="project" value="LOCAL" />
-      <updated>1722884816676</updated>
+      <workItem from="1726937390661" duration="12877000" />
+      <workItem from="1727014461496" duration="7511000" />
     </task>
     <task id="LOCAL-00066" summary="updating project">
       <option name="closed" value="true" />
@@ -690,7 +685,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726782688031</updated>
     </task>
-    <option name="localTasksCounter" value="114" />
+    <task id="LOCAL-00114" summary="updating project">
+      <option name="closed" value="true" />
+      <created>1726937442442</created>
+      <option name="number" value="00114" />
+      <option name="presentableId" value="LOCAL-00114" />
+      <option name="project" value="LOCAL" />
+      <updated>1726937442442</updated>
+    </task>
+    <option name="localTasksCounter" value="115" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
