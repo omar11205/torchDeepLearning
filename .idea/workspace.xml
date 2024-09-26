@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c927f566-e1ab-4c11-a852-3620c04eb55d" name="Changes" comment="updating project">
-      <change afterPath="$PROJECT_DIR$/numpy_cc/04_np_broadcasting.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ANN/02_gradient_descent_manual_model.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/ANN/02_gradient_descent_manual_model.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CNN/cifar_10_cnn.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/CNN/cifar_10_cnn.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CNN/mnist_cnn.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/CNN/mnist_cnn.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -306,23 +304,9 @@
       <workItem from="1727133333810" duration="3699000" />
       <workItem from="1727140829827" duration="3170000" />
       <workItem from="1727206832217" duration="24236000" />
-      <workItem from="1727304069091" duration="1741000" />
-    </task>
-    <task id="LOCAL-00067" summary="updating project">
-      <option name="closed" value="true" />
-      <created>1722984026995</created>
-      <option name="number" value="00067" />
-      <option name="presentableId" value="LOCAL-00067" />
-      <option name="project" value="LOCAL" />
-      <updated>1722984026995</updated>
-    </task>
-    <task id="LOCAL-00068" summary="updating project">
-      <option name="closed" value="true" />
-      <created>1723080237693</created>
-      <option name="number" value="00068" />
-      <option name="presentableId" value="LOCAL-00068" />
-      <option name="project" value="LOCAL" />
-      <updated>1723080237693</updated>
+      <workItem from="1727304069091" duration="3605000" />
+      <workItem from="1727351771147" duration="839000" />
+      <workItem from="1727370569446" duration="9255000" />
     </task>
     <task id="LOCAL-00069" summary="updating project">
       <option name="closed" value="true" />
@@ -700,7 +684,23 @@
       <option name="project" value="LOCAL" />
       <updated>1727127435750</updated>
     </task>
-    <option name="localTasksCounter" value="116" />
+    <task id="LOCAL-00116" summary="updating project">
+      <option name="closed" value="true" />
+      <created>1727315618566</created>
+      <option name="number" value="00116" />
+      <option name="presentableId" value="LOCAL-00116" />
+      <option name="project" value="LOCAL" />
+      <updated>1727315618566</updated>
+    </task>
+    <task id="LOCAL-00117" summary="updating project">
+      <option name="closed" value="true" />
+      <created>1727315953339</created>
+      <option name="number" value="00117" />
+      <option name="presentableId" value="LOCAL-00117" />
+      <option name="project" value="LOCAL" />
+      <updated>1727315953339</updated>
+    </task>
+    <option name="localTasksCounter" value="118" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
