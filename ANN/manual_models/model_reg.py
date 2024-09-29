@@ -1,5 +1,6 @@
 """
-Code for training a regression model with deep neural networks
+Code for training a regression model with deep neural networks.
+Default example with the MPG dataset
 """
 
 import numpy as np

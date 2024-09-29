@@ -1,5 +1,6 @@
 """
 Code for training a classification task with deep neural networks
+Default example with the MNIST Dataset
 Incoming updates to include Adam optimization and ReLU activation function
 """
 

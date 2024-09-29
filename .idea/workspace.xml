@@ -6,12 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="c927f566-e1ab-4c11-a852-3620c04eb55d" name="Changes" comment="updating project">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CNN/1D_convolution_operation.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/CNN/1_1D_convolution_operation.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CNN/2D_convolution_operation.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/CNN/2_2D_convolution_operation.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CNN/cifar_10_cnn.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/CNN/6_cifar_10_cnn.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CNN/mnist_ann.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/CNN/4_mnist_ann.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CNN/mnist_cnn.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/CNN/5_mnist_cnn.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CNN/simple_multi_channel_convolution.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/CNN/3_simple_multi_channel_convolution.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ANN/02_gradient_descent_manual_model.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/ANN/02_gradient_descent_manual_model.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ANN/07_torch_mpg_regression.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/ANN/07_torch_mpg_regression.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ANN/manual_models/model_class.py" beforeDir="false" afterPath="$PROJECT_DIR$/ANN/manual_models/model_class.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ANN/manual_models/model_reg.py" beforeDir="false" afterPath="$PROJECT_DIR$/ANN/manual_models/model_reg.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CNN/5_mnist_cnn.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/CNN/5_mnist_cnn.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CNN/7_image_processing.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/CNN/7_image_processing.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -315,15 +315,8 @@
       <workItem from="1727408451385" duration="965000" />
       <workItem from="1727448832200" duration="23263000" />
       <workItem from="1727484636110" duration="597000" />
-      <workItem from="1727487911782" duration="1596000" />
-    </task>
-    <task id="LOCAL-00074" summary="control">
-      <option name="closed" value="true" />
-      <created>1723662476821</created>
-      <option name="number" value="00074" />
-      <option name="presentableId" value="LOCAL-00074" />
-      <option name="project" value="LOCAL" />
-      <updated>1723662476821</updated>
+      <workItem from="1727487911782" duration="2123000" />
+      <workItem from="1727539508534" duration="8239000" />
     </task>
     <task id="LOCAL-00075" summary="updating project">
       <option name="closed" value="true" />
@@ -709,7 +702,15 @@
       <option name="project" value="LOCAL" />
       <updated>1727463808009</updated>
     </task>
-    <option name="localTasksCounter" value="123" />
+    <task id="LOCAL-00123" summary="updating project">
+      <option name="closed" value="true" />
+      <created>1727490247756</created>
+      <option name="number" value="00123" />
+      <option name="presentableId" value="LOCAL-00123" />
+      <option name="project" value="LOCAL" />
+      <updated>1727490247756</updated>
+    </task>
+    <option name="localTasksCounter" value="124" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
