@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c927f566-e1ab-4c11-a852-3620c04eb55d" name="Changes" comment="updating project">
+      <change afterPath="$PROJECT_DIR$/RNN/intoduction_to_rnn.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ANN/02_gradient_descent_manual_model.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/ANN/02_gradient_descent_manual_model.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ANN/07_torch_mpg_regression.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/ANN/07_torch_mpg_regression.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ANN/manual_models/model_class.py" beforeDir="false" afterPath="$PROJECT_DIR$/ANN/manual_models/model_class.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ANN/manual_models/model_reg.py" beforeDir="false" afterPath="$PROJECT_DIR$/ANN/manual_models/model_reg.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CNN/5_mnist_cnn.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/CNN/5_mnist_cnn.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CNN/7_image_processing.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/CNN/7_image_processing.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -317,14 +313,10 @@
       <workItem from="1727484636110" duration="597000" />
       <workItem from="1727487911782" duration="2123000" />
       <workItem from="1727539508534" duration="8239000" />
-    </task>
-    <task id="LOCAL-00075" summary="updating project">
-      <option name="closed" value="true" />
-      <created>1723956280759</created>
-      <option name="number" value="00075" />
-      <option name="presentableId" value="LOCAL-00075" />
-      <option name="project" value="LOCAL" />
-      <updated>1723956280759</updated>
+      <workItem from="1727622577200" duration="7690000" />
+      <workItem from="1727722764576" duration="700000" />
+      <workItem from="1727820853243" duration="9233000" />
+      <workItem from="1727843025608" duration="1469000" />
     </task>
     <task id="LOCAL-00076" summary="updating project">
       <option name="closed" value="true" />
@@ -710,7 +702,15 @@
       <option name="project" value="LOCAL" />
       <updated>1727490247756</updated>
     </task>
-    <option name="localTasksCounter" value="124" />
+    <task id="LOCAL-00124" summary="updating project">
+      <option name="closed" value="true" />
+      <created>1727622725678</created>
+      <option name="number" value="00124" />
+      <option name="presentableId" value="LOCAL-00124" />
+      <option name="project" value="LOCAL" />
+      <updated>1727622725678</updated>
+    </task>
+    <option name="localTasksCounter" value="125" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
