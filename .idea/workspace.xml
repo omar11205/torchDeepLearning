@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c927f566-e1ab-4c11-a852-3620c04eb55d" name="Changes" comment="Starting with Recurrent Neural Networks">
+      <change afterPath="$PROJECT_DIR$/RNN/vanishing_gradient_rnn.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RNN/intoduction_to_rnn.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/RNN/intoduction_to_rnn.ipynb" afterDir="false" />
     </list>
@@ -317,15 +318,9 @@
       <workItem from="1727820853243" duration="9233000" />
       <workItem from="1727843025608" duration="1772000" />
       <workItem from="1727869052563" duration="21612000" />
-      <workItem from="1727897916248" duration="7865000" />
-    </task>
-    <task id="LOCAL-00079" summary="updating project">
-      <option name="closed" value="true" />
-      <created>1724371746652</created>
-      <option name="number" value="00079" />
-      <option name="presentableId" value="LOCAL-00079" />
-      <option name="project" value="LOCAL" />
-      <updated>1724371746652</updated>
+      <workItem from="1727897916248" duration="18168000" />
+      <workItem from="1727957948085" duration="13638000" />
+      <workItem from="1728004486071" duration="10043000" />
     </task>
     <task id="LOCAL-00080" summary="updating project">
       <option name="closed" value="true" />
@@ -711,7 +706,15 @@
       <option name="project" value="LOCAL" />
       <updated>1727903736686</updated>
     </task>
-    <option name="localTasksCounter" value="128" />
+    <task id="LOCAL-00128" summary="Starting with Recurrent Neural Networks">
+      <option name="closed" value="true" />
+      <created>1727914741447</created>
+      <option name="number" value="00128" />
+      <option name="presentableId" value="LOCAL-00128" />
+      <option name="project" value="LOCAL" />
+      <updated>1727914741447</updated>
+    </task>
+    <option name="localTasksCounter" value="129" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
