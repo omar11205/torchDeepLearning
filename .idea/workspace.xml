@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c927f566-e1ab-4c11-a852-3620c04eb55d" name="Changes" comment="updating project">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAG_local/demo.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RNN/intoduction_to_rnn.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/RNN/intoduction_to_rnn.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -331,15 +330,13 @@
       <workItem from="1728320832432" duration="6396000" />
       <workItem from="1728339736310" duration="9615000" />
       <workItem from="1728653391530" duration="3098000" />
-      <workItem from="1728696701103" duration="800000" />
-    </task>
-    <task id="LOCAL-00086" summary="updating project">
-      <option name="closed" value="true" />
-      <created>1725464954525</created>
-      <option name="number" value="00086" />
-      <option name="presentableId" value="LOCAL-00086" />
-      <option name="project" value="LOCAL" />
-      <updated>1725464954525</updated>
+      <workItem from="1728696701103" duration="1331000" />
+      <workItem from="1728750382413" duration="5034000" />
+      <workItem from="1728949895983" duration="7000" />
+      <workItem from="1728994063482" duration="1125000" />
+      <workItem from="1728996064912" duration="1000" />
+      <workItem from="1728999976869" duration="1852000" />
+      <workItem from="1729008314726" duration="1207000" />
     </task>
     <task id="LOCAL-00087" summary="updating project">
       <option name="closed" value="true" />
@@ -725,7 +722,15 @@
       <option name="project" value="LOCAL" />
       <updated>1728320998113</updated>
     </task>
-    <option name="localTasksCounter" value="135" />
+    <task id="LOCAL-00135" summary="updating project">
+      <option name="closed" value="true" />
+      <created>1728697794077</created>
+      <option name="number" value="00135" />
+      <option name="presentableId" value="LOCAL-00135" />
+      <option name="project" value="LOCAL" />
+      <updated>1728697794078</updated>
+    </task>
+    <option name="localTasksCounter" value="136" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -750,10 +755,10 @@
     <MESSAGE value="debug and updating manual model for regression" />
     <MESSAGE value="creating torch embedding layers notebook" />
     <MESSAGE value="control" />
-    <MESSAGE value="updating project" />
     <MESSAGE value="Starting with Recurrent Neural Networks" />
     <MESSAGE value="Updating Project" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updating Project" />
+    <MESSAGE value="updating project" />
+    <option name="LAST_COMMIT_MESSAGE" value="updating project" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
