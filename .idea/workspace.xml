@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c927f566-e1ab-4c11-a852-3620c04eb55d" name="Changes" comment="updating project">
+    <list default="true" id="c927f566-e1ab-4c11-a852-3620c04eb55d" name="Changes" comment="starting llama-cpp-python project">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RAG_local/demo.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/RAG_local/demo.ipynb" afterDir="false" />
     </list>
@@ -346,15 +346,7 @@
       <workItem from="1729031617696" duration="1907000" />
       <workItem from="1729033689771" duration="507000" />
       <workItem from="1729034688794" duration="2410000" />
-      <workItem from="1729040336890" duration="1234000" />
-    </task>
-    <task id="LOCAL-00088" summary="updating project">
-      <option name="closed" value="true" />
-      <created>1725502956790</created>
-      <option name="number" value="00088" />
-      <option name="presentableId" value="LOCAL-00088" />
-      <option name="project" value="LOCAL" />
-      <updated>1725502956790</updated>
+      <workItem from="1729040336890" duration="4214000" />
     </task>
     <task id="LOCAL-00089" summary="updating project">
       <option name="closed" value="true" />
@@ -740,7 +732,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729009613650</updated>
     </task>
-    <option name="localTasksCounter" value="137" />
+    <task id="LOCAL-00137" summary="starting llama-cpp-python project">
+      <option name="closed" value="true" />
+      <created>1729041772901</created>
+      <option name="number" value="00137" />
+      <option name="presentableId" value="LOCAL-00137" />
+      <option name="project" value="LOCAL" />
+      <updated>1729041772901</updated>
+    </task>
+    <option name="localTasksCounter" value="138" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -768,7 +768,8 @@
     <MESSAGE value="Starting with Recurrent Neural Networks" />
     <MESSAGE value="Updating Project" />
     <MESSAGE value="updating project" />
-    <option name="LAST_COMMIT_MESSAGE" value="updating project" />
+    <MESSAGE value="starting llama-cpp-python project" />
+    <option name="LAST_COMMIT_MESSAGE" value="starting llama-cpp-python project" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
