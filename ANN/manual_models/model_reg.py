@@ -1,5 +1,5 @@
 """
-Code for training a regression model with deep neural networks.
+Code to train a regression model with deep neural networks.
 Default example with the MPG dataset
 """
 

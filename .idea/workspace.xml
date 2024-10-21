@@ -6,6 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="c927f566-e1ab-4c11-a852-3620c04eb55d" name="Changes" comment="update project">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ANN/manual_models/model_reg.py" beforeDir="false" afterPath="$PROJECT_DIR$/ANN/manual_models/model_reg.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RAG_local/app.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/RAG_local/app.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RNN/intoduction_to_rnn.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/RNN/intoduction_to_rnn.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -348,14 +351,10 @@
       <workItem from="1729040336890" duration="4214000" />
       <workItem from="1729080730384" duration="4275000" />
       <workItem from="1729116816692" duration="2794000" />
-    </task>
-    <task id="LOCAL-00090" summary="updating project">
-      <option name="closed" value="true" />
-      <created>1725578307817</created>
-      <option name="number" value="00090" />
-      <option name="presentableId" value="LOCAL-00090" />
-      <option name="project" value="LOCAL" />
-      <updated>1725578307818</updated>
+      <workItem from="1729280166074" duration="3202000" />
+      <workItem from="1729362058292" duration="385000" />
+      <workItem from="1729433531077" duration="3862000" />
+      <workItem from="1729470327451" duration="9873000" />
     </task>
     <task id="LOCAL-00091" summary="updating project">
       <option name="closed" value="true" />
@@ -741,7 +740,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729080782977</updated>
     </task>
-    <option name="localTasksCounter" value="139" />
+    <task id="LOCAL-00139" summary="update project">
+      <option name="closed" value="true" />
+      <created>1729280220298</created>
+      <option name="number" value="00139" />
+      <option name="presentableId" value="LOCAL-00139" />
+      <option name="project" value="LOCAL" />
+      <updated>1729280220299</updated>
+    </task>
+    <option name="localTasksCounter" value="140" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
