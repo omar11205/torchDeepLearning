@@ -5,10 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c927f566-e1ab-4c11-a852-3620c04eb55d" name="Changes" comment="update project">
+      <change afterPath="$PROJECT_DIR$/MCDA/gpt-ahp.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pandas_cc/advanced_processing.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pandas_cc/beta_dataset.jsonl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pandas_cc/chatbot_simulation.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ANN/manual_models/model_reg.py" beforeDir="false" afterPath="$PROJECT_DIR$/ANN/manual_models/model_reg.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RAG_local/app.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/RAG_local/app.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RNN/intoduction_to_rnn.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/RNN/intoduction_to_rnn.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RNN/LSTM_networks.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/RNN/LSTM_networks.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pandas_cc/data/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/pandas_cc/data/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -354,15 +357,22 @@
       <workItem from="1729280166074" duration="3202000" />
       <workItem from="1729362058292" duration="385000" />
       <workItem from="1729433531077" duration="3862000" />
-      <workItem from="1729470327451" duration="9873000" />
-    </task>
-    <task id="LOCAL-00091" summary="updating project">
-      <option name="closed" value="true" />
-      <created>1725585320735</created>
-      <option name="number" value="00091" />
-      <option name="presentableId" value="LOCAL-00091" />
-      <option name="project" value="LOCAL" />
-      <updated>1725585320735</updated>
+      <workItem from="1729470327451" duration="9890000" />
+      <workItem from="1729523390188" duration="735000" />
+      <workItem from="1729804517246" duration="7000" />
+      <workItem from="1729826310021" duration="53000" />
+      <workItem from="1730566608101" duration="6452000" />
+      <workItem from="1730809512835" duration="3538000" />
+      <workItem from="1731099756945" duration="3502000" />
+      <workItem from="1731168474097" duration="3829000" />
+      <workItem from="1731271441008" duration="6235000" />
+      <workItem from="1731546449018" duration="6611000" />
+      <workItem from="1731586397130" duration="4156000" />
+      <workItem from="1731896227194" duration="3634000" />
+      <workItem from="1731935528411" duration="1356000" />
+      <workItem from="1732022971043" duration="5991000" />
+      <workItem from="1732039097254" duration="4581000" />
+      <workItem from="1732106344964" duration="4691000" />
     </task>
     <task id="LOCAL-00092" summary="updating project">
       <option name="closed" value="true" />
@@ -748,7 +758,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729280220299</updated>
     </task>
-    <option name="localTasksCounter" value="140" />
+    <task id="LOCAL-00140" summary="update project">
+      <option name="closed" value="true" />
+      <created>1729485187852</created>
+      <option name="number" value="00140" />
+      <option name="presentableId" value="LOCAL-00140" />
+      <option name="project" value="LOCAL" />
+      <updated>1729485187853</updated>
+    </task>
+    <option name="localTasksCounter" value="141" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
