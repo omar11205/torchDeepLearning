@@ -1,92 +1,21 @@
 import random
 import json
 import locale
-import itertools
-import pandas as pd
-import re
-
-from datetime import date, datetime, timedelta
-from faker import Faker
-from copy import deepcopy
+from datetime import datetime, timedelta
+from pandas import DataFrame
 from string import Template
+from chatbot_sim_template import ConversationFactory as CFactory
+
 
 # Set locale dates in spanish
 locale.setlocale(locale.LC_ALL, "es_ES")
 
 
-class GenerateFakerDataset:
-    def __init__(self, mode):
-        pass
-
-    def gen_data(self, start_date, end_date):
-        fk = Faker('es_CO')
-        profile = fk.simple_profile(sex=random.choice(['M', 'F']))
-        npays = fk.pyint(min_value=3, max_value=12)
-        initial_date = fk.past_date() - timedelta(days=30 * npays)
-
-        # Gendered terms
-        gendered_terms = {
-            'M': {
-                'title': 'Señor',
-                'pronoun': 'el',
-                'confirmation': 'él',
-                'known': 'lo'
-            },
-            'F': {
-                'title': 'Señora',
-                'pronoun': 'la',
-                'confirmation': 'ella',
-                'known': 'la'
-            }
-        }
-        gender = profile['sex']
-        debtor_terms = gendered_terms[gender]
-
-        e = {}
-        debtor = {}
-        debtor['full_name'] = profile['name']
-        debtor['first_name'] = profile['name'].split(' ', 1)[0]
-        debtor['gender'] = gender
-        debtor['title'] = debtor_terms['title']
-        debtor['pronoun'] = debtor_terms['pronoun']
-        debtor['confirmation'] = debtor_terms['confirmation']
-        debtor['known'] = debtor_terms['known']
-        debtor['identification'] = str(fk.pyint(min_value=10000000, max_value=99999999))
-        debtor['address'] = profile['address']
-        debtor['email'] = profile['mail']
-        debtor['phone_number'] = fk.phone_number()
-        e['debtor'] = debtor.copy()
-
-        debt = {}
-        total = fk.pyfloat(min_value=100000, max_value=10000000, right_digits=2)
-        debt['status'] = 'activo'
-        debt['amount'] = total
-        debt['npays'] = npays
-        debt['start_date'] = initial_date.isoformat()
-        due_date = initial_date + timedelta(days=30 * npays)
-        debt['due_date'] = due_date.isoformat()
-        date_today = date.today()
-        debt['ndays'] = (date_today - due_date).days
-        debt['outstanding_balance'] = round(total / npays, 2)
-        debt['today_date'] = date_today.strftime("%d de %B de %Y")
-        debt['tomorrow_date'] = (date_today + timedelta(1)).strftime("%d de %B de %Y")
-        e['debt'] = debt
-
-        system_date_time = datetime.now()
-        am_pm = "AM" if system_date_time.hour < 12 else "PM"
-        debt['system_date_time'] = system_date_time.strftime(f"%A %Y-%m-%d %I:%M {am_pm}")
-
-        return e
-
-
-
-
-
 # Manage client data: loads the content of a json file name of the client and the gender
-class ClientManager:
+class InputManager:
     def __init__(self, filename):
         """
-        Initialize ClientManager loads all the available data in the client data jsonl file
+        Initialize InputManager loads all the available data in the client data jsonl file
         format of the dataset: {'gender': gender, 'name': name}.
         :param filename: Path to the client data file.
         """
@@ -157,14 +86,14 @@ class DatesGenerator:
     def __init__(self, holidays=None):
         # default holidays in Mexico
         self.holidays = holidays or [
-        datetime(2024, 1, 1),  # Año Nuevo
-        datetime(2024, 2, 5),  # Día de la Constitución (primer lunes de febrero)
-        datetime(2024, 3, 18),  # Natalicio de Benito Juárez (tercer lunes de marzo)
-        datetime(2024, 5, 1),  # Día del Trabajo
-        datetime(2024, 9, 16),  # Día de la Independencia
-        datetime(2024, 11, 18),  # Revolución Mexicana (tercer lunes de noviembre)
-        datetime(2024, 12, 25)  # Navidad
-    ]
+            datetime(2024, 1, 1),  # Año Nuevo
+            datetime(2024, 2, 5),  # Día de la Constitución (primer lunes de febrero)
+            datetime(2024, 3, 18),  # Natalicio de Benito Juárez (tercer lunes de marzo)
+            datetime(2024, 5, 1),  # Día del Trabajo
+            datetime(2024, 9, 16),  # Día de la Independencia
+            datetime(2024, 11, 18),  # Revolución Mexicana (tercer lunes de noviembre)
+            datetime(2024, 12, 25)  # Navidad
+        ]
 
     @staticmethod
     def is_business_day(date, holidays=None):
@@ -220,10 +149,10 @@ class RandomEntryGenerator:
 
         for client_name in self.cli_names:
 
-            if self.mode == "current_day": # use current day for testing
+            if self.mode == "current_day":  # use current day for testing
                 # current date
                 date_manager = datetime.now()
-            elif self.mode == "random_day": # use random date for training
+            elif self.mode == "random_day":  # use random date for training
                 # random business days. end_date must be less the current date
                 date_manager = self.date_config.generate_random_business_date_times(start_date, end_date, 1)[0]
             else:
@@ -261,42 +190,10 @@ class RandomEntryGenerator:
         return r_entries
 
 
-class AztecaBot:
-    """
-    Create random conversations using the Cobranzas Azteca bot flux and return the chat completion in OpenAI GPT format
-    """
-    def __init__(self, patterns=None, default_chat_flux=None):
+class DefaultBot:
+    def __init__(self):
+        pass
 
-        # search patterns inside assistant messages
-        self.assistant_patterns = patterns or {
-            "greeting": lambda content: "¿me comunico con" in content,
-            "primary_info": lambda content: "saldo requerido para ponerla al día" in content,
-            "amount_reconfirmation": lambda content: "Recuerda que el monto" in content,
-            "final_reconfirmation": lambda content: "Genial, has confirmado tu pago." in content,
-            "ask_for_tomorrow_pay": lambda content: "¿Podrías realizar el pago mañana" in content,
-            "contact_you_later": lambda content: "Entendemos que no es el momento." in content,
-            "first_attempt_agreement": lambda content: "Entendemos que puede ser complicado, pero si no" in content,
-            "second_attempt_agreement": lambda content: "Si no pagas hoy podrías recibir molestias" in content,
-            "ask_for_line_holder": lambda content: "¿Conoces al titular" in content,
-            "ask_for_callback": lambda content: "¿Podrías pedirle que se comunique con nosotros" in content,
-            "wrong_person": lambda content: "Gracias por tu tiempo y atención Lamento la confusión" in content
-        }
-
-        self.default_chat_flux = default_chat_flux or [
-            [True, True, True, False, False, False, False, False, False, False, False],
-            [True, True, False, False, False, False, False, False, False, False, False],
-            [True, True, False, True, False, False, False, False, False, False, False],
-            [True, False, False, False, True, True, False, False, False, False, False],
-            [True, False, False, False, True, False, False, False, False, False, False],
-            [True, False, False, False, True, False, True, False, False, False, False],
-            [True, False, False, False, False, False, False, True, True, False, False],
-            [True, False, False, False, False, False, False, True, False, False, False],
-            [True, False, False, False, False, False, False, True, False, True, False],
-            [True, False, False, False, False, False, False, False, False, False, False],
-            [False, False, False, False, False, False, False, False, False, False, True],
-            [False, False, False, False, False, False, False, False, False, False, False]]
-
-    # return the daytime greeting
     @staticmethod
     def get_greeting(entry):
         hour = entry['system_current_datetime_object'].hour
@@ -353,18 +250,67 @@ class AztecaBot:
                     f"no conozco a la señora {entry['client_name']['name']}", "no se a quién busca",
                     "no se a quién se refiere"]
 
+
+class AztecaGPTConversation:
+    """
+    Create random conversations using the Cobranzas Azteca bot flux and return the chat completion in OpenAI GPT format
+    """
+
+    def __init__(self, patterns=None, default_chat_flux=None, system_template=None):
+
+        # search patterns inside assistant messages
+        self.assistant_patterns = patterns or {
+            "greeting": lambda content: "¿me comunico con" in content,
+            "primary_info": lambda content: "saldo requerido para ponerla al día" in content,
+            "amount_reconfirmation": lambda content: "Recuerda que el monto" in content,
+            "final_reconfirmation": lambda content: "Genial, has confirmado tu pago." in content,
+            "ask_for_tomorrow_pay": lambda content: "¿Podrías realizar el pago mañana" in content,
+            "contact_you_later": lambda content: "Entendemos que no es el momento." in content,
+            "first_attempt_agreement": lambda content: "Entendemos que puede ser complicado, pero si no" in content,
+            "second_attempt_agreement": lambda content: "Si no pagas hoy podrías recibir molestias" in content,
+            "ask_for_line_holder": lambda content: "¿Conoces al titular" in content,
+            "ask_for_callback": lambda content: "¿Podrías pedirle que se comunique con nosotros" in content,
+            "wrong_person": lambda content: "Gracias por tu tiempo y atención Lamento la confusión" in content
+        }
+
+        self.default_chat_flux = default_chat_flux or [
+            [True, True, True, False, False, False, False, False, False, False, False],
+            [True, True, False, False, False, False, False, False, False, False, False],
+            [True, True, False, True, False, False, False, False, False, False, False],
+            [True, False, False, False, True, True, False, False, False, False, False],
+            [True, False, False, False, True, False, False, False, False, False, False],
+            [True, False, False, False, True, False, True, False, False, False, False],
+            [True, False, False, False, False, False, False, True, True, False, False],
+            [True, False, False, False, False, False, False, True, False, False, False],
+            [True, False, False, False, False, False, False, True, False, True, False],
+            [True, False, False, False, False, False, False, False, False, False, False],
+            [False, False, False, False, False, False, False, False, False, False, True],
+            [False, False, False, False, False, False, False, False, False, False, False]]
+
+        self.system_template = system_template or (
+            "Tu nombre es $agent y trabajas para Cumplir SAS. " 
+            "Tu tarea es comunicarte con los clientes con alta empatía y comprensión. "
+            "Nombre Banco: $bank_name. "
+            "Nombre Cliente: $client_name. " 
+            "Monto Adeudado: $amount pesos mexicanos. "
+            "Fecha y hora de hoy: $today_date. "
+            "Días de atraso en el pago: $days_late. " 
+            "Fecha de pago máxima: $tomorrow_date."
+        )
+
     # generates the conversation for the client negative identity
-    def negative_identity_confirmation_block(self, entry, a):
-        identity_confirmation = [{"role": "user", "content": random.choice(self.negative_confirmation_gender(entry))},
+    @staticmethod
+    def negative_identity_confirmation_block(entry, a):
+        identity_confirmation = [{"role": "user", "content": random.choice(DefaultBot.negative_confirmation_gender(entry))},
                                  {"role": "assistant", "content": "¿Conoces al titular de la línea?"}]
         if a:
             identity_confirmation.append({"role": "user", "content": random.choice(
-                ["si", "si le conozco", "si se a quién se refiere", f"{self.line_holder_gender(entry)}"])})
+                ["si", "si le conozco", "si se a quién se refiere", f"{DefaultBot.line_holder_gender(entry)}"])})
             identity_confirmation.append({"role": "assistant",
                                           "content": "¿Podrías pedirle que se comunique con nosotros lo antes posible al 4775006675? Estamos disponibles de Lunes a domingo de 08:00am a 09:00pm. Agradecemos mucho tu ayuda. ¡Que tengas un buen día!"})
         else:
             identity_confirmation.append(
-                {"role": "user", "content": random.choice(self.negative_reconfirmation_gender(entry))})
+                {"role": "user", "content": random.choice(DefaultBot.negative_reconfirmation_gender(entry))})
             identity_confirmation.append({"role": "assistant",
                                           "content": "Gracias por tu tiempo y atención Lamento la confusión, parece que no eres la persona que estamos buscando. Agradezco tu ayuda ¡Que tengas un excelente día!"})
 
@@ -405,44 +351,46 @@ class AztecaBot:
         return reconfirmation
 
     # generates the system prompt for the fine tunning
-    @staticmethod
-    def system_block(entry):
-        system_str = (
-            f"Tu nombre es {entry['name_of_the_agent']} y trabajas para Cumplir SAS. "
-            f"Tu tarea es comunicarte con los clientes con alta empatía y comprensión. "
-            f"Nombre Banco: {entry['bank_name']}. "
-            f"Nombre Cliente: {entry['client_name']['name']}. "
-            f"Monto Adeudado: {entry['amount_pesos']} pesos mexicanos. "
-            f"Fecha y hora de hoy: {entry['system_current_date_time']}. "
-            f"Días de atraso en el pago: {entry['days_late']}. "
-            f"Fecha de pago máxima: {entry['system_tomorrow_date']}. "
-        )
-        return system_str
 
-    @staticmethod
-    def add_weight_to_assistant_messages(conversation, default_weight=1):
-        """
-        Add a weight field to all "assistant" roles in the conversation.
-        """
-        for message in conversation["messages"]:
-            if message["role"] == "assistant":
-                message["weight"] = default_weight
-        return conversation
+    def system_block(self, entry):
+        # system_str = (
+        #     f"Tu nombre es {entry['name_of_the_agent']} y trabajas para Cumplir SAS. "
+        #     f"Tu tarea es comunicarte con los clientes con alta empatía y comprensión. "
+        #     f"Nombre Banco: {entry['bank_name']}. "
+        #     f"Nombre Cliente: {entry['client_name']['name']}. "
+        #     f"Monto Adeudado: {entry['amount_pesos']} pesos mexicanos. "
+        #     f"Fecha y hora de hoy: {entry['system_current_date_time']}. "
+        #     f"Días de atraso en el pago: {entry['days_late']}. "
+        #     f"Fecha de pago máxima: {entry['system_tomorrow_date']}. "
+        # )
+        # return system_str
+
+        sub = {
+            'agent': entry['name_of_the_agent'],
+            'days_late': entry['days_late'],
+            'bank_name': entry['bank_name'],
+            'client_name': entry['client_name']['name'],
+            'amount': entry['amount_pesos'],
+            'today_date': entry['system_current_date_time'],
+            'tomorrow_date': entry['system_tomorrow_date'],
+        }
+
+        return Template(self.system_template).substitute(sub)
 
     # Generate a conversation based on the desired chatbot flux
-    def generate_conversation(self, flux, entry, assistant_weight_to_all=False):
+    def generate_chat_completion(self, flux, entry):
         conversation = [
             {"role": "system", "content": self.system_block(entry)},
-            {"role": "user", "content": random.choice(["hola", "aló", "buenas", "bueno"])},
+            {"role": "user", "content": random.choice(["hola", "aló?", "buenas", "si bueno", "bueno?"])},
             {"role": "assistant",
-             "content": f"{self.get_greeting(entry)}, ¿me comunico con {entry['client_name']['name']}?"}
+             "content": f"{DefaultBot.get_greeting(entry)}, ¿me comunico con {entry['client_name']['name']}?"}
         ]
 
         # identity confirmation
         if flux[0]:
-            conversation.append({"role": "user", "content": random.choice(self.confirmation_with_gender(entry))})
+            conversation.append({"role": "user", "content": random.choice(DefaultBot.confirmation_with_gender(entry))})
             conversation.append({"role": "assistant",
-                                 "content": f"Perfecto, soy {entry['name_of_the_agent']} de {entry['bank_name']} y estamos contactándole para informarte que tienes {entry['days_late']} {self.plural_singular_day(entry)} de atraso en tu cuenta y el saldo requerido para ponerla al día es de {entry['amount_pesos']} pesos. ¿Contamos con tu pago el día de hoy?"
+                                 "content": f"Perfecto, soy {entry['name_of_the_agent']} de {entry['bank_name']} y estamos contactándole para informarte que tienes {entry['days_late']} {DefaultBot.plural_singular_day(entry)} de atraso en tu cuenta y el saldo requerido para ponerla al día es de {entry['amount_pesos']} pesos. ¿Contamos con tu pago el día de hoy?"
                                  })
 
             # User response to payment request
@@ -486,10 +434,15 @@ class AztecaBot:
 
         conv_dict = {"messages": conversation}
 
-        if assistant_weight_to_all:
-            conv_dict = self.add_weight_to_assistant_messages(conv_dict)
-
         return conv_dict
+
+class ConversationNoise:
+    def __init__(self, conversation):
+        self.conversation = conversation
+    @staticmethod
+    def add_noise():
+        pass
+
 
 
 class FineTuningDataset:
@@ -498,20 +451,32 @@ class FineTuningDataset:
         pass
 
     @staticmethod
-    def create_dataset(entries, chatbot, chat_flux, generate_weights=False, filename="dataset3.jsonl"):
+    def add_weight_to_assistant_messages(conversation, default_weight=1):
+        """
+        Add a weight field to all "assistant" roles in the conversation.
+        """
+        for message in conversation["messages"]:
+            if message["role"] == "assistant":
+                message["weight"] = default_weight
+        return conversation
+
+    @staticmethod
+    def create_dataset(entries, gpt_conv, chat_flux, generate_weights=False, filename="dataset3.jsonl"):
         """
         For each entry example generate a conversation with each chat flux and create a .jsonl file
         :param generate_weights: add weights to the assistant message
         :param entries: List of dictionaries with the conversation data
         :param chat_flux: List of lists with the chat flux config
-        :param chatbot: Bot object
+        :param gpt_conv: GPTConversation instance
         :param filename: Name of the jsonl file
 
         """
         with open(filename, 'w', encoding='utf-8') as f:
             for entry in entries:
                 for flux in chat_flux:
-                    conversation = chatbot.generate_conversation(flux, entry, generate_weights)
+                    conversation = gpt_conv.generate_chat_completion(flux, entry)
+                    if generate_weights:
+                        FineTuningDataset.add_weight_to_assistant_messages(conversation)
                     f.write(json.dumps(conversation, ensure_ascii=False) + "\n")
         print(f"Dataset created successfully and saved in {filename}")
 
@@ -537,7 +502,6 @@ class FineTuningDataset:
         def assign_weight(line_number, part_name):
             """Determine if the weight for a specific part should be 1 or 0."""
             return 1 if line_number < thresholds_count[part_name] else 0
-
 
         # Write the modified dataset
         with open(output_file, 'w', encoding='utf-8') as outfile:
@@ -586,8 +550,7 @@ class FineTuningDataset:
 
 
 if __name__ == "__main__":
-
-    cli_manager = ClientManager("client_names.jsonl")  # loads the entire dataset
+    cli_manager = InputManager("client_names.jsonl")  # loads the entire dataset
     cli_data = cli_manager.get_sample(absolute=20)  # retrieve 20 random names
 
     # random dates start
@@ -614,41 +577,41 @@ if __name__ == "__main__":
         e_date
     )
 
-    bot = AztecaBot()
+    bot = AztecaGPTConversation()
 
     FineTuningDataset.create_dataset(
         entries=train_entries,
-        chatbot=bot,
+        gpt_conv=bot,
         chat_flux=bot.default_chat_flux,
-        generate_weights=True, # all the weights are set to 1 by default
-        filename="train_azteca_v1.jsonl"
+        generate_weights=True,  # all the weights are set to 1 by default
+        filename="train_azteca_v5.jsonl"
     )
 
-    count_train_patterns = FineTuningDataset.analyze_dataset_patterns(
-        dataset_file_path="train_azteca_v1.jsonl",
-        conv_patterns=bot.assistant_patterns
-    )
-
-    print(count_train_patterns)
-
-    assistant_thresholds_config = {
-        "greeting": 0.5,  # After 50% of the dataset, set weight to 0. Set the 50% of the dataset with weight = 0
-        "primary_info": 0.7,  # After 70% of the dataset, set weight to 0. Set the 30% of the dataset with weight = 0
-        "amount_reconfirmation": 1,
-        # After 100% of the dataset, set weight to 0. Set the 0% of the dataset with weight = 0
-        "final_reconfirmation": 1,
-        "ask_for_tomorrow_pay": 1,
-        "contact_you_later": 1,
-        "first_attempt_agreement": 1,
-        "second_attempt_agreement": 1,
-        "ask_for_line_holder": 1,
-        "ask_for_callback": 1,
-        "wrong_person": 1
-    }
-
-    FineTuningDataset.adjust_weights_by_line(
-        input_file="train_azteca_v1.jsonl",
-        output_file="train_azteca_weights_v1.jsonl",
-        thresholds=assistant_thresholds_config,
-        patterns=bot.assistant_patterns
-    )
+    # count_train_patterns = FineTuningDataset.analyze_dataset_patterns(
+    #     dataset_file_path="train_azteca_v1.jsonl",
+    #     conv_patterns=bot.assistant_patterns
+    # )
+    #
+    # print(count_train_patterns)
+    #
+    # assistant_thresholds_config = {
+    #     "greeting": 0.5,  # After 50% of the dataset, set weight to 0. Set the 50% of the dataset with weight = 0
+    #     "primary_info": 0.7,  # After 70% of the dataset, set weight to 0. Set the 30% of the dataset with weight = 0
+    #     "amount_reconfirmation": 1,
+    #     # After 100% of the dataset, set weight to 0. Set the 0% of the dataset with weight = 0
+    #     "final_reconfirmation": 1,
+    #     "ask_for_tomorrow_pay": 1,
+    #     "contact_you_later": 1,
+    #     "first_attempt_agreement": 1,
+    #     "second_attempt_agreement": 1,
+    #     "ask_for_line_holder": 1,
+    #     "ask_for_callback": 1,
+    #     "wrong_person": 1
+    # }
+    #
+    # FineTuningDataset.adjust_weights_by_line(
+    #     input_file="train_azteca_v1.jsonl",
+    #     output_file="train_azteca_weights_v1.jsonl",
+    #     thresholds=assistant_thresholds_config,
+    #     patterns=bot.assistant_patterns
+    # )
