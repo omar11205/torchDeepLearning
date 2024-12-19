@@ -5,25 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c927f566-e1ab-4c11-a852-3620c04eb55d" name="Changes" comment="update project">
-      <change afterPath="$PROJECT_DIR$/fine_tunning_llm/llama3_2_3b.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fine_tunning_llm/processing_data.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pandas_cc/client_names.jsonl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pandas_cc/dataset_by_template.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pandas_cc/latencies.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pandas_cc/latencies_temperature_0.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pandas_cc/simulation_modules/azteca_random.jsonl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pandas_cc/simulation_modules/azteca_variational.jsonl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pandas_cc/simulation_modules/chat_flux_experimental.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pandas_cc/simulation_modules/chat_flux_template_azteca_test.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pandas_cc/simulation_modules/test_azteca_v4.jsonl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RNN/intoduction_to_rnn.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/RNN/intoduction_to_rnn.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/llama3_2_3b.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pandas_cc/openai_latency_test.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/pandas_cc/openai_latency_test.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pandas_cc/simulation_modules/azteca_train_template.jsonl" beforeDir="false" afterPath="$PROJECT_DIR$/pandas_cc/simulation_modules/azteca_train_template.jsonl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pandas_cc/simulation_modules/chat_flux_template_azteca.csv" beforeDir="false" afterPath="$PROJECT_DIR$/pandas_cc/simulation_modules/chat_flux_template_azteca.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pandas_cc/simulation_modules/chatbot_sim.py" beforeDir="false" afterPath="$PROJECT_DIR$/pandas_cc/simulation_modules/chatbot_sim.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pandas_cc/dataset_by_template.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/pandas_cc/dataset_by_template.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pandas_cc/simulation_modules/chat_flux_experimental.csv" beforeDir="false" afterPath="$PROJECT_DIR$/pandas_cc/simulation_modules/chat_flux_experimental.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pandas_cc/simulation_modules/chat_flux_template_azteca_test.csv" beforeDir="false" afterPath="$PROJECT_DIR$/pandas_cc/simulation_modules/chat_flux_template_azteca_test.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pandas_cc/simulation_modules/chatbot_sim_template.py" beforeDir="false" afterPath="$PROJECT_DIR$/pandas_cc/simulation_modules/chatbot_sim_template.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -499,15 +484,9 @@
       <workItem from="1734382637337" duration="31000" />
       <workItem from="1734382684613" duration="13571000" />
       <workItem from="1734451455485" duration="27395000" />
-      <workItem from="1734532401252" duration="15943000" />
-    </task>
-    <task id="LOCAL-00095" summary="updating project">
-      <option name="closed" value="true" />
-      <created>1725645475850</created>
-      <option name="number" value="00095" />
-      <option name="presentableId" value="LOCAL-00095" />
-      <option name="project" value="LOCAL" />
-      <updated>1725645475850</updated>
+      <workItem from="1734532401252" duration="17637000" />
+      <workItem from="1734567266155" duration="15572000" />
+      <workItem from="1734615749670" duration="2191000" />
     </task>
     <task id="LOCAL-00096" summary="updating project">
       <option name="closed" value="true" />
@@ -893,7 +872,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733862634771</updated>
     </task>
-    <option name="localTasksCounter" value="144" />
+    <task id="LOCAL-00144" summary="update project">
+      <option name="closed" value="true" />
+      <created>1734566987244</created>
+      <option name="number" value="00144" />
+      <option name="presentableId" value="LOCAL-00144" />
+      <option name="project" value="LOCAL" />
+      <updated>1734566987244</updated>
+    </task>
+    <option name="localTasksCounter" value="145" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

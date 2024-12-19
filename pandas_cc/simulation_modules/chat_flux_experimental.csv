@@ -2,14 +2,14 @@ id,rol,text
 1,user,[hola; alo?; bueno?]
 1,assistant,"Hola soy $agent de $bank_name ¿me comunico con $full_name?"
 1,user,"$user_identity_confirmation"
-1,assistant,Quiero informarte que tienes $days $plural_days de atraso en tu cuenta y el saldo requerido para ponerla al día es de $amount pesos.
-1,user,"[disculpen, me había olvidado de la fecha límite para realizar el pago del crédito pero voy a realizar el pago hoy; solo hasta hoy reuní la lana completa, salgo a pagar ya mismo; me descuidé en el pago pero voy a pagar ahora mismo; estoy en camino a realizar el pago disculpas]"
+1,assistant,Quiero informarte que tienes $days $plural_ndays de atraso en tu cuenta y el saldo requerido para ponerla al día es de $amount pesos.
+1,user,"$user_agrees_to_pay_today"
 1,assistant,Recuerda que el monto a pagar es $amount para el día de hoy $today_date.
 1,user,"[correcto ese es el monto que debía y voy a pagar ya mismo; si esa es la lana que debía voy a pagar ese monto hoy]"
 1,assistant,"Genial, has confirmado tu pago. Puedes hacerlo en la app, sucursal o aliados como Walmart. ¡Gracias por tu compromiso!"
 2,user,hola
 2,assistant,"Hola soy $agent de $bank_name ¿me comunico con $full_name?"
-2,user,"[si; soy yo; si con $gender_confirm; si $gender_confirm habla; si con $gender_confirm; si en qué lo puedo ayudar?]"
+2,user,"$user_identity_confirmation"
 2,assistant,Quiero informarte que tienes $days días de atraso en tu cuenta y el saldo requerido para ponerla al día es de $amount pesos.
 2,user,[no; hoy no puedo; ni madres; difícil; hoy me queda complicado]
 2,assistant,Podrías realizar el pago el día $tomorrow_date

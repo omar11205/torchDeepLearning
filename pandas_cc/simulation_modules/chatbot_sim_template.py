@@ -14,81 +14,93 @@ from string import Template
 locale.setlocale(locale.LC_ALL, "es_ES")
 
 
-def gen_data(bank_name, agent_name):
-    fk = Faker('es_CO')
-    profile = fk.simple_profile(sex=random.choice(['M', 'F']))
-    npays = fk.pyint(min_value=3, max_value=12)
-    initial_date = fk.past_datetime() - timedelta(days=30 * npays)
+class ConversationDataGenerator:
+    def __init__(self, bank_name, agent_name, additional_data=None):
+        self.bank_name = bank_name
+        self.agent_name = agent_name
+        self.additional_data = additional_data
 
-    cobranzas = {
-        'bank_name': bank_name,
-        'agent': agent_name,
-        'contact_number': 4775006675
-    }
+    def gen_data(self):
+        fk = Faker('es_CO')
+        profile = fk.simple_profile(sex=random.choice(['M', 'F']))
+        npays = fk.pyint(min_value=3, max_value=12)
+        initial_date = fk.past_datetime() - timedelta(days=30 * npays)
 
-    gendered_terms = {
-        'M': {
-            'title': 'Señor',
-            'pronoun': 'el',
-            'confirmation': 'él',
-            'known': 'lo'
-        },
-        'F': {
-            'title': 'Señora',
-            'pronoun': 'la',
-            'confirmation': 'ella',
-            'known': 'la'
+        cobranzas = {
+            'bank_name': self.bank_name,
+            'agent': self.agent_name,
+            'contact_number': 4775006675
         }
-    }
-    gender = profile['sex']
-    debtor_terms = gendered_terms[gender]
 
-    debtor = {
-        'full_name': profile['name'],
-        'first_name': profile['name'].split(' ', 1)[0],
-        'gender': gender,
-        'title': debtor_terms['title'],
-        'pronoun': debtor_terms['pronoun'],
-        'confirmation': debtor_terms['confirmation'],
-        'known': debtor_terms['known'],
-        'identification': str(fk.pyint(min_value=10000000, max_value=99999999)),
-        'address': profile['address'],
-        'email': profile['mail'],
-        'phone_number': fk.phone_number()
-    }
+        gendered_terms = {
+            'M': {
+                'title': 'Señor',
+                'pronoun': 'el',
+                'confirmation': 'él',
+                'known': 'lo'
+            },
+            'F': {
+                'title': 'Señora',
+                'pronoun': 'la',
+                'confirmation': 'ella',
+                'known': 'la'
+            }
+        }
+        gender = profile['sex']
+        debtor_terms = gendered_terms[gender]
 
-    total = fk.pyfloat(min_value=10000, max_value=1000000, right_digits=2)
-    due_date = initial_date + timedelta(days=30 * npays)
-    date_today = datetime.now()
+        debtor = {
+            'full_name': profile['name'],
+            'first_name': profile['name'].split(' ', 1)[0],
+            'gender': gender,
+            'title': debtor_terms['title'],
+            'pronoun': debtor_terms['pronoun'],
+            'confirmation': debtor_terms['confirmation'],
+            'known': debtor_terms['known'],
+            'identification': str(fk.pyint(min_value=10000000, max_value=99999999)),
+            'address': profile['address'],
+            'email': profile['mail'],
+            'phone_number': fk.phone_number()
+        }
 
-    debt = {
-        'status': 'activo',
-        'amount': total,
-        'npays': npays,
-        'start_date': initial_date.isoformat(),
-        'due_date': due_date.isoformat(),
-        'ndays': (date_today - due_date).days,
-        'outstanding_balance': round(total / npays, 2),
-        'today_date': date_today.strftime("%d de %B de %Y"),
-        'tomorrow_date': (date_today + timedelta(1)).strftime("%d de %B de %Y"),
-        'system_date_time': date_today.strftime("%A %Y-%m-%d %I:%M %p")
-    }
+        total = fk.pyfloat(min_value=10000, max_value=1000000, right_digits=2)
+        due_date = initial_date + timedelta(days=30 * npays)
+        date_today = datetime.now()
 
-    return {'debtor': debtor, 'debt': debt, 'cobranzas': cobranzas}
+        debt = {
+            'status': 'activo',
+            'amount': total,
+            'npays': npays,
+            'start_date': initial_date.isoformat(),
+            'due_date': due_date.isoformat(),
+            'ndays': (date_today - due_date).days,
+            'outstanding_balance': round(total / npays, 2),
+            'today_date': date_today.strftime("%d de %B de %Y"),
+            'tomorrow_date': (date_today + timedelta(1)).strftime("%d de %B de %Y"),
+            'system_date_time': date_today.strftime("%A %Y-%m-%d %I:%M %p")
+        }
+
+        if self.additional_data is not None:
+            self.additional_data = deepcopy(self.additional_data)
+            return {'debtor': debtor, 'debt': debt, 'cobranzas': cobranzas, 'aditional': self.additional_data}
+        else:
+            return {'debtor': debtor, 'debt': debt, 'cobranzas': cobranzas}
 
 
 class ConversationFactory:
-    def __init__(self, input_csv, system_prompt, sub_entry=None, use_random_variations=False):
+    def __init__(self, input_csv, system_prompt, gen_data_instance, sub_entry=False, use_random_variations=False):
         self.df = pd.read_csv(input_csv)
         self.system_prompt = system_prompt
         self.sub_entry = sub_entry
         self.use_random_variations = use_random_variations
+        self.gen_data = gen_data_instance
 
     def get_unique_conversations(self):
         return self.df.id.unique()
 
-    def generate_conversation(self, c, cdata):
-        sub = self.sub_entry or {
+    @staticmethod
+    def generate_basic_sub_entry(cdata):
+        sub = {
             'bank_name': cdata['cobranzas']['bank_name'],
             'agent': cdata['cobranzas']['agent'],
             'contact_number': cdata['cobranzas']['contact_number'],
@@ -106,8 +118,15 @@ class ConversationFactory:
             'pronoun': cdata['debtor']['pronoun'],
             'gender_confirm': cdata['debtor']['confirmation'],
             'known': cdata['debtor']['known'],
-            'system_date_time': cdata['debt']['system_date_time']
+            'system_date_time': cdata['debt']['system_date_time'],
+            'user_identity_confirmation': cdata['aditional']['user_identity_confirmation'],
+            'user_agrees_to_pay_today': cdata['aditional']['user_agrees_to_pay_today']
         }
+
+        return sub
+
+    def generate_conversation(self, c, cdata):
+        sub = self.generate_basic_sub_entry(cdata)
 
         conversation = {
             "messages": [{"role": "system", "content": Template(self.system_prompt).substitute(sub)}]
@@ -115,7 +134,7 @@ class ConversationFactory:
 
         dfc = self.df[self.df.id == c].reset_index(drop=True)
 
-        if self.use_random_variations:
+        if self.use_random_variations and self.sub_entry is False:
             for i in range(0, len(dfc.index), 2):
                 user_content = Template(dfc.loc[i].text).substitute(sub)
                 user_content = self.randomize_user_response(user_content)
@@ -125,11 +144,28 @@ class ConversationFactory:
                 conversation['messages'].append(
                     {"role": "assistant", "content": Template(dfc.loc[i + 1].text).substitute(sub)}
                 )
-
-        else:
+        elif self.use_random_variations and self.sub_entry:
+            for i in range(0, len(dfc.index), 2):
+                user_content = Template(Template(dfc.loc[i].text).substitute(sub)).substitute(sub)
+                user_content = self.randomize_user_response(user_content)
+                conversation['messages'].append(
+                    {"role": "user", "content": user_content}
+                )
+                conversation['messages'].append(
+                    {"role": "assistant", "content": Template(dfc.loc[i + 1].text).substitute(sub)}
+                )
+        elif self.use_random_variations is False and self.sub_entry is False:
             for i in range(0, len(dfc.index), 2):
                 conversation['messages'].append(
                     {"role": "user", "content": Template(dfc.loc[i].text).substitute(sub)}
+                )
+                conversation['messages'].append(
+                    {"role": "assistant", "content": Template(dfc.loc[i + 1].text).substitute(sub)}
+                )
+        elif self.use_random_variations is False and self.sub_entry:
+            for i in range(0, len(dfc.index), 2):
+                conversation['messages'].append(
+                    {"role": "user", "content": Template(Template(dfc.loc[i].text).substitute(sub)).substitute(sub)}
                 )
                 conversation['messages'].append(
                     {"role": "assistant", "content": Template(dfc.loc[i + 1].text).substitute(sub)}
@@ -178,7 +214,7 @@ class ConversationFactory:
         convs = self.get_unique_conversations()
 
         for c in convs:
-            cdata = gen_data(bank_name, agent_name)
+            cdata = self.gen_data.gen_data()
             conversation = self.generate_conversation(c, cdata)
             variations = self.get_variations(conversation)
             conversations.extend(variations)
@@ -190,7 +226,7 @@ class ConversationFactory:
         convs = self.get_unique_conversations()
 
         for _ in range(dataset_size):
-            cdata = gen_data(bank_name, agent_name)
+            cdata = self.gen_data.gen_data()
             for c in convs:
                 conversation = self.generate_conversation(c, cdata)
                 conversations.append(conversation)
