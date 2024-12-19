@@ -1,16 +1,16 @@
 id,rol,text
 1,user,hola
-1,assistant,"Hola, soy Raul de Banco Azteca. Me comunico con $pronoun $title $full_name?"
-1,user,[si; soy yo; si con $gender_confirm]
-1,assistant,Quiero informarte que tienes $days días de atraso en tu cuenta y el saldo a cancelar es de $amount. Podemos contar con tu pago el día de hoy ?
-1,user,"[ok; ta bueno; esta bien; si, yo pago]"
-1,assistant,Recuerda que el monto a pagar es $amount para el día $today_date. Confirmamos tu pago completo ?
-1,user,[correcto; de acuerdo]
-1,assistant,"Genial, has confirmado tu pago.  Recuerda que puedes realizarlo en la aplicación móvil, en cualquiera de nuestras sucursales o en aliados como Walmart. Gracias por tu compromiso"
+1,assistant,"Hola soy $agent de $bank_name ¿me comunico con $full_name?"
+1,user,[si; soy yo; si con $gender_confirm; si $gender_confirm habla; si con $gender_confirm; si en qué lo puedo ayudar?]
+1,assistant,Quiero informarte que tienes $days días de atraso en tu cuenta y el saldo requerido es de $amount pesos.
+1,user,["disculpen, me había olvidado de la fecha límite para realizar el pago del crédito pero voy a realizar el pago hoy"; "solo hasta hoy reuní la lana completa, salgo a pagar ya mismo"; me descuidé en el pago pero voy a pagar ahora mismo; estoy en camino a realizar el pago disculpas]
+1,assistant,Recuerda que el monto a pagar es $amount para el día de hoy $today_date.
+1,user,[correcto ese es el monto que debía y voy a pagar ya mismo; si esa es la lana que debía voy a pagar ese monto hoy]
+1,assistant,"Genial, has confirmado tu pago. Puedes hacerlo en la app, sucursal o aliados como Walmart. ¡Gracias por tu compromiso!"
 2,user,hola
-2,assistant,"Hola, soy Raul de Banco Azteca. Me comunico con $pronoun $title $full_name?"
-2,user,[con $gender_confirm; $gender_confirm habla; en que lo puedo ayudar]
-2,assistant,Quiero informarte que tienes días $days de atraso en tu cuenta y el saldo a cancelar es de $amount. Podemos contar con tu pago el día de hoy ?
+2,assistant,"Hola soy $agent de $bank_name ¿me comunico con $full_name?"
+2,user,si; soy yo; si con $gender_confirm; si $gender_confirm habla; si con $gender_confirm; si en qué lo puedo ayudar?
+2,assistant,Quiero informarte que tienes $days días de atraso en tu cuenta y el saldo a cancelar es de $amount.
 2,user,[no; hoy no puedo; ni madres; difícil; hoy me queda complicado]
 2,assistant,Podrías realizar el pago el día $tomorrow_date
 2,user,[si; mañana si; si yo creo que puedo]
@@ -18,7 +18,7 @@ id,rol,text
 3,user,hola
 3,assistant,"Hola, soy Raul de Banco Azteca. Me comunico con $pronoun $title $full_name?"
 3,user,[sí con $gender_confirm; dígame; cuénteme]
-3,assistant,Quiero informarte que tienes $days días de atraso en tu cuenta y el saldo a cancelar es de $amount. Podemos contar con tu pago el día de hoy ?
+3,assistant,Quiero informarte que tienes $days días de atraso en tu cuenta y el saldo  es de $amount. Podemos contar con tu pago el día de hoy ?
 3,user,[no; hoy no puedo; complicado; hoy complejo]
 3,assistant,Podrías realizar el pago el día $tomorrow_date
 3,user,[no; tampoco; no puedo; no tengo lana; me queda difícil]

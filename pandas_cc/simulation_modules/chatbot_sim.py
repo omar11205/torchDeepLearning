@@ -551,7 +551,7 @@ class FineTuningDataset:
 
 if __name__ == "__main__":
     cli_manager = InputManager("client_names.jsonl")  # loads the entire dataset
-    cli_data = cli_manager.get_sample(absolute=20)  # retrieve 20 random names
+    cli_data = cli_manager.get_sample(absolute=2)  # retrieve 20 random names
 
     # random dates start
     s_date = datetime(2024, 1, 1)
@@ -564,15 +564,15 @@ if __name__ == "__main__":
 
     dates_generator = DatesGenerator()
 
-    train_entries_generator = RandomEntryGenerator(
-        mode="random_day",
+    test_entries_generator = RandomEntryGenerator(
+        mode="current_day",
         ag_names=agent_names,
         cli_names=cli_data,
         bank=bank_name,
         date_config=dates_generator
     )
 
-    train_entries = train_entries_generator.generate_random_entries(
+    test_entries = test_entries_generator.generate_random_entries(
         s_date,
         e_date
     )
@@ -580,11 +580,11 @@ if __name__ == "__main__":
     bot = AztecaGPTConversation()
 
     FineTuningDataset.create_dataset(
-        entries=train_entries,
+        entries=test_entries,
         gpt_conv=bot,
         chat_flux=bot.default_chat_flux,
-        generate_weights=True,  # all the weights are set to 1 by default
-        filename="train_azteca_v5.jsonl"
+        generate_weights=False,  # all the weights are set to 1 by default
+        filename="test_azteca_v4.jsonl"
     )
 
     # count_train_patterns = FineTuningDataset.analyze_dataset_patterns(

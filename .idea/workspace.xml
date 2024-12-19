@@ -5,19 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c927f566-e1ab-4c11-a852-3620c04eb55d" name="Changes" comment="update project">
-      <change afterPath="$PROJECT_DIR$/pandas_cc/simulation_modules/azteca_train_template.jsonl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pandas_cc/simulation_modules/chat_flux_template_azteca.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pandas_cc/simulation_modules/chatbot_sim_template.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pandas_cc/simulation_modules/conversations_azteca.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pandas_cc/simulation_modules/train_azteca_v4.jsonl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pandas_cc/simulation_modules/train_azteca_v5.jsonl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pandas_cc/test_azteca_v4.jsonl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pandas_cc/train_azteca_v4.jsonl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fine_tunning_llm/llama3_2_3b.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fine_tunning_llm/processing_data.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pandas_cc/client_names.jsonl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pandas_cc/dataset_by_template.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pandas_cc/latencies.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pandas_cc/latencies_temperature_0.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pandas_cc/simulation_modules/azteca_random.jsonl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pandas_cc/simulation_modules/azteca_variational.jsonl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pandas_cc/simulation_modules/chat_flux_experimental.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pandas_cc/simulation_modules/chat_flux_template_azteca_test.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pandas_cc/simulation_modules/test_azteca_v4.jsonl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pandas_cc/chatbot_simulation.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/pandas_cc/chatbot_simulation.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pandas_cc/simulation_modules/analize_results.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RNN/intoduction_to_rnn.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/RNN/intoduction_to_rnn.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/llama3_2_3b.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pandas_cc/openai_latency_test.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/pandas_cc/openai_latency_test.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pandas_cc/simulation_modules/azteca_train_template.jsonl" beforeDir="false" afterPath="$PROJECT_DIR$/pandas_cc/simulation_modules/azteca_train_template.jsonl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pandas_cc/simulation_modules/chat_flux_template_azteca.csv" beforeDir="false" afterPath="$PROJECT_DIR$/pandas_cc/simulation_modules/chat_flux_template_azteca.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pandas_cc/simulation_modules/chatbot_sim.py" beforeDir="false" afterPath="$PROJECT_DIR$/pandas_cc/simulation_modules/chatbot_sim.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pandas_cc/simulation_modules/chatbot_simulation.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pandas_cc/simulation_modules/chatbot_sim_template.py" beforeDir="false" afterPath="$PROJECT_DIR$/pandas_cc/simulation_modules/chatbot_sim_template.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,8 +34,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Jupyter Notebook" />
         <option value="Python Script" />
+        <option value="Jupyter Notebook" />
       </list>
     </option>
   </component>
@@ -82,7 +89,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/GIT/AI/torchDeepLearning/pandas_cc/simulation_modules&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/GITAI/artificial_intelligence/torchDeepLearning/pandas_cc/simulation_modules&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -95,21 +102,21 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\GITAI\artificial_intelligence\torchDeepLearning\pandas_cc\simulation_modules" />
       <recent name="D:\GIT\AI\torchDeepLearning\pandas_cc\simulation_modules" />
       <recent name="D:\GIT\AI\torchDeepLearning\CNN" />
       <recent name="D:\GIT\AI\torchDeepLearning\CNN\train_images\MNIST\MNIST\raw" />
       <recent name="C:\GITAI\artificial_intelligence\torchDeepLearning\ANN" />
-      <recent name="C:\GITAI\artificial_intelligence\torchDeepLearning\ANN\data" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\GITAI\artificial_intelligence\torchDeepLearning\pandas_cc" />
       <recent name="D:\GIT\AI\torchDeepLearning\pandas_cc" />
       <recent name="D:\GIT\AI\torchDeepLearning\pandas_cc\simulation_modules" />
       <recent name="C:\GITAI\artificial_intelligence\torchDeepLearning\CNN" />
       <recent name="D:\GIT\AI\torchDeepLearning\CNN" />
-      <recent name="C:\GITAI\artificial_intelligence\torchDeepLearning\ANN" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.chatbot_sim">
+  <component name="RunManager" selected="Python.chatbot_sim_template">
     <configuration name="chatbot_sim" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="torchDeepLearning" />
       <option name="ENV_FILES" value="" />
@@ -181,8 +188,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.chatbot_sim" />
         <item itemvalue="Python.chatbot_sim_template" />
+        <item itemvalue="Python.chatbot_sim" />
         <item itemvalue="Python.chatbot_simulation" />
       </list>
     </recent_temporary>
@@ -190,8 +197,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-PY-241.14494.241" />
-        <option value="bundled-python-sdk-0509580d9d50-28c9f5db9ffe-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-241.14494.241" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-PY-241.17011.127" />
+        <option value="bundled-python-sdk-48aec45f0201-7e9c3bbb6e34-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-241.17011.127" />
       </set>
     </attachedChunks>
   </component>
@@ -484,6 +491,15 @@
       <workItem from="1734012661499" duration="13143000" />
       <workItem from="1734028852955" duration="23498000" />
       <workItem from="1734097724998" duration="5446000" />
+      <workItem from="1734205744221" duration="13288000" />
+      <workItem from="1734361634321" duration="1017000" />
+      <workItem from="1734365817737" duration="6555000" />
+      <workItem from="1734378836726" duration="409000" />
+      <workItem from="1734379283164" duration="2708000" />
+      <workItem from="1734382637337" duration="31000" />
+      <workItem from="1734382684613" duration="13571000" />
+      <workItem from="1734451455485" duration="27395000" />
+      <workItem from="1734532401252" duration="15943000" />
     </task>
     <task id="LOCAL-00095" summary="updating project">
       <option name="closed" value="true" />
@@ -936,12 +952,12 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/torchDeepLearning$chatbot_sim.coverage" NAME="chatbot_sim Coverage Results" MODIFIED="1734383381961" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pandas_cc/simulation_modules" />
+    <SUITE FILE_PATH="coverage/torchDeepLearning$model_class.coverage" NAME="model_class Coverage Results" MODIFIED="1721940189827" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ANN" />
+    <SUITE FILE_PATH="coverage/torchDeepLearning$chatbot_simulation.coverage" NAME="chatbot_simulation Coverage Results" MODIFIED="1733882983882" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pandas_cc/simulation_modules" />
     <SUITE FILE_PATH="coverage/torchDeepLearning$analize_results.coverage" NAME="analize_results Coverage Results" MODIFIED="1733758497384" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pandas_cc/simulation_modules" />
     <SUITE FILE_PATH="coverage/torchDeepLearning$model_stop.coverage" NAME="model_stop Coverage Results" MODIFIED="1721949155352" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ANN" />
     <SUITE FILE_PATH="coverage/torchDeepLearning$model_reg.coverage" NAME="model_reg Coverage Results" MODIFIED="1727393856552" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ANN/manual_models" />
-    <SUITE FILE_PATH="coverage/torchDeepLearning$model_class.coverage" NAME="model_class Coverage Results" MODIFIED="1721940189827" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ANN" />
-    <SUITE FILE_PATH="coverage/torchDeepLearning$chatbot_sim_template.coverage" NAME="chatbot_sim_template Coverage Results" MODIFIED="1734028906083" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pandas_cc/simulation_modules" />
-    <SUITE FILE_PATH="coverage/torchDeepLearning$chatbot_simulation.coverage" NAME="chatbot_simulation Coverage Results" MODIFIED="1733882983882" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pandas_cc/simulation_modules" />
-    <SUITE FILE_PATH="coverage/torchDeepLearning$chatbot_sim.coverage" NAME="chatbot_sim Coverage Results" MODIFIED="1734097973032" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pandas_cc/simulation_modules" />
+    <SUITE FILE_PATH="coverage/torchDeepLearning$chatbot_sim_template.coverage" NAME="chatbot_sim_template Coverage Results" MODIFIED="1734486078505" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pandas_cc/simulation_modules" />
   </component>
 </project>

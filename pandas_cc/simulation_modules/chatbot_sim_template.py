@@ -9,17 +9,22 @@ from datetime import datetime, timedelta
 from faker import Faker
 from copy import deepcopy
 from string import Template
-from pprint import pprint
 
 # Set locale dates in spanish
 locale.setlocale(locale.LC_ALL, "es_ES")
 
 
-def gen_data():
+def gen_data(bank_name, agent_name):
     fk = Faker('es_CO')
     profile = fk.simple_profile(sex=random.choice(['M', 'F']))
     npays = fk.pyint(min_value=3, max_value=12)
     initial_date = fk.past_datetime() - timedelta(days=30 * npays)
+
+    cobranzas = {
+        'bank_name': bank_name,
+        'agent': agent_name,
+        'contact_number': 4775006675
+    }
 
     gendered_terms = {
         'M': {
@@ -52,7 +57,7 @@ def gen_data():
         'phone_number': fk.phone_number()
     }
 
-    total = fk.pyfloat(min_value=100000, max_value=10000000, right_digits=2)
+    total = fk.pyfloat(min_value=10000, max_value=1000000, right_digits=2)
     due_date = initial_date + timedelta(days=30 * npays)
     date_today = datetime.now()
 
@@ -69,26 +74,31 @@ def gen_data():
         'system_date_time': date_today.strftime("%A %Y-%m-%d %I:%M %p")
     }
 
-    return {'debtor': debtor, 'debt': debt}
+    return {'debtor': debtor, 'debt': debt, 'cobranzas': cobranzas}
 
 
 class ConversationFactory:
-    def __init__(self, input_csv, system_prompt, sub_entry=None):
+    def __init__(self, input_csv, system_prompt, sub_entry=None, use_random_variations=False):
         self.df = pd.read_csv(input_csv)
         self.system_prompt = system_prompt
         self.sub_entry = sub_entry
+        self.use_random_variations = use_random_variations
 
     def get_unique_conversations(self):
         return self.df.id.unique()
 
     def generate_conversation(self, c, cdata):
         sub = self.sub_entry or {
+            'bank_name': cdata['cobranzas']['bank_name'],
+            'agent': cdata['cobranzas']['agent'],
+            'contact_number': cdata['cobranzas']['contact_number'],
             'full_name': cdata['debtor']['full_name'],
             'address': cdata['debtor']['address'],
             'phone_number': cdata['debtor']['phone_number'],
             'email': cdata['debtor']['email'],
             'identification': cdata['debtor']['identification'],
             'days': cdata['debt']['ndays'],
+            'plural_ndays': "días" if cdata['debt']['ndays'] > 1 else "día",
             'amount': cdata['debt']['amount'],
             'today_date': cdata['debt']['today_date'],
             'tomorrow_date': cdata['debt']['tomorrow_date'],
@@ -96,6 +106,7 @@ class ConversationFactory:
             'pronoun': cdata['debtor']['pronoun'],
             'gender_confirm': cdata['debtor']['confirmation'],
             'known': cdata['debtor']['known'],
+            'system_date_time': cdata['debt']['system_date_time']
         }
 
         conversation = {
@@ -104,15 +115,40 @@ class ConversationFactory:
 
         dfc = self.df[self.df.id == c].reset_index(drop=True)
 
-        for i in range(0, len(dfc.index), 2):
-            conversation['messages'].append(
-                {"role": "user", "content": Template(dfc.loc[i].text).substitute(sub)}
-            )
-            conversation['messages'].append(
-                {"role": "assistant", "content": Template(dfc.loc[i + 1].text).substitute(sub)}
-            )
+        if self.use_random_variations:
+            for i in range(0, len(dfc.index), 2):
+                user_content = Template(dfc.loc[i].text).substitute(sub)
+                user_content = self.randomize_user_response(user_content)
+                conversation['messages'].append(
+                    {"role": "user", "content": user_content}
+                )
+                conversation['messages'].append(
+                    {"role": "assistant", "content": Template(dfc.loc[i + 1].text).substitute(sub)}
+                )
+
+        else:
+            for i in range(0, len(dfc.index), 2):
+                conversation['messages'].append(
+                    {"role": "user", "content": Template(dfc.loc[i].text).substitute(sub)}
+                )
+                conversation['messages'].append(
+                    {"role": "assistant", "content": Template(dfc.loc[i + 1].text).substitute(sub)}
+                )
 
         return conversation
+
+
+    @staticmethod
+    def randomize_user_response(content):
+        """
+        Replace options in brackets [option1; option2; ...] with one random choice.
+        """
+        def replace_match(match):
+            options = [x.strip() for x in match.group(1).split(';')]
+            return random.choice(options)
+
+        return re.sub(r'\[(.*?)\]', replace_match, content)
+
 
     @staticmethod
     def get_variations(conversation):
@@ -137,33 +173,70 @@ class ConversationFactory:
 
         return variations if variations else [conversation]
 
-    def generate_training_data(self):
+    def generate_variational_training_data(self, bank_name, agent_name):
         conversations = []
         convs = self.get_unique_conversations()
 
         for c in convs:
-            cdata = gen_data()
+            cdata = gen_data(bank_name, agent_name)
             conversation = self.generate_conversation(c, cdata)
             variations = self.get_variations(conversation)
             conversations.extend(variations)
 
         return conversations
 
+    def generate_random_unique_training_data(self, dataset_size, bank_name, agent_name):
+        conversations = []
+        convs = self.get_unique_conversations()
+
+        for _ in range(dataset_size):
+            cdata = gen_data(bank_name, agent_name)
+            for c in convs:
+                conversation = self.generate_conversation(c, cdata)
+                conversations.append(conversation)
+
+        return conversations
+
 
 if __name__ == '__main__':
-    input_csv = 'conversations_azteca.csv'
-    system_prompt3 = """
-    Eres Raul de Banco Azteca.
-    Tu objetivo es informar sobre el estado de la obligación financiera y realizar un acuerdo del pago con el deudor.
-    """
+    # generate a variational dataset
+    input_csv = 'chat_flux_template_azteca_test.csv'
 
-    factory = ConversationFactory(input_csv, system_prompt3)
-    conversations = factory.generate_training_data()
+    system_prompt_default = (
+            "Tu nombre es $agent y trabajas para Cumplir SAS. " 
+            "Tu tarea es comunicarte con los clientes con alta empatía y comprensión. "
+            "Nombre Banco: $bank_name. "
+            "Nombre Cliente: $full_name. " 
+            "Monto Adeudado: $amount pesos. "
+            "Fecha y hora de hoy: $system_date_time. "
+            "Días de atraso en el pago: $days. " 
+            "Fecha de pago máxima: $tomorrow_date. "
+            "Número de contacto de Banco Azteca: $contact_number"
+    )
 
-    print(f"Total training conversations: {len(conversations)}")
+    factory = ConversationFactory(input_csv, system_prompt_default)
+    conversations = factory.generate_variational_training_data(bank_name="Banco Azteca", agent_name="Raúl")
 
-    with open('azteca_train_template.jsonl', 'w') as f:
+    print(f"Total variational training conversations: {len(conversations)}")
+
+    with open('azteca_variational.jsonl', 'w') as f:
         for item in conversations:
             f.write(json.dumps(item) + '\n')
 
-    print(f"Conversation created successfully: {len(conversations)}")
+    print(f"Variational Conversation created successfully: {len(conversations)}")
+
+    # generate a random dataset
+    system_prompt_default = ("Eres Raul de Banco Azteca. Tu objetivo es informar sobre el estado de la obligación "
+                      "financiera y realizar un acuerdo del pago con el deudor.")
+
+    factory_ran = ConversationFactory(input_csv, system_prompt_default, use_random_variations=True)
+    conversations_ran = factory_ran.generate_random_unique_training_data(dataset_size=10, bank_name="Banco Azteca", agent_name="Raúl")
+
+    print(f"Total random training conversations: {len(conversations_ran)}")
+
+    with open('azteca_random.jsonl', 'w') as f:
+        for item in conversations_ran:
+            f.write(json.dumps(item) + '\n')
+
+    print(f"Random Conversation created successfully: {len(conversations_ran)}")
+
