@@ -88,7 +88,7 @@ class ConversationDataGenerator:
 
 
 class ConversationFactory:
-    def __init__(self, input_csv, system_prompt, gen_data_instance, sub_entry=False, use_random_variations=False):
+    def __init__(self, input_csv, system_prompt, gen_data_instance, sub_entry=None, use_random_variations=False):
         self.df = pd.read_csv(input_csv)
         self.system_prompt = system_prompt
         self.sub_entry = sub_entry
@@ -118,15 +118,16 @@ class ConversationFactory:
             'pronoun': cdata['debtor']['pronoun'],
             'gender_confirm': cdata['debtor']['confirmation'],
             'known': cdata['debtor']['known'],
-            'system_date_time': cdata['debt']['system_date_time'],
-            'user_identity_confirmation': cdata['aditional']['user_identity_confirmation'],
-            'user_agrees_to_pay_today': cdata['aditional']['user_agrees_to_pay_today']
+            'system_date_time': cdata['debt']['system_date_time']
         }
 
         return sub
 
     def generate_conversation(self, c, cdata):
-        sub = self.generate_basic_sub_entry(cdata)
+        if self.sub_entry is not None:
+            sub = self.sub_entry(cdata)
+        else:
+            sub = self.generate_basic_sub_entry(cdata)
 
         conversation = {
             "messages": [{"role": "system", "content": Template(self.system_prompt).substitute(sub)}]
@@ -134,7 +135,7 @@ class ConversationFactory:
 
         dfc = self.df[self.df.id == c].reset_index(drop=True)
 
-        if self.use_random_variations and self.sub_entry is False:
+        if self.use_random_variations and self.sub_entry is None:
             for i in range(0, len(dfc.index), 2):
                 user_content = Template(dfc.loc[i].text).substitute(sub)
                 user_content = self.randomize_user_response(user_content)
@@ -154,7 +155,7 @@ class ConversationFactory:
                 conversation['messages'].append(
                     {"role": "assistant", "content": Template(dfc.loc[i + 1].text).substitute(sub)}
                 )
-        elif self.use_random_variations is False and self.sub_entry is False:
+        elif self.use_random_variations is False and self.sub_entry is None:
             for i in range(0, len(dfc.index), 2):
                 conversation['messages'].append(
                     {"role": "user", "content": Template(dfc.loc[i].text).substitute(sub)}
@@ -173,7 +174,6 @@ class ConversationFactory:
 
         return conversation
 
-
     @staticmethod
     def randomize_user_response(content):
         """
@@ -184,7 +184,6 @@ class ConversationFactory:
             return random.choice(options)
 
         return re.sub(r'\[(.*?)\]', replace_match, content)
-
 
     @staticmethod
     def get_variations(conversation):
@@ -209,34 +208,42 @@ class ConversationFactory:
 
         return variations if variations else [conversation]
 
-    def generate_variational_training_data(self, bank_name, agent_name):
+    def generate_fine_tuning_dataset(self, dataset_size=1):
         conversations = []
         convs = self.get_unique_conversations()
 
-        for c in convs:
-            cdata = self.gen_data.gen_data()
-            conversation = self.generate_conversation(c, cdata)
-            variations = self.get_variations(conversation)
-            conversations.extend(variations)
+        if self.use_random_variations:
+            for _ in range(dataset_size):
+                cdata = self.gen_data.gen_data()
+                for c in convs:
+                    conversation = self.generate_conversation(c, cdata)
+                    conversations.append(conversation)
 
-        return conversations
+            return conversations
 
-    def generate_random_unique_training_data(self, dataset_size, bank_name, agent_name):
-        conversations = []
-        convs = self.get_unique_conversations()
-
-        for _ in range(dataset_size):
-            cdata = self.gen_data.gen_data()
+        else:
             for c in convs:
+                cdata = self.gen_data.gen_data()
                 conversation = self.generate_conversation(c, cdata)
-                conversations.append(conversation)
+                variations = self.get_variations(conversation)
+                conversations.extend(variations)
 
-        return conversations
+            return conversations
+
+    @staticmethod
+    def generate_jsonl(conversations_list, file_name="fine_tuning_dataset.jsonl",):
+        print(f"Total conversations: {len(conversations_list)}")
+
+        with open(file_name, 'w') as f:
+            for items in conversations_list:
+                f.write(json.dumps(items) + '\n')
+
+        print(f"Conversation jsonl created successfully: {len(conversations_list)} conversations in {file_name}")
 
 
 if __name__ == '__main__':
     # generate a variational dataset
-    input_csv = 'chat_flux_template_azteca_test.csv'
+    template_csv = 'chat_flux_template_azteca_test.csv'
 
     system_prompt_default = (
             "Tu nombre es $agent y trabajas para Cumplir SAS. " 
@@ -250,29 +257,22 @@ if __name__ == '__main__':
             "Número de contacto de Banco Azteca: $contact_number"
     )
 
-    factory = ConversationFactory(input_csv, system_prompt_default)
-    conversations = factory.generate_variational_training_data(bank_name="Banco Azteca", agent_name="Raúl")
+    conversation_data_generator = ConversationDataGenerator(
+        bank_name="Banco Azteca",
+        agent_name="Raúl"
+    )
 
-    print(f"Total variational training conversations: {len(conversations)}")
+    factory = ConversationFactory(
+        input_csv=template_csv,
+        system_prompt=system_prompt_default,
+        gen_data_instance=conversation_data_generator,
+        use_random_variations=False,  # permutate the user entries
+    )
 
-    with open('azteca_variational.jsonl', 'w') as f:
-        for item in conversations:
-            f.write(json.dumps(item) + '\n')
+    conversations = factory.generate_fine_tuning_dataset()
+    print(f"Total training conversations: {len(conversations)}")
 
-    print(f"Variational Conversation created successfully: {len(conversations)}")
+    factory.generate_jsonl(conversations, file_name="train_azteca_beta.jsonl")
 
-    # generate a random dataset
-    system_prompt_default = ("Eres Raul de Banco Azteca. Tu objetivo es informar sobre el estado de la obligación "
-                      "financiera y realizar un acuerdo del pago con el deudor.")
 
-    factory_ran = ConversationFactory(input_csv, system_prompt_default, use_random_variations=True)
-    conversations_ran = factory_ran.generate_random_unique_training_data(dataset_size=10, bank_name="Banco Azteca", agent_name="Raúl")
-
-    print(f"Total random training conversations: {len(conversations_ran)}")
-
-    with open('azteca_random.jsonl', 'w') as f:
-        for item in conversations_ran:
-            f.write(json.dumps(item) + '\n')
-
-    print(f"Random Conversation created successfully: {len(conversations_ran)}")
 

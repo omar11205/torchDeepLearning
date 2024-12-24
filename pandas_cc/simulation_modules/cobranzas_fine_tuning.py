@@ -4,7 +4,7 @@ import locale
 from datetime import datetime, timedelta
 from pandas import DataFrame
 from string import Template
-from chatbot_sim_template import ConversationFactory as CFactory
+from cobranzas_fine_tuning_template import ConversationFactory as CFactory
 
 
 # Set locale dates in spanish
@@ -483,6 +483,7 @@ class FineTuningDataset:
     @staticmethod
     def adjust_weights_by_line(input_file, output_file, thresholds, patterns):
         """
+        For fine tuning OpenAI gpt models
         Adjust weights in a .jsonl dataset based on line percentages.
         :param patterns:
         :param input_file: Path to the input .jsonl dataset.
