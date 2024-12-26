@@ -263,47 +263,80 @@ class ConversationFactory:
 
     @staticmethod
     def get_variations(conversation: Dict[str, Any]) -> List[Dict[str, Any]]:
-        variations = []
-        subs = []
+        """
+        Generate variations of a conversation by replacing placeholders in user messages
+        with all possible combinations of alternatives.
+
+        Args:
+            conversation (Dict[str, Any]): A dictionary representing a conversation. It is
+                                           expected to have a 'messages' key containing a list
+                                           of dictionaries. Each dictionary should include
+                                           'role' and 'content' keys.
+
+        Returns:
+            List[Dict[str, Any]]: A list of dictionaries, each representing a variation of the
+                                  original conversation. If no placeholders are found, the
+                                  original conversation is returned in a single-item list.
+        """
+
+        variations: List[Dict[str, Any]] = []
+        subs: List[Dict[str, Any]] = []
 
         for entry in conversation['messages']:
             if entry['role'] == 'user':
                 x = re.search(r'\[(.*?)\]', entry['content'])
                 if x is not None:
-                    alts = [y.strip() for y in x.group(1).split(';')]
+                    alts: List[str] = [y.strip() for y in x.group(1).split(';')]
                     subs.append({'entry': entry, 'alts': alts})
 
-        al = [sub['alts'] for sub in subs]
-        pr = list(itertools.product(*al))
+        al: List[List[str]] = [sub['alts'] for sub in subs]
+        pr: List[tuple] = list(itertools.product(*al))
 
         for p in pr:
             for idx, sub in enumerate(subs):
                 sub['entry']['content'] = p[idx]
-            cc = deepcopy(conversation)
+            cc: Dict[str, Any] = deepcopy(conversation)
             variations.append(cc)
 
         return variations if variations else [conversation]
 
     @staticmethod
-    def get_gemini_variations(conversation: Dict[str, Any]):
-        # NOT READY
-        variations = []
-        subs = []
+    def get_gemini_variations_v1(conversation: Dict[str, Any]) -> List[Dict[str, Any]]:
+        """
+        Generate variations of a conversation in Gemini 1.5 format by replacing placeholders
+        in user messages with all possible combinations of alternatives.
 
+        Args:
+            conversation (Dict[str, Any]): A dictionary representing a Gemini 1.5 conversation.
+                                           It is expected to have a 'contents' key containing a
+                                           list of dictionaries. Each dictionary should include
+                                           'role' and 'parts' keys.
+
+        Returns:
+            List[Dict[str, Any]]: A list of dictionaries, each representing a variation of the
+                                  original conversation. If no placeholders are found, the
+                                  original conversation is returned in a single-item list.
+        """
+        variations: List[Dict[str, Any]] = []
+        subs: List[Dict[str, Any]] = []
+
+        # Step 1: Identify placeholders in 'contents' for user messages
         for entry in conversation['contents']:
             if entry['role'] == 'user':
                 x = re.search(r'\[(.*?)\]', entry['parts'][0]['text'])
                 if x is not None:
-                    alts = [y.strip() for y in x.group(1).split(';')]
+                    alts: List[str] = [y.strip() for y in x.group(1).split(';')]
                     subs.append({'entry': entry, 'alts': alts})
 
-        al = [sub['alts'] for sub in subs]
-        pr = list(itertools.product(*al))
+        # Step 2: Generate Cartesian product of all alternatives
+        al: List[List[str]] = [sub['alts'] for sub in subs]
+        pr: List[tuple] = list(itertools.product(*al))
 
+        # Step 3: Replace placeholders and create variations
         for p in pr:
             for idx, sub in enumerate(subs):
-                sub['entry']['content'] = p[idx]
-            cc = deepcopy(conversation)
+                sub['entry']['parts'][0]['text'] = p[idx]
+            cc: Dict[str, Any] = deepcopy(conversation)
             variations.append(cc)
 
         return variations if variations else [conversation]
@@ -342,25 +375,34 @@ class ConversationFactory:
                     conversations.append(conversation)
 
             return conversations
-
-        # else:
-        #     for c in convs:
-        #         cdata = self.gen_data.gen_data()
-        #         conversation = self.generate_conversation(c, cdata)
-        #         variations = self.get_variations(conversation)
-        #         conversations.extend(variations)
-        #
-        #     return conversations
+        else:
+            for c in convs:
+                cdata = self.gen_data.gen_data()
+                conversation = self.gemini_15_conversation(c, cdata)
+                variations = self.get_gemini_variations_v1(conversation)
+                conversations.extend(variations)
+            return conversations
 
     @staticmethod
-    def generate_jsonl(conversations_list: List[Dict[str, Any]], file_name: str = "fine_tuning_dataset.jsonl",):
+    def generate_jsonl(conversations_list: List[Dict[str, Any]],
+                       file_name: str = "fine_tuning_dataset.jsonl",
+                       utf8_encoding: bool = False
+                       ):
+
         print(f"Total conversations: {len(conversations_list)}")
 
-        with open(file_name, 'w') as f:
-            for items in conversations_list:
-                f.write(json.dumps(items) + '\n')
+        if utf8_encoding is False:
+            with open(file_name, 'w') as f:
+                for items in conversations_list:
+                    f.write(json.dumps(items) + '\n')
+        else:
+            with open(file_name, 'w', encoding="utf-8") as f:
+                for items in conversations_list:
+                    f.write(json.dumps(items, ensure_ascii=False) + '\n')
 
         print(f"Conversation jsonl created successfully: {len(conversations_list)} conversations in {file_name}")
+
+
 
 
 if __name__ == '__main__':

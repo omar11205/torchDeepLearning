@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c927f566-e1ab-4c11-a852-3620c04eb55d" name="Changes" comment="update project">
-      <change afterPath="$PROJECT_DIR$/pandas_cc/gemini_azteca_beta.jsonl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pandas_cc/simulation_modules/train_azteca_beta.jsonl" afterDir="false" />
+    <list default="true" id="c927f566-e1ab-4c11-a852-3620c04eb55d" name="Changes" comment="update project (gemini_variational_dataset) not ready">
+      <change afterPath="$PROJECT_DIR$/pandas_cc/gemini_azteca_beta2.jsonl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pandas_cc/gemini_azteca_beta2_test.jsonl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pandas_cc/azteca_enhaced_flux.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/pandas_cc/azteca_enhaced_flux.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pandas_cc/gemini_test_beta.jsonl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pandas_cc/dataset_by_template.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/pandas_cc/dataset_by_template.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pandas_cc/gemini_azteca_beta.jsonl" beforeDir="false" afterPath="$PROJECT_DIR$/pandas_cc/gemini_azteca_beta.jsonl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pandas_cc/simulation_modules/cobranzas_fine_tuning_template.py" beforeDir="false" afterPath="$PROJECT_DIR$/pandas_cc/simulation_modules/cobranzas_fine_tuning_template.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -517,15 +518,9 @@
       <workItem from="1734879171078" duration="12820000" />
       <workItem from="1734961864607" duration="10854000" />
       <workItem from="1735061212838" duration="4575000" />
-      <workItem from="1735069608663" duration="27915000" />
-    </task>
-    <task id="LOCAL-00098" summary="updating project">
-      <option name="closed" value="true" />
-      <created>1725648299236</created>
-      <option name="number" value="00098" />
-      <option name="presentableId" value="LOCAL-00098" />
-      <option name="project" value="LOCAL" />
-      <updated>1725648299236</updated>
+      <workItem from="1735069608663" duration="27968000" />
+      <workItem from="1735217646799" duration="7775000" />
+      <workItem from="1735232054448" duration="1753000" />
     </task>
     <task id="LOCAL-00099" summary="updating project">
       <option name="closed" value="true" />
@@ -911,7 +906,15 @@
       <option name="project" value="LOCAL" />
       <updated>1735076109993</updated>
     </task>
-    <option name="localTasksCounter" value="147" />
+    <task id="LOCAL-00147" summary="update project (gemini_variational_dataset) not ready">
+      <option name="closed" value="true" />
+      <created>1735182315263</created>
+      <option name="number" value="00147" />
+      <option name="presentableId" value="LOCAL-00147" />
+      <option name="project" value="LOCAL" />
+      <updated>1735182315263</updated>
+    </task>
+    <option name="localTasksCounter" value="148" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -941,7 +944,8 @@
     <MESSAGE value="updating project" />
     <MESSAGE value="starting llama-cpp-python project" />
     <MESSAGE value="update project" />
-    <option name="LAST_COMMIT_MESSAGE" value="update project" />
+    <MESSAGE value="update project (gemini_variational_dataset) not ready" />
+    <option name="LAST_COMMIT_MESSAGE" value="update project (gemini_variational_dataset) not ready" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
