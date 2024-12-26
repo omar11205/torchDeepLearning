@@ -1,7 +1,10 @@
+from typing import Optional, Dict, Any, List
 import random
 import json
 import locale
 import itertools
+
+import numpy as np
 import pandas as pd
 import re
 
@@ -15,12 +18,12 @@ locale.setlocale(locale.LC_ALL, "es_ES")
 
 
 class ConversationDataGenerator:
-    def __init__(self, bank_name, agent_name, additional_data=None):
+    def __init__(self, bank_name: str, agent_name: str, additional_data: Optional[Dict[str, Any]] = None):
         self.bank_name = bank_name
         self.agent_name = agent_name
         self.additional_data = additional_data
 
-    def gen_data(self):
+    def gen_data(self) -> Dict[str, Any]:
         fk = Faker('es_CO')
         profile = fk.simple_profile(sex=random.choice(['M', 'F']))
         npays = fk.pyint(min_value=3, max_value=12)
@@ -88,18 +91,34 @@ class ConversationDataGenerator:
 
 
 class ConversationFactory:
-    def __init__(self, input_csv, system_prompt, gen_data_instance, sub_entry=None, use_random_variations=False):
+    def __init__(self,
+                 input_csv: str,
+                 system_prompt: str,
+                 gen_data_instance: ConversationDataGenerator,
+                 model_chat_completion: Optional[Dict[str, Any]] = None,
+                 sub_entry_function: Optional[Any] = None,
+                 use_random_variations: bool = False
+                 ):
+
         self.df = pd.read_csv(input_csv)
         self.system_prompt = system_prompt
-        self.sub_entry = sub_entry
+        self.sub_entry = sub_entry_function
         self.use_random_variations = use_random_variations
         self.gen_data = gen_data_instance
+        self.m = model_chat_completion or {  # the default chat completion is for OpenAI Models
+                'messages': 'messages',
+                'role': 'role',
+                'content': 'content',
+                'system': 'system',
+                'user': 'user',
+                'assistant': 'assistant'
+        }
 
-    def get_unique_conversations(self):
+    def get_unique_conversations(self) -> np.ndarray:
         return self.df.id.unique()
 
     @staticmethod
-    def generate_basic_sub_entry(cdata):
+    def generate_basic_sub_entry(cdata: Dict[str, Any]) -> Dict[str, Any]:
         sub = {
             'bank_name': cdata['cobranzas']['bank_name'],
             'agent': cdata['cobranzas']['agent'],
@@ -123,59 +142,116 @@ class ConversationFactory:
 
         return sub
 
-    def generate_conversation(self, c, cdata):
+    def generate_conversation(self, c: int, cdata: Dict[str, Any]):
         if self.sub_entry is not None:
             sub = self.sub_entry(cdata)
         else:
             sub = self.generate_basic_sub_entry(cdata)
 
         conversation = {
-            "messages": [{"role": "system", "content": Template(self.system_prompt).substitute(sub)}]
+            f"{self.m['messages']}": [{f"{self.m['role']}": f"{self.m['system']}",
+                                       f"{self.m['content']}": Template(self.system_prompt).substitute(sub)}]
         }
 
         dfc = self.df[self.df.id == c].reset_index(drop=True)
+
+        def fill_sub_template(conv, dfc_i, i, user_cont):
+            conv[f"{self.m['messages']}"].append(
+                {f"{self.m['role']}": f"{self.m['user']}", f"{self.m['content']}": user_cont}
+            )
+            conv[f"{self.m['messages']}"].append(
+                {f"{self.m['role']}": f"{self.m['assistant']}",
+                 f"{self.m['content']}": Template(dfc_i.loc[i + 1].text).substitute(sub)}
+            )
 
         if self.use_random_variations and self.sub_entry is None:
             for i in range(0, len(dfc.index), 2):
                 user_content = Template(dfc.loc[i].text).substitute(sub)
                 user_content = self.randomize_user_response(user_content)
-                conversation['messages'].append(
-                    {"role": "user", "content": user_content}
-                )
-                conversation['messages'].append(
-                    {"role": "assistant", "content": Template(dfc.loc[i + 1].text).substitute(sub)}
-                )
+                fill_sub_template(conversation, dfc, i, user_content)
+
         elif self.use_random_variations and self.sub_entry:
             for i in range(0, len(dfc.index), 2):
                 user_content = Template(Template(dfc.loc[i].text).substitute(sub)).substitute(sub)
                 user_content = self.randomize_user_response(user_content)
-                conversation['messages'].append(
-                    {"role": "user", "content": user_content}
-                )
-                conversation['messages'].append(
-                    {"role": "assistant", "content": Template(dfc.loc[i + 1].text).substitute(sub)}
-                )
+                fill_sub_template(conversation, dfc, i, user_content)
+
         elif self.use_random_variations is False and self.sub_entry is None:
             for i in range(0, len(dfc.index), 2):
-                conversation['messages'].append(
-                    {"role": "user", "content": Template(dfc.loc[i].text).substitute(sub)}
-                )
-                conversation['messages'].append(
-                    {"role": "assistant", "content": Template(dfc.loc[i + 1].text).substitute(sub)}
-                )
+                user_content = Template(dfc.loc[i].text).substitute(sub)
+                fill_sub_template(conversation, dfc, i, user_content)
+
         elif self.use_random_variations is False and self.sub_entry:
             for i in range(0, len(dfc.index), 2):
-                conversation['messages'].append(
-                    {"role": "user", "content": Template(Template(dfc.loc[i].text).substitute(sub)).substitute(sub)}
-                )
-                conversation['messages'].append(
-                    {"role": "assistant", "content": Template(dfc.loc[i + 1].text).substitute(sub)}
-                )
+                user_content = Template(Template(dfc.loc[i].text).substitute(sub)).substitute(sub)
+                fill_sub_template(conversation, dfc, i, user_content)
 
         return conversation
 
+    def gemini_15_conversation(self, c: int, cdata: Dict[str, Any]):
+        if self.sub_entry is not None:
+            sub = self.sub_entry(cdata)
+        else:
+            sub = self.generate_basic_sub_entry(cdata)
+
+        dfc = self.df[self.df.id == c].reset_index(drop=True)
+
+        conversation = {
+            "systemInstruction": {
+                "role": "system",
+                "parts": [
+                    {
+                        "text": Template(self.system_prompt).substitute(sub)
+                    }
+                ]
+            },
+            "contents": []
+        }
+
+        def fill_sub_template(conv, dfc_i, i, user_cont):
+            conv["contents"].append(
+                {"role": "user", "parts": [
+                    {
+                        "text": user_cont
+                    }
+                ]}
+            )
+
+            conv["contents"].append(
+                {"role": "model", "parts": [
+                    {
+                        "text": Template(dfc_i.loc[i + 1].text).substitute(sub)
+                    }
+                ]}
+            )
+
+        if self.use_random_variations and self.sub_entry is None:
+            for i in range(0, len(dfc.index), 2):
+                user_content = Template(dfc.loc[i].text).substitute(sub)
+                user_content = self.randomize_user_response(user_content)
+                fill_sub_template(conversation, dfc, i, user_content)
+
+        elif self.use_random_variations and self.sub_entry:
+            for i in range(0, len(dfc.index), 2):
+                user_content = Template(Template(dfc.loc[i].text).substitute(sub)).substitute(sub)
+                user_content = self.randomize_user_response(user_content)
+                fill_sub_template(conversation, dfc, i, user_content)
+
+        elif self.use_random_variations is False and self.sub_entry is None:
+            for i in range(0, len(dfc.index), 2):
+                user_content = Template(dfc.loc[i].text).substitute(sub)
+                fill_sub_template(conversation, dfc, i, user_content)
+
+        elif self.use_random_variations is False and self.sub_entry:
+            for i in range(0, len(dfc.index), 2):
+                user_content = Template(Template(dfc.loc[i].text).substitute(sub)).substitute(sub)
+                fill_sub_template(conversation, dfc, i, user_content)
+
+        return conversation
+
+
     @staticmethod
-    def randomize_user_response(content):
+    def randomize_user_response(content: str) -> str:
         """
         Replace options in brackets [option1; option2; ...] with one random choice.
         """
@@ -186,7 +262,7 @@ class ConversationFactory:
         return re.sub(r'\[(.*?)\]', replace_match, content)
 
     @staticmethod
-    def get_variations(conversation):
+    def get_variations(conversation: Dict[str, Any]) -> List[Dict[str, Any]]:
         variations = []
         subs = []
 
@@ -208,7 +284,31 @@ class ConversationFactory:
 
         return variations if variations else [conversation]
 
-    def generate_fine_tuning_dataset(self, dataset_size=1):
+    @staticmethod
+    def get_gemini_variations(conversation: Dict[str, Any]):
+        # NOT READY
+        variations = []
+        subs = []
+
+        for entry in conversation['contents']:
+            if entry['role'] == 'user':
+                x = re.search(r'\[(.*?)\]', entry['parts'][0]['text'])
+                if x is not None:
+                    alts = [y.strip() for y in x.group(1).split(';')]
+                    subs.append({'entry': entry, 'alts': alts})
+
+        al = [sub['alts'] for sub in subs]
+        pr = list(itertools.product(*al))
+
+        for p in pr:
+            for idx, sub in enumerate(subs):
+                sub['entry']['content'] = p[idx]
+            cc = deepcopy(conversation)
+            variations.append(cc)
+
+        return variations if variations else [conversation]
+
+    def generate_fine_tuning_dataset(self, dataset_size: int = 1) -> List[Dict[str, Any]]:
         conversations = []
         convs = self.get_unique_conversations()
 
@@ -230,8 +330,30 @@ class ConversationFactory:
 
             return conversations
 
+    def generate_gemini_fine_tuning_dataset(self, dataset_size: int = 1):
+        conversations = []
+        convs = self.get_unique_conversations()
+
+        if self.use_random_variations:
+            for _ in range(dataset_size):
+                cdata = self.gen_data.gen_data()
+                for c in convs:
+                    conversation = self.gemini_15_conversation(c, cdata)
+                    conversations.append(conversation)
+
+            return conversations
+
+        # else:
+        #     for c in convs:
+        #         cdata = self.gen_data.gen_data()
+        #         conversation = self.generate_conversation(c, cdata)
+        #         variations = self.get_variations(conversation)
+        #         conversations.extend(variations)
+        #
+        #     return conversations
+
     @staticmethod
-    def generate_jsonl(conversations_list, file_name="fine_tuning_dataset.jsonl",):
+    def generate_jsonl(conversations_list: List[Dict[str, Any]], file_name: str = "fine_tuning_dataset.jsonl",):
         print(f"Total conversations: {len(conversations_list)}")
 
         with open(file_name, 'w') as f:
@@ -262,11 +384,21 @@ if __name__ == '__main__':
         agent_name="Raúl"
     )
 
+    gemini_model_chat_completion = {  # the default chat completion is for OpenAI Models
+        'messages': 'messages',
+        'role': 'role',
+        'content': 'content',
+        'system': 'system',
+        'user': 'user',
+        'assistant': 'model'
+    }
+
     factory = ConversationFactory(
         input_csv=template_csv,
         system_prompt=system_prompt_default,
         gen_data_instance=conversation_data_generator,
-        use_random_variations=False,  # permutate the user entries
+        model_chat_completion=gemini_model_chat_completion,
+        use_random_variations=True,  # dont permutate the user entries
     )
 
     conversations = factory.generate_fine_tuning_dataset()
