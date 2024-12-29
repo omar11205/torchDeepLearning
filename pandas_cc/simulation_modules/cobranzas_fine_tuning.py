@@ -585,7 +585,7 @@ if __name__ == "__main__":
         gpt_conv=bot,
         chat_flux=bot.default_chat_flux,
         generate_weights=False,  # all the weights are set to 1 by default
-        filename="test_azteca_v4.jsonl"
+        filename="../data/test_azteca_v4.jsonl"
     )
 
     # count_train_patterns = FineTuningDataset.analyze_dataset_patterns(

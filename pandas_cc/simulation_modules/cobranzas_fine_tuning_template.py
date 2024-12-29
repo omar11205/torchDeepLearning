@@ -13,8 +13,11 @@ from faker import Faker
 from copy import deepcopy
 from string import Template
 
+from twisted.words.im.basechat import Conversation
+
 # Set locale dates in spanish
 locale.setlocale(locale.LC_ALL, "es_ES")
+random.seed(0)
 
 
 class ConversationDataGenerator:
@@ -97,13 +100,13 @@ class ConversationFactory:
                  gen_data_instance: ConversationDataGenerator,
                  model_chat_completion: Optional[Dict[str, Any]] = None,
                  sub_entry_function: Optional[Any] = None,
-                 use_random_variations: bool = False
+                 create_random_dataset: bool = False
                  ):
 
         self.df = pd.read_csv(input_csv)
         self.system_prompt = system_prompt
         self.sub_entry = sub_entry_function
-        self.use_random_variations = use_random_variations
+        self.create_random_dataset = create_random_dataset
         self.gen_data = gen_data_instance
         self.m = model_chat_completion or {  # the default chat completion is for OpenAI Models
                 'messages': 'messages',
@@ -164,24 +167,24 @@ class ConversationFactory:
                  f"{self.m['content']}": Template(dfc_i.loc[i + 1].text).substitute(sub)}
             )
 
-        if self.use_random_variations and self.sub_entry is None:
+        if self.create_random_dataset and self.sub_entry is None:
             for i in range(0, len(dfc.index), 2):
                 user_content = Template(dfc.loc[i].text).substitute(sub)
                 user_content = self.randomize_user_response(user_content)
                 fill_sub_template(conversation, dfc, i, user_content)
 
-        elif self.use_random_variations and self.sub_entry:
+        elif self.create_random_dataset and self.sub_entry:
             for i in range(0, len(dfc.index), 2):
                 user_content = Template(Template(dfc.loc[i].text).substitute(sub)).substitute(sub)
                 user_content = self.randomize_user_response(user_content)
                 fill_sub_template(conversation, dfc, i, user_content)
 
-        elif self.use_random_variations is False and self.sub_entry is None:
+        elif self.create_random_dataset is False and self.sub_entry is None:
             for i in range(0, len(dfc.index), 2):
                 user_content = Template(dfc.loc[i].text).substitute(sub)
                 fill_sub_template(conversation, dfc, i, user_content)
 
-        elif self.use_random_variations is False and self.sub_entry:
+        elif self.create_random_dataset is False and self.sub_entry:
             for i in range(0, len(dfc.index), 2):
                 user_content = Template(Template(dfc.loc[i].text).substitute(sub)).substitute(sub)
                 fill_sub_template(conversation, dfc, i, user_content)
@@ -225,24 +228,24 @@ class ConversationFactory:
                 ]}
             )
 
-        if self.use_random_variations and self.sub_entry is None:
+        if self.create_random_dataset and self.sub_entry is None:
             for i in range(0, len(dfc.index), 2):
                 user_content = Template(dfc.loc[i].text).substitute(sub)
                 user_content = self.randomize_user_response(user_content)
                 fill_sub_template(conversation, dfc, i, user_content)
 
-        elif self.use_random_variations and self.sub_entry:
+        elif self.create_random_dataset and self.sub_entry:
             for i in range(0, len(dfc.index), 2):
                 user_content = Template(Template(dfc.loc[i].text).substitute(sub)).substitute(sub)
                 user_content = self.randomize_user_response(user_content)
                 fill_sub_template(conversation, dfc, i, user_content)
 
-        elif self.use_random_variations is False and self.sub_entry is None:
+        elif self.create_random_dataset is False and self.sub_entry is None:
             for i in range(0, len(dfc.index), 2):
                 user_content = Template(dfc.loc[i].text).substitute(sub)
                 fill_sub_template(conversation, dfc, i, user_content)
 
-        elif self.use_random_variations is False and self.sub_entry:
+        elif self.create_random_dataset is False and self.sub_entry:
             for i in range(0, len(dfc.index), 2):
                 user_content = Template(Template(dfc.loc[i].text).substitute(sub)).substitute(sub)
                 fill_sub_template(conversation, dfc, i, user_content)
@@ -301,18 +304,23 @@ class ConversationFactory:
         return variations if variations else [conversation]
 
     @staticmethod
-    def get_gemini_variations_v1(conversation: Dict[str, Any]) -> List[Dict[str, Any]]:
+    def select_random_user_entries(in_list: List[str], n_choices: int) -> List[str]:
+        if len(in_list) > n_choices:
+            return random.sample(in_list, n_choices)
+        else:
+            return in_list
+
+    @staticmethod
+    def get_gemini_variations_v1(conversation: Dict[str, Any], n_variations: int) -> List[Dict[str, Any]]:
         """
         Generate variations of a conversation in Gemini 1.5 format by replacing placeholders
         in user messages with all possible combinations of alternatives.
-
-        Args:
-            conversation (Dict[str, Any]): A dictionary representing a Gemini 1.5 conversation.
-                                           It is expected to have a 'contents' key containing a
-                                           list of dictionaries. Each dictionary should include
-                                           'role' and 'parts' keys.
-
-        Returns:
+        :param conversation: A dictionary representing a Gemini 1.5 conversation.
+                                       It is expected to have a 'contents' key containing a
+                                       list of dictionaries. Each dictionary should include
+                                       'role' and 'parts' keys.
+        :param n_variations: Integer number of máximum user entries to select randomly.
+        :returns:
             List[Dict[str, Any]]: A list of dictionaries, each representing a variation of the
                                   original conversation. If no placeholders are found, the
                                   original conversation is returned in a single-item list.
@@ -326,6 +334,8 @@ class ConversationFactory:
                 x = re.search(r'\[(.*?)\]', entry['parts'][0]['text'])
                 if x is not None:
                     alts: List[str] = [y.strip() for y in x.group(1).split(';')]
+                    if n_variations >= 2:
+                        alts: List[str] = ConversationFactory.select_random_user_entries(alts, n_variations)
                     subs.append({'entry': entry, 'alts': alts})
 
         # Step 2: Generate Cartesian product of all alternatives
@@ -345,7 +355,7 @@ class ConversationFactory:
         conversations = []
         convs = self.get_unique_conversations()
 
-        if self.use_random_variations:
+        if self.create_random_dataset:
             for _ in range(dataset_size):
                 cdata = self.gen_data.gen_data()
                 for c in convs:
@@ -363,11 +373,23 @@ class ConversationFactory:
 
             return conversations
 
-    def generate_gemini_fine_tuning_dataset(self, dataset_size: int = 1):
+    def generate_gemini_fine_tuning_dataset(self, dataset_size: int = 1, maximum_variation_control: int = 0):
+        """
+        Returns the fine-tuning dataset using the Gemini 1.5 format
+        :param dataset_size: when create_random_dataset = True, create a number of random conversations equal to
+                             dataset_size.
+        :param maximum_variation_control: controls the variations when create_random_dataset = False, selecting a maximum
+                                          of user entries from the total user entries.
+                                          This parameter affect all the users entries.
+                                          By default there are not any control on the variations (0).
+                                          If you want to control the variations use an integer greater or equal than 2.
+
+        :return: fine-tuning dataset List[Dict[str, Any]]
+        """
         conversations = []
         convs = self.get_unique_conversations()
 
-        if self.use_random_variations:
+        if self.create_random_dataset:
             for _ in range(dataset_size):
                 cdata = self.gen_data.gen_data()
                 for c in convs:
@@ -379,7 +401,7 @@ class ConversationFactory:
             for c in convs:
                 cdata = self.gen_data.gen_data()
                 conversation = self.gemini_15_conversation(c, cdata)
-                variations = self.get_gemini_variations_v1(conversation)
+                variations = self.get_gemini_variations_v1(conversation, maximum_variation_control)
                 conversations.extend(variations)
             return conversations
 
@@ -426,21 +448,11 @@ if __name__ == '__main__':
         agent_name="Raúl"
     )
 
-    gemini_model_chat_completion = {  # the default chat completion is for OpenAI Models
-        'messages': 'messages',
-        'role': 'role',
-        'content': 'content',
-        'system': 'system',
-        'user': 'user',
-        'assistant': 'model'
-    }
-
     factory = ConversationFactory(
         input_csv=template_csv,
         system_prompt=system_prompt_default,
         gen_data_instance=conversation_data_generator,
-        model_chat_completion=gemini_model_chat_completion,
-        use_random_variations=True,  # dont permutate the user entries
+        create_random_dataset=False,  # do not permutate the user entries
     )
 
     conversations = factory.generate_fine_tuning_dataset()

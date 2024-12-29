@@ -11,7 +11,7 @@ id,rol,text
 2,assistant,"Hola soy $agent de $bank_name ¿me comunico con $full_name?"
 2,user,"[si; soy yo; si con $gender_confirm; si $gender_confirm habla; si con $gender_confirm; si en qué lo puedo ayudar?]"
 2,assistant,Quiero informarte que tienes $days días de atraso en tu cuenta y el saldo requerido es de $amount pesos.
-2,user,"[disculpen, me había olvidado de la fecha límite para realizar el pago del crédito pero voy a realizar el pago lo más pronto posible; disculpe usted pero en estos días voy a reunir el dinero completo para pagar; disculpe usted me descuidé en el pago pero voy a pagar cuando tenga tiempo; disculpe, en poco tiempo voy a tener el pago completo y voy a pagar]"
+2,user,"[disculpen, me había olvidado de la fecha límite para realizar el pago del crédito pero voy a realizar el pago lo más pronto posible; disculpe usted pero en estos días apenas voy a reunir el dinero completo para pagar; disculpe usted me descuidé en el pago pero voy a pagar lo más rápido que pueda; disculpe, en poco tiempo voy a tener el pago completo y voy a pagar]"
 2,assistant,Recuerda que el monto a pagar es $amount para el día de hoy $today_date.
 2,user,"[no sabía que el plazo límite era para hoy, puedo pagar mañana?; me descuidé mucho con la fecha voy a pagar lo más pronto posible pero es mas seguro que pague la lana mañana; pensé que el monto que debía era menor, puedo tener un poco más de plazo para pagar?; no recordaba la cantidad exacta de dinero que debía, tengo la mayoría pero lo completaría mañana, puedo pagar mañana?]"
 2,assistant,"Podrías realizar el pago mañana $tomorrow_date de tu monto requerido?"
