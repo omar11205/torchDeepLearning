@@ -5,14 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c927f566-e1ab-4c11-a852-3620c04eb55d" name="Changes" comment="update project: gemini variational dataset ok">
-      <change afterPath="$PROJECT_DIR$/pandas_cc/gemini_azteca_beta3.jsonl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pandas_cc/gemini_azteca_beta3_test1.jsonl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pandas_cc/azteca_enhaced_flux.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/pandas_cc/azteca_enhaced_flux.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pandas_cc/simulation_modules/chat_flux_template_azteca.csv" beforeDir="false" afterPath="$PROJECT_DIR$/pandas_cc/simulation_modules/chat_flux_template_azteca.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pandas_cc/simulation_modules/chat_flux_template_azteca_test.csv" beforeDir="false" afterPath="$PROJECT_DIR$/pandas_cc/simulation_modules/chat_flux_template_azteca_test.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pandas_cc/simulation_modules/cobranzas_fine_tuning.py" beforeDir="false" afterPath="$PROJECT_DIR$/pandas_cc/simulation_modules/cobranzas_fine_tuning.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pandas_cc/simulation_modules/cobranzas_fine_tuning_template.py" beforeDir="false" afterPath="$PROJECT_DIR$/pandas_cc/simulation_modules/cobranzas_fine_tuning_template.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pandas_cc/simulation_modules/test_azteca_v4.jsonl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pandas_cc/simulation_modules/train_azteca_beta.jsonl" beforeDir="false" afterPath="$PROJECT_DIR$/pandas_cc/simulation_modules/train_azteca_beta.jsonl" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,32 +60,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Python.analize_results.executor": "Run",
-    "Python.chatbot_sim.executor": "Run",
-    "Python.chatbot_sim_template.executor": "Run",
-    "Python.chatbot_simulation.executor": "Run",
-    "Python.cobranzas_fine_tuning_template (1).executor": "Run",
-    "Python.cobranzas_fine_tuning_template.executor": "Run",
-    "Python.model_class.executor": "Run",
-    "Python.model_reg.executor": "Run",
-    "Python.model_stop.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/GITAI/artificial_intelligence/torchDeepLearning/pandas_cc/simulation_modules",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "python.debugger.dataview.coloredbydefault": "false",
-    "settings.editor.selected.configurable": "preferences.keymap",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Python.analize_results.executor&quot;: &quot;Run&quot;,
+    &quot;Python.chatbot_sim.executor&quot;: &quot;Run&quot;,
+    &quot;Python.chatbot_sim_template.executor&quot;: &quot;Run&quot;,
+    &quot;Python.chatbot_simulation.executor&quot;: &quot;Run&quot;,
+    &quot;Python.cobranzas_fine_tuning_template (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.cobranzas_fine_tuning_template.executor&quot;: &quot;Run&quot;,
+    &quot;Python.model_class.executor&quot;: &quot;Run&quot;,
+    &quot;Python.model_reg.executor&quot;: &quot;Run&quot;,
+    &quot;Python.model_stop.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/GITAI/artificial_intelligence/torchDeepLearning/pandas_cc/simulation_modules&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;python.debugger.dataview.coloredbydefault&quot;: &quot;false&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\GITAI\artificial_intelligence\torchDeepLearning\pandas_cc\simulation_modules" />
@@ -106,7 +102,7 @@
       <recent name="C:\GITAI\artificial_intelligence\torchDeepLearning\CNN" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.chatbot_simulation">
     <configuration name="chatbot_simulation" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="torchDeepLearning" />
       <option name="ENV_FILES" value="" />
@@ -525,15 +521,10 @@
       <workItem from="1735232054448" duration="13539000" />
       <workItem from="1735256886482" duration="2710000" />
       <workItem from="1735311489828" duration="2993000" />
-      <workItem from="1735317533260" duration="3850000" />
-    </task>
-    <task id="LOCAL-00100" summary="updating project">
-      <option name="closed" value="true" />
-      <created>1725667035612</created>
-      <option name="number" value="00100" />
-      <option name="presentableId" value="LOCAL-00100" />
-      <option name="project" value="LOCAL" />
-      <updated>1725667035613</updated>
+      <workItem from="1735317533260" duration="3853000" />
+      <workItem from="1735519068854" duration="5509000" />
+      <workItem from="1735563653790" duration="1012000" />
+      <workItem from="1735565045734" duration="9602000" />
     </task>
     <task id="LOCAL-00101" summary="updating project">
       <option name="closed" value="true" />
@@ -919,7 +910,15 @@
       <option name="project" value="LOCAL" />
       <updated>1735235341276</updated>
     </task>
-    <option name="localTasksCounter" value="149" />
+    <task id="LOCAL-00149" summary="update project: gemini variational dataset ok">
+      <option name="closed" value="true" />
+      <created>1735493546397</created>
+      <option name="number" value="00149" />
+      <option name="presentableId" value="LOCAL-00149" />
+      <option name="project" value="LOCAL" />
+      <updated>1735493546397</updated>
+    </task>
+    <option name="localTasksCounter" value="150" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -1,5 +1,5 @@
 id,rol,text
-1,user,hola
+1,user,"[hola; bueno?; alo?; si buenas?; si bueno?; ola]"
 1,assistant,"Hola soy $agent de $bank_name ¿me comunico con $full_name?"
 1,user,[si; soy yo; si con $gender_confirm; si $gender_confirm habla; si con $gender_confirm; si en qué lo puedo ayudar?]
 1,assistant,Quiero informarte que tienes $days días de atraso en tu cuenta y el saldo requerido es de $amount pesos.
@@ -7,7 +7,7 @@ id,rol,text
 1,assistant,Recuerda que el monto a pagar es $amount para el día de hoy $today_date.
 1,user,[correcto ese es el monto que debía y voy a pagar ya mismo; si esa es la lana que debía voy a pagar ese monto hoy]
 1,assistant,"Genial, has confirmado tu pago. Puedes hacerlo en la app, sucursal o aliados como Walmart. ¡Gracias por tu compromiso!"
-2,user,bueno?
+2,user,"[hola; bueno?; alo?; si buenas?; si bueno?; ola]"
 2,assistant,"Hola soy $agent de $bank_name ¿me comunico con $full_name?"
 2,user,"[si; soy yo; si con $gender_confirm; si $gender_confirm habla; si con $gender_confirm; si en qué lo puedo ayudar?]"
 2,assistant,Quiero informarte que tienes $days días de atraso en tu cuenta y el saldo requerido es de $amount pesos.
@@ -17,7 +17,7 @@ id,rol,text
 2,assistant,"Podrías realizar el pago mañana $tomorrow_date de tu monto requerido?"
 2,user,"[si claro, para mañana no hay inconveniente; gracias por el plazo, mañana pago todo completo; si para mañana no hay problema con el pago; vale gracias por el plazo con eso ya consigo la lana completa]"
 2,assistant,"Genial, has confirmado tu pago. Puedes hacerlo en la app, sucursal o aliados como Walmart. Gracias por tu compromiso."
-3,user,alo?
+3,user,"[hola; bueno?; alo?; si buenas?; si bueno?; ola]"
 3,assistant,"Hola soy $agent de $bank_name ¿me comunico con $full_name?"
 3,user,"[si; soy yo; si con $gender_confirm; si $gender_confirm habla; si con $gender_confirm; si en qué lo puedo ayudar?]"
 3,assistant,Quiero informarte que tienes $days días de atraso en tu cuenta y el saldo requerido es de $amount pesos.
@@ -27,7 +27,7 @@ id,rol,text
 3,assistant,"Podrías realizar el pago mañana $tomorrow_date de tu monto requerido?"
 3,user,"[no, para mañana creo que no puedo pagar necesito más plazo; no podría darme plazo hasta el día después de mañana; no podría darme plazo para pasado mañana?; no me puede dar plazo para el siguiente més?; no me podría dar plazo para la siguiente semana? en esta semana no creo conseguir el monto total ahora que lo pienso bien]"
 3,assistant,"Entendemos que no es el momento, nos comunicamos más tarde. Feliz día."
-4,user,alo?
+4,user,"[hola; bueno?; alo?; si buenas?; si bueno?; ola]"
 4,assistant,"Hola soy $agent de $bank_name ¿me comunico con $full_name?"
 4,user,"[si; soy yo; si con $gender_confirm; si $gender_confirm habla; si con $gender_confirm; si en qué lo puedo ayudar?]"
 4,assistant,Quiero informarte que tienes $days $plural_ndays de atraso en tu cuenta y el saldo requerido es de $amount pesos.
@@ -37,7 +37,7 @@ id,rol,text
 4,assistant,Recuerda que el monto a pagar es $amount para el día $today_date.
 4,user,"[si, ese es el monto de la cuota y estoy seguro que alcanzo a pagar hoy; sí, esa lana la acabo de reunir; si yo puedo pagar ese monto hoy; si, sin problema pagaría para hoy]"
 4,assistant,"Genial, has confirmado tu pago. Puedes hacerlo en la app, sucursal o aliados como Walmart. ¡Gracias por tu compromiso!"
-5,user,bueno?
+5,user,"[hola; bueno?; alo?; si buenas?; si bueno?; ola]"
 5,assistant,"Hola soy $agent de $bank_name ¿me comunico con $full_name?"
 5,user,["si; soy yo; si con $gender_confirm; si $gender_confirm habla; si con $gender_confirm; si en qué lo puedo ayudar?"]
 5,assistant,Quiero informarte que tienes $days $plural_ndays de atraso en tu cuenta y el saldo requerido es de $amount pesos.
@@ -49,7 +49,7 @@ id,rol,text
 5,assistant,Podrías realizar el pago mañana $tomorrow_date de tu monto requerido?
 5,user,"[si, para mañana si; si, para mañana si es seguro; si para mañana tendré todo el dinero completo; si, mañana tengo el dinero completo y voy a pagar en el transcurso del día]"
 5,assistant,"Genial, has confirmado tu pago. Puedes hacerlo en la app, sucursal o aliados como Walmart. ¡Gracias por tu compromiso!"
-6,user,si bueno?
+6,user,"[hola; bueno?; alo?; si buenas?; si bueno?; ola]"
 6,assistant,"Hola soy $agent de $bank_name ¿me comunico con $full_name?"
 6,user,"[si; soy yo; si con $gender_confirm; si $gender_confirm habla; si con $gender_confirm; si en qué lo puedo ayudar?]"
 6,assistant,Quiero informarte que tienes $days $plural_ndays de atraso en tu cuenta y el saldo requerido es de $amount pesos.
@@ -61,7 +61,7 @@ id,rol,text
 6,assistant,Podrías realizar el pago mañana $tomorrow_date de tu monto requerido?
 6,user,"[no, ni siquiera creo que para mañana vaya a conseguir toda la lana necesito más plazo; no, no creo que mi compadre me preste el monto que falta para mañana, el me presta en una semana por lo menos; necesitaría más tiempo, no alcanzo a reunir mañana todo]".
 6,assistant,"Entendemos que no es el momento, nos comunicamos mas tarde. ¡Feliz día!"
-7,user,si bueno?
+7,user,"[hola; bueno?; alo?; si buenas?; si bueno?; ola]"
 7,assistant,"Hola soy $agent de $bank_name ¿me comunico con $full_name?"
 7,user,[si; soy yo; si con $gender_confirm; si $gender_confirm habla; si con $gender_confirm; si en qué lo puedo ayudar?]
 7,assistant,Quiero informarte que tienes $days $plural_ndays de atraso en tu cuenta y el saldo requerido es de $amount pesos.
@@ -71,7 +71,7 @@ id,rol,text
 7,assistant,"Si no pagas hoy podrías recibir molestias en tus teléfonos y cargos adicionales. Te invitamos a resolverlo ahora. ¿Confirmamos tu pago hoy?"
 7,user,"[definitivamente no tengo el dinero para pagar hoy y no hay nadie quien me pueda prestar la lana; no puedo pagar para otro mes las cuotas atrasadas? Para este ya no alcanzo; solamente puedo pagar la mitad de la lana de lo que debo, eso sería posible?; alcanzo a reunir una parte de la lana pero no es mucha, me la reciben?; no entiende usted que no puedo pagar, dejen de chingar; no sería posible un refinanciamiento de las cuotas para bajar la lana que tengo que pagar?]"
 7,assistant,"Entendemos que no es el momento, nos comunicamos mas tarde. ¡Feliz día!"
-8,user,bueno?
+8,user,"[hola; bueno?; alo?; si buenas?; si bueno?; ola]"
 8,assistant,"Hola soy $agent de $bank_name ¿me comunico con $full_name?"
 8,user,[si; soy yo; si con $gender_confirm; si $gender_confirm habla; si con $gender_confirm; si en qué lo puedo ayudar?]
 8,assistant,Quiero informarte que tienes $days $plural_ndays de atraso en tu cuenta y el saldo requerido es de $amount pesos.
@@ -83,7 +83,7 @@ id,rol,text
 8,assistant,Recuerda que el monto a pagar es $amount pesos para el día $today_date
 8,user,"[si, ese es el monto y creo que si voy a poder pagar hoy; estoy seguro de que voy a poder conseguir ese dinero en la tarde y realizaré el pago; creo que voy a poder conseguir hoy esa lana para pagar hoy]"
 8,assistant,"Genial has confirmado tu pago. Puedes hacerlo en la app, sucursal o aliados. ¡Gracias por tu compromiso!"
-9,user,bueno?
+9,user,"[hola; bueno?; alo?; si buenas?; si bueno?; ola]"
 9,assistant,"Hola soy $agent de $bank_name ¿me comunico con $full_name?"
 9,user,[si; soy yo; si con $gender_confirm; si $gender_confirm habla; si con $gender_confirm; si en qué lo puedo ayudar?]
 9,assistant,Quiero informarte que tienes $days $plural_ndays de atraso en tu cuenta y el saldo requerido es de $amount pesos.
@@ -97,7 +97,7 @@ id,rol,text
 9,assistant,"Podrías realizar el pago mañana $tomorrow_date de tu mento requerido?"
 9,user,"[si, para mañana es más seguro que tenga el pago completo; si, para mañana ya reúno todo; si, mañana ya puedo pagar la lana completa; si, para mañana estaría bien puedo reunir todo más facil]"
 9,assistant,"Genial has confirmado tu pago. Puedes hacerlo en la app, sucursal o aliados. ¡Gracias por tu compromiso!"
-10,user,bueno?
+10,user,"[hola; bueno?; alo?; si buenas?; si bueno?; ola]"
 10,assistant,"Hola soy $agent de $bank_name ¿me comunico con $full_name?"
 10,user,[si; soy yo; si con $gender_confirm; si $gender_confirm habla; si con $gender_confirm; si en qué lo puedo ayudar?]
 10,assistant,Quiero informarte que tienes $days $plural_ndays de atraso en tu cuenta y el saldo requerido es de $amount pesos.
@@ -111,13 +111,13 @@ id,rol,text
 10,assistant,"Podrías realizar el pago mañana $tomorrow_date de tu mento requerido?"
 10,user,"[no creo que para mañana tenga todo el dinero reunido aún me falta; podría ser para el día después de mañana? Para pasado mañana ya tengo todo reunido; no, definitivamente necesito más plazo, por lo menos una semana para completar el dinero para pagar; alcanzo a completar el dinero para el pago en un mes o más]"
 10,assistant,"Entendemos que no es el momento, nos comunicamos más tarde. ¡Feliz Día!"
-11,user,bueno?
+11,user,"[hola; bueno?; alo?; si buenas?; si bueno?; ola]"
 11,assistant,"Hola soy $agent de $bank_name ¿me comunico con $full_name?"
 11,user,"[No, no es $pronoun; No, número equivocado; está equivocado; acá no vive]"
 11,assistant,¿Conoces al titular de la línea?
 11,user,"[No, no conozco a $pronoun $title $full_name; no $known conozco; No, no conozco a quien se refiere]"
 11,assistant,"Gracias por tu tiempo, lamento la confusión, parece que no eres la persona que estamos buscando. ¡Feliz día!"
-12,user,alo?
+12,user,"[hola; bueno?; alo?; si buenas?; si bueno?; ola]"
 12,assistant,"Hola soy $agent de $bank_name ¿me comunico con $full_name?"
 12,user,"[No, no es $pronoun; No, habla la mamá; No, habla su prima; No, habla su hermana; No, habla su pareja]"
 12,assistant,¿Conoces al titular de la línea?
